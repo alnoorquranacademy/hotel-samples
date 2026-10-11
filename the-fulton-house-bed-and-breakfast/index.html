@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fulton House Bed and Breakfast — Portland | Sample Website</title>
+<style>:root{--ink:#42262e;--accent:#7c3f4e;--accent2:#5e2a35;--bg:#f8f1e7;--line:#e9dcc9;--muted:#857077}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16.5px}
+h1,h2,h3,.serif{font-family:Georgia,'Playfair Display','Times New Roman',serif;font-weight:600;line-height:1.2}
+img{display:block;max-width:100%}
+a{color:var(--accent2)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.topbar{background:var(--ink);color:#f3ead9;font-size:13.5px;letter-spacing:.04em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.topbar a{color:#f3ead9;text-decoration:none}
+header.site{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;gap:16px;flex-wrap:wrap}
+.logo{font-family:Georgia,'Playfair Display',serif;font-size:24px;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+nav.main a{margin-left:26px;text-decoration:none;color:var(--ink);font-size:14.5px;letter-spacing:.08em;text-transform:uppercase}
+nav.main a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 30px;border-radius:999px;font-size:15px;letter-spacing:.05em;border:none;cursor:pointer}
+.btn:hover{background:var(--accent2)}
+.btn.ghost{background:transparent;border:1.5px solid #fff;color:#fff}
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.16) 40%,rgba(20,14,8,.78))}
+.hero .content{position:relative;padding:120px 0 64px;width:100%}
+.hero .kicker{letter-spacing:.34em;text-transform:uppercase;font-size:13px;color:#f0d9b5;margin-bottom:16px}
+.hero h1{font-size:clamp(42px,6.4vw,74px);max-width:840px}
+.hero p.tag{font-family:Georgia,serif;font-style:italic;font-size:clamp(19px,2.4vw,25px);margin-top:14px;color:#f7ecd7;max-width:660px}
+.hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.facts{background:var(--ink);color:#efe6d4}
+.facts .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;padding-top:22px;padding-bottom:22px;text-align:center}
+.facts b{display:block;font-family:Georgia,serif;font-size:19px;color:#fff}
+.facts span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#cbbfa9}
+section{padding:88px 0}
+.kicker2{letter-spacing:.3em;text-transform:uppercase;font-size:12.5px;color:var(--accent);margin-bottom:12px}
+h2.title{font-size:clamp(30px,4vw,42px);margin-bottom:18px}
+.lede{color:var(--muted);max-width:720px;font-size:17.5px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.split img{border-radius:14px;box-shadow:0 24px 50px rgba(30,20,10,.18);width:100%;height:100%;object-fit:cover;max-height:520px}
+.amen{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.amen li{padding-left:22px;position:relative}
+.amen li:before{content:"\2014";position:absolute;left:0;color:var(--accent)}
+.rooms{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(30,20,10,.07);display:flex;flex-direction:column}
+.card img{height:230px;width:100%;object-fit:cover}
+.card .body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:22px}
+.card p{color:var(--muted);font-size:15.5px;flex:1}
+.price{font-family:Georgia,serif;font-size:19px;color:var(--accent2)}
+.price small{font-size:12.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.card.textonly{justify-content:center;background:var(--bg)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+.gallery figure{border-radius:12px;overflow:hidden;position:relative}
+.gallery img{height:250px;width:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;color:#fff;font-size:14px;background:linear-gradient(transparent,rgba(15,10,5,.72))}
+.locgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:36px}
+.loc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.loc h3{font-size:19px;margin-bottom:6px}
+.loc p{color:var(--muted);font-size:15px}
+.contact{background:var(--ink);color:#f1e8d8}
+.contact h2{color:#fff}
+.contact .lede{color:#cfc2ab}
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:54px}
+.cinfo p{margin-bottom:14px}
+.cinfo a{color:#f0d9b5}
+form.book{background:#fff;color:var(--ink);border-radius:14px;padding:30px;--muted:#6f6459}
+form.book label{display:block;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;margin:14px 0 6px;color:#6f6459}
+form.book input,form.book select,form.book textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:15.5px;background:var(--bg)}
+form.book .btn{margin-top:20px;width:100%}
+.thanks{display:none;background:#eef5e9;border:1px solid #bcd3ae;color:#33511f;border-radius:10px;padding:16px 18px;margin-top:18px}
+footer{padding:34px 0 44px;background:var(--ink);color:#bfae94;font-size:14px;border-top:1px solid rgba(255,255,255,.12)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.chatbtn{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:15px 24px;font-size:15.5px;box-shadow:0 14px 34px rgba(20,10,0,.35);cursor:pointer}
+.chatbtn:hover{background:var(--accent2)}
+.chatpanel{position:fixed;right:22px;bottom:86px;z-index:60;width:min(360px,calc(100vw - 32px));background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(20,10,0,.35);overflow:hidden;display:none;border:1px solid var(--line)}
+.chatpanel.open{display:block}
+.chathead{background:var(--ink);color:#fff;padding:18px 20px}
+.chathead b{font-family:Georgia,serif;font-size:18px;display:block}
+.chathead span{font-size:13.5px;color:#d8cbae}
+.chatbody{padding:18px 20px;max-height:330px;overflow:auto}
+.chatbody p{font-size:15px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{border:1.5px solid var(--accent);color:var(--accent2);background:#fff;border-radius:999px;padding:7px 14px;font-size:13.5px;cursor:pointer}
+.chip:hover{background:var(--accent);color:#fff}
+.answer{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14.5px;display:none;color:var(--ink)}
+.chatactions{display:flex;gap:10px;padding:0 20px 20px}
+.chatactions a{flex:1;text-align:center;text-decoration:none;padding:12px;border-radius:10px;font-size:15px}
+.chatactions .call{background:var(--accent);color:#fff}
+.chatactions .mail{border:1.5px solid var(--ink);color:var(--ink)}
+@media(max-width:820px){.split,.cgrid{grid-template-columns:1fr}nav.main{display:none}section{padding:60px 0}.hero{min-height:74vh}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>Portland, Oregon</span><span><a href="tel:+15038925781">(503) 892-5781</a> &nbsp;·&nbsp; <a href="mailto:stay@thefultonhouse.com">stay@thefultonhouse.com</a></span></div></div>
+<header class="site"><div class="wrap"><a class="logo" href="#top">The Fulton <span>House</span></a><nav class="main"><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a></nav><a class="btn" href="#contact">Book Your Stay</a></div></header>
+<section class="hero" id="top" style="padding:0">
+<img class="bg" src="assets/hero.jpg" alt="The Fulton House at dusk, Portland, Oregon">
+<div class="shade"></div>
+<div class="content"><div class="wrap">
+<p class="kicker">Portland, Oregon</p>
+<h1>The Fulton House Bed and Breakfast</h1>
+<p class="tag">Your memorable Portland vacation starts here.</p>
+<div class="cta"><a class="btn" href="#rooms">Explore Rooms</a><a class="btn ghost" href="tel:+15038925781">Call (503) 892-5781</a></div>
+</div></div>
+</section>
+<div class="facts"><div class="wrap"><div><b>4</b><span>Charming Guest Rooms</span></div><div><b>All</b><span>Private Baths</span></div><div><b>Free</b><span>Homemade Breakfast</span></div><div><b>1880</b><span>House History</span></div><div><b>John's Landing</b><span>Historic Neighbourhood</span></div></div></div>
+<section id="welcome"><div class="wrap"><div class="split">
+<div><p class="kicker2">Welcome</p><h2 class="title">Turn-of-the-century charm, one block from the river</h2>
+<p class="lede">The Fulton House began life in 1880 and was moved to its present site in the 1930s - today this beautifully restored house in historic John’s Landing welcomes travellers with four charming rooms, no two alike. Enjoy the scenic horizon from the rooftop perch, imagine 1880s Fulton commerce from the second-floor porch, or relax in the tranquil garden. Oh - if this house could talk.</p>
+<ul class="amen"><li>Complimentary homemade breakfast</li><li>Private bathroom in every room</li><li>Free high-speed Wi-Fi</li><li>Tranquil garden & patio</li><li>Rooftop perch with river views</li><li>Second-floor porch</li><li>Free parking</li><li>One block from Willamette Park</li></ul></div>
+<div><img src="assets/about.jpg" alt="The front porch of The Fulton House"></div>
+</div></div></section>
+<section class="rooms" id="rooms"><div class="wrap">
+<p class="kicker2">Stay With Us</p><h2 class="title">Rooms &amp; Suites</h2>
+<p class="lede">Four guest rooms, each with a private bath and wireless internet, and a complimentary breakfast included in every stay. Rates are confirmed personally on enquiry.</p>
+<div class="grid"><article class="card"><img src="assets/room-innkeeper.jpg" alt="Workspace corner of the Innkeeper Suite, Fulton House"><div class="body"><h3>Innkeeper's Suite</h3><p>The house’s grandest room - space to stretch out, work at the glass desk, and unwind in quiet comfort.</p><div class="price">Rates on request <small>per night</small></div></div></article><article class="card"><img src="assets/room-garden.jpg" alt="Garden Room porch seating at The Fulton House"><div class="body"><h3>Garden Room</h3><p>A light-filled room opening toward the garden and porch - wicker chairs, flowers, and the slowest mornings in Portland.</p><div class="price">Rates on request <small>per night</small></div></div></article><article class="card"><img src="assets/room-heron.jpg" alt="Blue Heron Room at The Fulton House"><div class="body"><h3>Blue Heron Room</h3><p>Deep teal walls, heron-embroidered pillows and crisp white linen - a serene room named for the river’s great blue herons.</p><div class="price">Rates on request <small>per night</small></div></div></article><article class="card textonly"><div class="body"><h3>Wine Cellar Suite</h3><p>A characterful suite steeped in the house’s storied past - spacious, private, and unlike anywhere else in the city.</p><div class="price">Rates on request <small>per night</small></div></div></article></div>
+</div></section>
+<section id="gallery"><div class="wrap">
+<p class="kicker2">Gallery</p><h2 class="title">Corners of the House</h2>
+<div class="gallery"><figure><img src="assets/gallery-spring.jpg" alt="The house in spring"><figcaption>The house in spring</figcaption></figure><figure><img src="assets/gallery-desk.jpg" alt="Blue Heron details"><figcaption>Blue Heron details</figcaption></figure><figure><img src="assets/gallery-pillows.jpg" alt="Heron pillows, made up fresh"><figcaption>Heron pillows, made up fresh</figcaption></figure><figure><img src="assets/gallery-living.jpg" alt="Living spaces of the house"><figcaption>Living spaces of the house</figcaption></figure></div>
+</div></section>
+<section id="location" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+<p class="kicker2">Location</p><h2 class="title">Discover Portland</h2>
+<p class="lede">In John’s Landing, southwest Portland - one block from Willamette Park and the riverfront greenway, minutes from downtown, OHSU and Lewis & Clark.</p>
+<div class="locgrid"><div class="loc"><h3>Willamette Park</h3><p>Riverfront greenway and parkland, one block from the door.</p></div><div class="loc"><h3>Downtown Portland</h3><p>Minutes away for dining, culture and the waterfront.</p></div><div class="loc"><h3>OHSU & the Tram</h3><p>The aerial tram up Pill Hill is a short distance away.</p></div><div class="loc"><h3>Lewis & Clark College</h3><p>The renowned campus, close by in the southwest hills.</p></div></div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="cgrid">
+<div class="cinfo"><p class="kicker2">Contact</p><h2 class="title">Plan Your Stay</h2>
+<p class="lede">Questions, celebrations, whole-property enquiries — the team is glad to help, directly and personally.</p>
+<p><strong>The Fulton House Bed and Breakfast</strong><br>7006 South Virginia Avenue, Portland, OR 97219<br>Portland, Oregon</p>
+<p>Phone: <a href="tel:+15038925781">(503) 892-5781</a><br>Email: <a href="mailto:stay@thefultonhouse.com">stay@thefultonhouse.com</a></p>
+</div>
+<div><form class="book" id="bookForm">
+<h3 class="serif" style="font-size:24px">Booking Enquiry</h3>
+<label for="f-name">Your name</label><input id="f-name" required type="text" placeholder="Full name">
+<label for="f-email">Your email</label><input id="f-email" required type="email" placeholder="you@example.com">
+<label for="f-room">Room or suite</label><select id="f-room"><option>Innkeeper's Suite</option><option>Garden Room</option><option>Blue Heron Room</option><option>Wine Cellar Suite</option></select>
+<label for="f-in">Check-in</label><input id="f-in" type="date">
+<label for="f-out">Check-out</label><input id="f-out" type="date">
+<label for="f-msg">Anything we should know?</label><textarea id="f-msg" rows="3" placeholder="Occasion, requests, questions"></textarea>
+<button class="btn" type="submit">Send Enquiry</button>
+<div class="thanks" id="formThanks">Thank you — your enquiry has been noted. The hotel team will reply shortly. For anything urgent, call <a href="tel:+15038925781">(503) 892-5781</a>.</div>
+</form></div>
+</div></div></section>
+<footer><div class="wrap"><span>The Fulton House Bed and Breakfast · Portland, Oregon</span><span>Sample website prepared for The Fulton House Bed and Breakfast — demonstration only.</span></div></footer>
+<button class="chatbtn" onclick="toggleChat()">Guest Support</button>
+<div class="chatpanel" id="chatPanel">
+<div class="chathead"><b>The Fulton House Bed and Breakfast</b><span>Guest support — replies from the hotel team</span></div>
+<div class="chatbody">
+<p>Hello, and welcome to The Fulton House Bed and Breakfast. Tap a question, or reach the team directly below.</p>
+<div class="chips">
+<button class="chip" onclick="ask('rates')">Rates &amp; availability</button>
+<button class="chip" onclick="ask('checkin')">Check-in times</button>
+<button class="chip" onclick="ask('parking')">Parking</button>
+<button class="chip" onclick="ask('breakfast')">Breakfast</button>
+<button class="chip" onclick="ask('pets')">Pets</button>
+</div>
+<div class="answer" id="chatAnswer"></div>
+</div>
+<div class="chatactions"><a class="call" href="tel:+15038925781">Call the Hotel</a><a class="mail" href="mailto:stay@thefultonhouse.com">Email Us</a></div>
+</div>
+<script>var answers = {
+  rates: "Our four rooms are priced per enquiry so we can match the room to your trip - send the form above or call (503) 892-5781 and we will confirm rates and availability.",
+  checkin: "We offer flexible, personal check-in - including 24-hour check-in arrangements. Confirm your arrival time when you book and we will be ready.",
+  parking: "Free parking is available at the house, with street parking nearby as well.",
+  breakfast: "A hearty homemade breakfast is included with every stay, served each morning in our formal dining room.",
+  pets: "For pet questions, please call us on (503) 892-5781 and we will do our best to help."
+};
+function toggleChat() {
+  var p = document.getElementById('chatPanel');
+  p.classList.toggle('open');
+}
+function ask(key) {
+  var a = document.getElementById('chatAnswer');
+  a.textContent = answers[key] || '';
+  a.style.display = 'block';
+}
+document.getElementById('bookForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('formThanks').style.display = 'block';
+  this.reset();
+});</script>
+</body>
+</html>
