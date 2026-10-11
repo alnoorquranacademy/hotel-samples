@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Argyll Guest House — Glasgow | Guest Accommodation</title>
+<meta name="description" content="Argyll Guest House, Glasgow — a homely, budget-friendly guest house in the West End with single, double/twin and family rooms. Rates on request.">
+<style>
+:root{--ink:#232323;--accent:#33523f;--accent2:#b98a2f;--cream:#faf7f2;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;flex-wrap:wrap;gap:10px}
+.logo{font-family:Georgia,serif;font-size:1.35rem;font-weight:bold;color:var(--accent)}
+.logo small{display:block;font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:#777;font-family:'Segoe UI',sans-serif;font-weight:600}
+.nav a{color:var(--ink);text-decoration:none;margin-left:18px;font-size:.95rem}
+.nav a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff!important;padding:11px 24px;border-radius:30px;text-decoration:none;font-weight:600;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:transparent;border:2px solid #fff}
+.hero{position:relative;color:#fff;text-align:center}
+.hero img{width:100%;height:78vh;min-height:460px;object-fit:cover}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55));display:flex;flex-direction:column;justify-content:center;align-items:center;padding:20px}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);margin-bottom:12px;text-shadow:0 2px 10px rgba(0,0,0,.4)}
+.hero p{font-size:clamp(1rem,2.4vw,1.3rem);max-width:640px;margin-bottom:26px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+section{padding:64px 0}
+h2.title{font-size:2rem;color:var(--accent);text-align:center;margin-bottom:8px}
+.sub{text-align:center;color:#666;max-width:680px;margin:0 auto 36px}
+.grid{display:grid;gap:24px}
+.grid.c3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid.c2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.card img{height:220px;width:100%;object-fit:cover}
+.card .body{padding:22px}
+.card h3{color:var(--accent);margin-bottom:8px;font-size:1.25rem}
+.rate{display:inline-block;margin-top:12px;background:var(--cream);border:1px dashed var(--accent2);color:var(--accent);padding:5px 14px;border-radius:20px;font-weight:600;font-size:.92rem}
+.about{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:36px;align-items:center}
+.about img{border-radius:14px;height:340px;width:100%;object-fit:cover;box-shadow:0 6px 22px rgba(0,0,0,.12)}
+.badge{display:inline-block;background:var(--accent2);color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;font-weight:600;margin-bottom:14px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal figure{border-radius:12px;overflow:hidden;position:relative}
+.gal img{height:210px;width:100%;object-fit:cover;transition:transform .4s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;padding:26px 14px 10px;font-size:.92rem}
+.loc{background:#fff;border-radius:14px;padding:30px;box-shadow:0 4px 18px rgba(0,0,0,.06)}
+.loc ul{list-style:none}
+.loc li{padding:9px 0;border-bottom:1px solid #eee}
+.loc li:last-child{border:none}
+form{background:#fff;padding:30px;border-radius:14px;box-shadow:0 4px 18px rgba(0,0,0,.08);max-width:640px;margin:0 auto}
+form label{display:block;font-weight:600;margin:14px 0 5px;font-size:.93rem}
+form input,form select,form textarea{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font:inherit}
+form .btn{width:100%;margin-top:20px}
+.thanks{display:none;background:#eaf6ec;border:1px solid #9ccc9c;color:#256029;padding:16px;border-radius:10px;margin-top:18px;text-align:center;font-weight:600}
+.contact-cards{text-align:center}
+.contact-cards a{color:var(--accent);font-weight:700;text-decoration:none;font-size:1.15rem}
+footer{background:var(--accent);color:#e9e4da;text-align:center;padding:36px 20px;margin-top:0}
+footer a{color:#fff}
+footer .note{margin-top:12px;font-size:.88rem;opacity:.85;font-style:italic}
+#chatBtn{position:fixed;bottom:22px;right:22px;z-index:99;background:var(--accent);color:#fff;border:none;border-radius:50px;padding:14px 22px;font-size:1rem;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.3);cursor:pointer}
+#chatPanel{position:fixed;bottom:84px;right:22px;z-index:99;width:min(340px,92vw);background:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.28);display:none;overflow:hidden;max-height:70vh;overflow-y:auto}
+#chatPanel .head{background:var(--accent);color:#fff;padding:16px;font-weight:700}
+#chatPanel .inner{padding:16px}
+.chip{display:inline-block;background:var(--cream);border:1px solid var(--accent2);color:var(--accent);border-radius:20px;padding:6px 13px;margin:0 6px 8px 0;font-size:.85rem;cursor:pointer}
+.chip:hover{background:var(--accent);color:#fff}
+#chatAnswer{background:var(--cream);border-radius:10px;padding:12px;font-size:.92rem;margin:6px 0 12px;min-height:20px}
+#chatPanel details{border-top:1px solid #eee;padding:9px 0;font-size:.92rem}
+#chatPanel summary{cursor:pointer;font-weight:600;color:var(--accent)}
+.chat-contact{display:flex;gap:10px;margin-top:14px}
+.chat-contact a{flex:1;text-align:center;padding:11px;border-radius:10px;text-decoration:none;font-weight:700;color:#fff;background:var(--accent)}
+.chat-contact a.mail{background:var(--accent2)}
+@media(max-width:640px){.nav a{margin-left:10px}.hero img{height:62vh}}
+</style></head>
+<body>
+<header><div class="wrap nav"><div class="logo">Argyll Guest House<small>Glasgow · West End</small></div>
+<nav><a href="#about">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#book">Book</a><a href="#contact">Contact</a></nav></div></header>
+
+<div class="hero"><img src="assets/hero.jpg" alt="Kelvingrove Art Gallery and Museum in Glasgow's West End">
+<div class="overlay"><h1>Argyll Guest House</h1><p>A warm, homely welcome in Glasgow's leafy West End — comfortable rooms, honest value and a proper Scottish breakfast to start your day.</p>
+<div class="btns"><a class="btn" href="#book">Check Availability</a><a class="btn alt" href="tel:01413575155">Call 0141 357 5155</a></div></div></div>
+
+<section id="about"><div class="wrap"><div class="about">
+<div><span class="badge">Rated 4.2 on Google · 18 Rooms</span><h2 style="font-size:1.9rem;color:var(--accent);margin-bottom:14px">A Home From Home in the West End</h2><p>Argyll Guest House is a friendly, budget-conscious guest house in Glasgow's much-loved West End, close to Kelvingrove Park and the Kelvingrove Art Gallery and Museum. With 18 rooms, it is big enough to welcome groups and families, yet small enough to keep the personal, homely feel our guests return for.</p>
+<p style="margin-top:12px">Inside you will find comfortable rooms with rustic, tartan touches, and in the morning a hearty Scottish breakfast sets you up for a day of exploring the city. Whether you are visiting the university, attending an event, or simply discovering Glasgow, you will find a warm welcome here.</p></div>
+<img src="assets/room-double.jpg" alt="A bright, comfortable double bedroom at Argyll Guest House">
+</div></div></section>
+
+<section id="rooms" style="background:#fff"><div class="wrap">
+<h2 class="title">Our Rooms</h2><p class="sub">18 comfortable rooms — singles, doubles, twins and family rooms sleeping up to four.</p>
+<div class="grid c3">
+      <div class="card"><img src="assets/room-single.jpg" alt="Cosy single room with a comfortable single bed">
+        <div class="body"><h3>Single Room</h3><p>A cosy, comfortable room for the solo traveller — everything you need for a restful night at a sensible price.</p><span class="rate">Rates on request</span></div></div>
+      <div class="card"><img src="assets/room-double-twin.jpg" alt="Double/twin room with tartan touches and a fireplace">
+        <div class="body"><h3>Double / Twin Room</h3><p>Flexible rooms set up as a double or with twin beds, finished with traditional tartan touches and a homely feel.</p><span class="rate">Rates on request</span></div></div>
+      <div class="card"><img src="assets/room-family.jpg" alt="Spacious family room with room for up to four guests">
+        <div class="body"><h3>Family Room</h3><p>Spacious family rooms sleeping up to four, giving parents and children room to relax after a day in the city.</p><span class="rate">Rates on request</span></div></div></div>
+<p style="text-align:center;margin-top:26px;color:#555">Rates are available on request — call <a href="tel:01413575155">0141 357 5155</a> or email <a href="mailto:info@argyllguesthouseglasgow.co.uk">info@argyllguesthouseglasgow.co.uk</a> for our best direct-booking rate.</p>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<h2 class="title">Gallery</h2><p class="sub">Around the guest house and our West End neighbourhood.</p>
+<div class="gal">
+      <figure><img src="assets/hero.jpg" alt="Kelvingrove Art Gallery and Museum, Glasgow"><figcaption>Kelvingrove Art Gallery & Museum, on our doorstep</figcaption></figure>
+      <figure><img src="assets/room-double-twin.jpg" alt="Bedroom with tartan throws and thistle headboards"><figcaption>Tartan touches in our bedrooms</figcaption></figure>
+      <figure><img src="assets/room-family.jpg" alt="Family room with space for four"><figcaption>Family rooms sleeping up to four</figcaption></figure>
+      <figure><img src="assets/breakfast.jpg" alt="A full Scottish breakfast with egg, bacon, beans and toast"><figcaption>A proper Scottish breakfast</figcaption></figure>
+      <figure><img src="assets/victorian-street.jpg" alt="Victorian sandstone terraces on a Glasgow street"><figcaption>Victorian terraces of the West End</figcaption></figure>
+      <figure><img src="assets/university-cloisters.jpg" alt="The cloisters of the University of Glasgow"><figcaption>The University of Glasgow cloisters</figcaption></figure></div></div></section>
+
+<section id="location" style="background:#fff"><div class="wrap">
+<h2 class="title">Location &amp; Area</h2><p class="sub">In the heart of Glasgow's West End — the city's café, gallery and park quarter.</p>
+<div class="loc"><ul><li><strong>Kelvingrove Park & Museum</strong> — The West End's beloved park and Glasgow's famous free museum and art gallery are right in the neighbourhood.</li><li><strong>University of Glasgow</strong> — The historic university, with its landmark tower and cloisters, is a short walk away.</li><li><strong>Byres Road & Ashton Lane</strong> — Independent shops, cafés, bars and restaurants along the West End's main streets.</li><li><strong>The River Clyde & City Centre</strong> — Easy transport links carry you to the city centre, the SEC and Glasgow's venues.</li></ul></div></div></section>
+
+<section id="book"><div class="wrap">
+<h2 class="title">Booking Enquiry</h2><p class="sub">Send us an enquiry and we will come back to you with availability and our best rate. Prefer to talk? Call <a href="tel:01413575155">0141 357 5155</a>.</p>
+<form onsubmit="return submitForm(event)">
+<label>Your name</label><input required type="text" placeholder="Full name">
+<label>Email address</label><input required type="email" placeholder="you@example.com">
+<label>Phone number</label><input type="tel" placeholder="Your phone number">
+<label>Check-in date</label><input type="date">
+<label>Check-out date</label><input type="date">
+<label>Room type</label><select><option>Single Room</option><option>Double / Twin Room</option><option>Family Room (sleeps up to 4)</option></select>
+<label>Number of guests</label><input type="number" min="1" max="8" value="2">
+<label>Anything else we should know?</label><textarea rows="3" placeholder="Special requests, arrival time, questions..."></textarea>
+<button class="btn" type="submit">Send Enquiry</button>
+<div class="thanks" id="thanks">Thank you! Your enquiry has been noted — this is a demonstration form, so please also call us on 0141 357 5155 or email info@argyllguesthouseglasgow.co.uk and we will confirm your booking personally.</div>
+</form></div></section>
+
+<section id="contact" style="background:#fff"><div class="wrap contact-cards">
+<h2 class="title">Contact Us</h2><p class="sub">We would love to hear from you — booking direct is always best.</p>
+<p>📞 <a href="tel:01413575155">0141 357 5155</a></p>
+<p style="margin-top:10px">✉️ <a href="mailto:info@argyllguesthouseglasgow.co.uk">info@argyllguesthouseglasgow.co.uk</a></p>
+<p style="margin-top:10px;color:#666">Argyll Guest House, Glasgow</p>
+</div></section>
+
+<footer><p><strong>Argyll Guest House</strong> · Glasgow</p>
+<p style="margin-top:8px"><a href="tel:01413575155">0141 357 5155</a> · <a href="mailto:info@argyllguesthouseglasgow.co.uk">info@argyllguesthouseglasgow.co.uk</a></p>
+<p class="note">Sample website prepared for Argyll Guest House — demonstration only.</p></footer>
+
+<button id="chatBtn" onclick="toggleChat()">💬 Guest Support</button>
+<div id="chatPanel"><div class="head">Guest Support — Argyll Guest House</div><div class="inner">
+<p style="font-size:.92rem;margin-bottom:10px">Hello! Tap a question below, browse our quick answers, or contact us directly — we are happy to help.</p>
+<div><span class="chip" onclick="askQ(this,'Check-in arrangements are confirmed when you book — call us on 0141 357 5155 and we will have everything ready for your arrival.')">What time is check-in?</span><span class="chip" onclick="askQ(this,'Yes — a hearty Scottish breakfast is a much-loved part of a stay with us. Tell us about any dietary needs when you book.')">Do you serve breakfast?</span><span class="chip" onclick="askQ(this,'Call us on 0141 357 5155 before you travel and we will happily advise on parking near the guest house.')">Is parking available?</span><span class="chip" onclick="askQ(this,'Absolutely — booking direct is best. Call 0141 357 5155 or email info@argyllguesthouseglasgow.co.uk for our best rate.')">Can I book direct?</span></div>
+<div id="chatAnswer">Choose a question above and the answer will appear here.</div>
+<details><summary>How many rooms do you have?</summary><p>We have 18 rooms — single, double/twin and family rooms sleeping up to four.</p></details><details><summary>What are your rates?</summary><p>Rates are available on request. Call or email us with your dates and we will quote our best direct rate.</p></details><details><summary>Where are you located?</summary><p>We are in Glasgow's West End, near Kelvingrove Park and the University of Glasgow.</p></details>
+<div class="chat-contact"><a href="tel:01413575155">📞 Call Us</a><a class="mail" href="mailto:info@argyllguesthouseglasgow.co.uk">✉️ Email Us</a></div>
+<p style="font-size:.85rem;color:#666;margin-top:10px;text-align:center">0141 357 5155 · info@argyllguesthouseglasgow.co.uk</p>
+</div></div>
+<script>
+function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display==='block')?'none':'block';}
+function askQ(q,a){document.getElementById('chatAnswer').textContent=a;document.querySelectorAll('.chip').forEach(function(c){c.style.fontWeight='normal'});event.target.style.fontWeight='bold';}
+function submitForm(e){e.preventDefault();document.getElementById('thanks').style.display='block';document.getElementById('thanks').scrollIntoView({behavior:'smooth',block:'center'});e.target.reset();return false;}
+</script>
+</body></html>
