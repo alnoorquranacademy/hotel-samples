@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Gibbs Downtown San Antonio Riverwalk — San Antonio | Sample Website</title>
+<style>:root{--ink:#2b2622;--accent:#a8642f;--accent2:#7d4a20;--bg:#f6efe6;--line:#e7d9c6;--muted:#77685a}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16.5px}
+h1,h2,h3,.serif{font-family:Georgia,'Playfair Display','Times New Roman',serif;font-weight:600;line-height:1.2}
+img{display:block;max-width:100%}
+a{color:var(--accent2)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.topbar{background:var(--ink);color:#f3ead9;font-size:13.5px;letter-spacing:.04em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.topbar a{color:#f3ead9;text-decoration:none}
+header.site{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;gap:16px;flex-wrap:wrap}
+.logo{font-family:Georgia,'Playfair Display',serif;font-size:24px;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+nav.main a{margin-left:26px;text-decoration:none;color:var(--ink);font-size:14.5px;letter-spacing:.08em;text-transform:uppercase}
+nav.main a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 30px;border-radius:999px;font-size:15px;letter-spacing:.05em;border:none;cursor:pointer}
+.btn:hover{background:var(--accent2)}
+.btn.ghost{background:transparent;border:1.5px solid #fff;color:#fff}
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.16) 40%,rgba(20,14,8,.78))}
+.hero .content{position:relative;padding:120px 0 64px;width:100%}
+.hero .kicker{letter-spacing:.34em;text-transform:uppercase;font-size:13px;color:#f0d9b5;margin-bottom:16px}
+.hero h1{font-size:clamp(42px,6.4vw,74px);max-width:840px}
+.hero p.tag{font-family:Georgia,serif;font-style:italic;font-size:clamp(19px,2.4vw,25px);margin-top:14px;color:#f7ecd7;max-width:660px}
+.hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.facts{background:var(--ink);color:#efe6d4}
+.facts .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;padding-top:22px;padding-bottom:22px;text-align:center}
+.facts b{display:block;font-family:Georgia,serif;font-size:19px;color:#fff}
+.facts span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#cbbfa9}
+section{padding:88px 0}
+.kicker2{letter-spacing:.3em;text-transform:uppercase;font-size:12.5px;color:var(--accent);margin-bottom:12px}
+h2.title{font-size:clamp(30px,4vw,42px);margin-bottom:18px}
+.lede{color:var(--muted);max-width:720px;font-size:17.5px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.split img{border-radius:14px;box-shadow:0 24px 50px rgba(30,20,10,.18);width:100%;height:100%;object-fit:cover;max-height:520px}
+.amen{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.amen li{padding-left:22px;position:relative}
+.amen li:before{content:"\2014";position:absolute;left:0;color:var(--accent)}
+.rooms{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(30,20,10,.07);display:flex;flex-direction:column}
+.card img{height:230px;width:100%;object-fit:cover}
+.card .body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:22px}
+.card p{color:var(--muted);font-size:15.5px;flex:1}
+.price{font-family:Georgia,serif;font-size:19px;color:var(--accent2)}
+.price small{font-size:12.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.card.textonly{justify-content:center;background:var(--bg)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+.gallery figure{border-radius:12px;overflow:hidden;position:relative}
+.gallery img{height:250px;width:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;color:#fff;font-size:14px;background:linear-gradient(transparent,rgba(15,10,5,.72))}
+.locgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:36px}
+.loc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.loc h3{font-size:19px;margin-bottom:6px}
+.loc p{color:var(--muted);font-size:15px}
+.contact{background:var(--ink);color:#f1e8d8}
+.contact h2{color:#fff}
+.contact .lede{color:#cfc2ab}
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:54px}
+.cinfo p{margin-bottom:14px}
+.cinfo a{color:#f0d9b5}
+form.book{background:#fff;color:var(--ink);border-radius:14px;padding:30px;--muted:#6f6459}
+form.book label{display:block;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;margin:14px 0 6px;color:#6f6459}
+form.book input,form.book select,form.book textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:15.5px;background:var(--bg)}
+form.book .btn{margin-top:20px;width:100%}
+.thanks{display:none;background:#eef5e9;border:1px solid #bcd3ae;color:#33511f;border-radius:10px;padding:16px 18px;margin-top:18px}
+footer{padding:34px 0 44px;background:var(--ink);color:#bfae94;font-size:14px;border-top:1px solid rgba(255,255,255,.12)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.chatbtn{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:15px 24px;font-size:15.5px;box-shadow:0 14px 34px rgba(20,10,0,.35);cursor:pointer}
+.chatbtn:hover{background:var(--accent2)}
+.chatpanel{position:fixed;right:22px;bottom:86px;z-index:60;width:min(360px,calc(100vw - 32px));background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(20,10,0,.35);overflow:hidden;display:none;border:1px solid var(--line)}
+.chatpanel.open{display:block}
+.chathead{background:var(--ink);color:#fff;padding:18px 20px}
+.chathead b{font-family:Georgia,serif;font-size:18px;display:block}
+.chathead span{font-size:13.5px;color:#d8cbae}
+.chatbody{padding:18px 20px;max-height:330px;overflow:auto}
+.chatbody p{font-size:15px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{border:1.5px solid var(--accent);color:var(--accent2);background:#fff;border-radius:999px;padding:7px 14px;font-size:13.5px;cursor:pointer}
+.chip:hover{background:var(--accent);color:#fff}
+.answer{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14.5px;display:none;color:var(--ink)}
+.chatactions{display:flex;gap:10px;padding:0 20px 20px}
+.chatactions a{flex:1;text-align:center;text-decoration:none;padding:12px;border-radius:10px;font-size:15px}
+.chatactions .call{background:var(--accent);color:#fff}
+.chatactions .mail{border:1.5px solid var(--ink);color:var(--ink)}
+@media(max-width:820px){.split,.cgrid{grid-template-columns:1fr}nav.main{display:none}section{padding:60px 0}.hero{min-height:74vh}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>San Antonio, Texas</span><span><a href="tel:+12109332000">+12109332000</a> &nbsp;·&nbsp; <a href="mailto:info@hotelgibbs.com">info@hotelgibbs.com</a></span></div></div>
+<header class="site"><div class="wrap"><a class="logo" href="#top">Hotel <span>Gibbs</span></a><nav class="main"><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a></nav><a class="btn" href="#contact">Book Your Stay</a></div></header>
+<section class="hero" id="top" style="padding:0">
+<img class="bg" src="assets/hero.jpg" alt="Hotel Gibbs historic building exterior, downtown San Antonio">
+<div class="shade"></div>
+<div class="content"><div class="wrap">
+<p class="kicker">San Antonio, Texas</p>
+<h1>Hotel Gibbs Downtown San Antonio Riverwalk</h1>
+<p class="tag">Historic preservation. Modern design. On the grounds of the original Alamo.</p>
+<div class="cta"><a class="btn" href="#rooms">Explore Rooms</a><a class="btn ghost" href="tel:+12109332000">Call +12109332000</a></div>
+</div></div>
+</section>
+<div class="facts"><div class="wrap"><div><b>1909</b><span>San Antonio’s First High-Rise</span></div><div><b>100 ft</b><span>From the River Walk</span></div><div><b>Daily</b><span>Hot Breakfast Buffet</span></div><div><b>Free</b><span>Wine Tasting for 21+</span></div><div><b>24 hr</b><span>Fitness Center</span></div></div></div>
+<section id="welcome"><div class="wrap"><div class="split">
+<div><p class="kicker2">Welcome</p><h2 class="title">San Antonio’s first high-rise, thoughtfully restored</h2>
+<p class="lede">Originally built in 1909 as San Antonio’s first high-rise, Hotel Gibbs preserves its historic roots - warm wood floors, marble halls and Alamo heritage - while offering a stay designed for today. It stands on the grounds of the original Alamo compound, just steps from the Alamo itself and 100 feet from the River Walk entrance.</p>
+<ul class="amen"><li>Daily hot breakfast buffet</li><li>Complimentary FlorVino wine tasting (21+)</li><li>Free Wi-Fi</li><li>24-hour fitness center</li><li>1909 Bar and Bistro on site</li><li>Pet friendly</li><li>Historic marble lobby</li><li>Steps from the Alamo & River Walk</li></ul></div>
+<div><img src="assets/about.jpg" alt="Historic lobby of Hotel Gibbs"></div>
+</div></div></section>
+<section class="rooms" id="rooms"><div class="wrap">
+<p class="kicker2">Stay With Us</p><h2 class="title">Rooms &amp; Suites</h2>
+<p class="lede">Bright rooms where crisp modern comfort meets 1909 character - several with the Alamo itself framed in the window.</p>
+<div class="grid"><article class="card"><img src="assets/room-queen.jpg" alt="Queen Executive room at Hotel Gibbs"><div class="body"><h3>Queen Room</h3><p>One queen bed sleeping two, with a work desk, walk-in shower and warm wood floors - the classic Gibbs stay.</p><div class="price">From $90 <small>per night</small></div></div></article><article class="card"><img src="assets/room-king.jpg" alt="King Executive room at Hotel Gibbs"><div class="body"><h3>King Room</h3><p>One king bed sleeping two, generous light and historic detail - a calm base in the middle of downtown.</p><div class="price">From $99 <small>per night</small></div></div></article><article class="card"><img src="assets/room-alamo.jpg" alt="King room with Alamo view at Hotel Gibbs"><div class="body"><h3>King Room with View of Alamo</h3><p>Wake to the Alamo itself. One king bed, premium bedding and the most storied view in Texas.</p><div class="price">From $108 <small>per night</small></div></div></article><article class="card"><img src="assets/room-twoqueen.jpg" alt="Two Queen room at Hotel Gibbs"><div class="body"><h3>Two Queen Beds</h3><p>Two queen beds sleeping four - made for families and friends taking on San Antonio together.</p><div class="price">Rates on request <small>per night</small></div></div></article><article class="card"><img src="assets/room-suite.jpg" alt="One-Bedroom King Suite at Hotel Gibbs"><div class="body"><h3>One-Bedroom King Suite</h3><p>A separate living space with a king bedroom - the most room to settle into the city’s history.</p><div class="price">Rates on request <small>per night</small></div></div></article></div>
+</div></section>
+<section id="gallery"><div class="wrap">
+<p class="kicker2">Gallery</p><h2 class="title">Gibbs & the Neighbourhood</h2>
+<div class="gallery"><figure><img src="assets/gallery-alamo.jpg" alt="The Alamo, across the street"><figcaption>The Alamo, across the street</figcaption></figure><figure><img src="assets/gallery-aerial.jpg" alt="The Gibbs building downtown"><figcaption>The Gibbs building downtown</figcaption></figure><figure><img src="assets/gallery-breakfast.jpg" alt="The breakfast buffet"><figcaption>The breakfast buffet</figcaption></figure><figure><img src="assets/gallery-pet.jpg" alt="Furry friends welcome"><figcaption>Furry friends welcome</figcaption></figure></div>
+</div></section>
+<section id="location" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+<p class="kicker2">Location</p><h2 class="title">Discover San Antonio</h2>
+<p class="lede">At 105 N Alamo Street - the Alamo a one-minute walk, the River Walk three minutes, the Convention Center and Tower of the Americas close behind.</p>
+<div class="locgrid"><div class="loc"><h3>The Alamo</h3><p>Literally across the street - a one-minute walk.</p></div><div class="loc"><h3>River Walk</h3><p>100 feet from the main entrance to the colourful riverfront.</p></div><div class="loc"><h3>Henry B. Gonzalez Convention Center</h3><p>A seven-minute walk through downtown.</p></div><div class="loc"><h3>Tower of the Americas</h3><p>Ten minutes away, with the best view in the city.</p></div></div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="cgrid">
+<div class="cinfo"><p class="kicker2">Contact</p><h2 class="title">Plan Your Stay</h2>
+<p class="lede">Questions, celebrations, whole-property enquiries — the team is glad to help, directly and personally.</p>
+<p><strong>Hotel Gibbs Downtown San Antonio Riverwalk</strong><br>105 N Alamo St, San Antonio, TX 78205<br>San Antonio, Texas</p>
+<p>Phone: <a href="tel:+12109332000">+12109332000</a><br>Email: <a href="mailto:info@hotelgibbs.com">info@hotelgibbs.com</a></p>
+</div>
+<div><form class="book" id="bookForm">
+<h3 class="serif" style="font-size:24px">Booking Enquiry</h3>
+<label for="f-name">Your name</label><input id="f-name" required type="text" placeholder="Full name">
+<label for="f-email">Your email</label><input id="f-email" required type="email" placeholder="you@example.com">
+<label for="f-room">Room or suite</label><select id="f-room"><option>Queen Room</option><option>King Room</option><option>King Room with View of Alamo</option><option>Two Queen Beds</option><option>One-Bedroom King Suite</option></select>
+<label for="f-in">Check-in</label><input id="f-in" type="date">
+<label for="f-out">Check-out</label><input id="f-out" type="date">
+<label for="f-msg">Anything we should know?</label><textarea id="f-msg" rows="3" placeholder="Occasion, requests, questions"></textarea>
+<button class="btn" type="submit">Send Enquiry</button>
+<div class="thanks" id="formThanks">Thank you — your enquiry has been noted. The hotel team will reply shortly. For anything urgent, call <a href="tel:+12109332000">+12109332000</a>.</div>
+</form></div>
+</div></div></section>
+<footer><div class="wrap"><span>Hotel Gibbs Downtown San Antonio Riverwalk · San Antonio, Texas</span><span>Sample website prepared for Hotel Gibbs Downtown San Antonio Riverwalk — demonstration only.</span></div></footer>
+<button class="chatbtn" onclick="toggleChat()">Guest Support</button>
+<div class="chatpanel" id="chatPanel">
+<div class="chathead"><b>Hotel Gibbs Downtown San Antonio Riverwalk</b><span>Guest support — replies from the hotel team</span></div>
+<div class="chatbody">
+<p>Hello, and welcome to Hotel Gibbs Downtown San Antonio Riverwalk. Tap a question, or reach the team directly below.</p>
+<div class="chips">
+<button class="chip" onclick="ask('rates')">Rates &amp; availability</button>
+<button class="chip" onclick="ask('checkin')">Check-in times</button>
+<button class="chip" onclick="ask('parking')">Parking</button>
+<button class="chip" onclick="ask('breakfast')">Breakfast</button>
+<button class="chip" onclick="ask('pets')">Pets</button>
+</div>
+<div class="answer" id="chatAnswer"></div>
+</div>
+<div class="chatactions"><a class="call" href="tel:+12109332000">Call the Hotel</a><a class="mail" href="mailto:info@hotelgibbs.com">Email Us</a></div>
+</div>
+<script>var answers = {
+  rates: "Published rates start from $90 for a Queen Room, $99 for a King Room and $108 for a King Room with a view of the Alamo. Send an enquiry above or call +12109332000 to confirm your dates.",
+  checkin: "Our front desk team is on hand around the clock - confirm your arrival when you book and we will have everything ready.",
+  parking: "Valet parking is available (surcharge) - call +12109332000 and the team will arrange the easiest option for your stay.",
+  breakfast: "A daily hot breakfast buffet is served - famous for its breakfast tacos with fluffy scrambled eggs, savoury meats, melted cheese and flavourful toppings.",
+  pets: "Pets are family at Hotel Gibbs - bring them along for $75 per stay and enjoy San Antonio together."
+};
+function toggleChat() {
+  var p = document.getElementById('chatPanel');
+  p.classList.toggle('open');
+}
+function ask(key) {
+  var a = document.getElementById('chatAnswer');
+  a.textContent = answers[key] || '';
+  a.style.display = 'block';
+}
+document.getElementById('bookForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('formThanks').style.display = 'block';
+  this.reset();
+});</script>
+</body>
+</html>
