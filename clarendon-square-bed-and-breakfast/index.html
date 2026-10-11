@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clarendon Square Bed and Breakfast — Boston, Massachusetts</title>
+<meta name="description" content="Clarendon Square Bed and Breakfast in Boston, Massachusetts. Classic elegance in a historic Victorian brownstone">
+<style>
+:root{--ink:#3a2430;--accent:#8e3b46;--accent2:#b08d3e;--bg:#faf6f0;--card:#ffffff;}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+h1,h2,h3{font-family:Georgia,'Playfair Display','Times New Roman',serif;font-weight:600}
+nav,.btn,.chip{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+header{position:sticky;top:0;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);z-index:50}
+.nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px}
+.logo{font-weight:700;font-size:1.2rem;letter-spacing:.03em;font-family:Georgia,serif}
+.logo span{color:var(--accent)}
+nav a{color:var(--ink);text-decoration:none;margin-left:20px;font-size:.82rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.hero{position:relative;min-height:72vh;display:flex;align-items:flex-end;background:url('assets/own-hero.jpg') center/cover no-repeat}
+.hero-overlay{width:100%;background:linear-gradient(transparent,rgba(15,18,25,.78));padding:90px 20px 44px;color:#fff}
+.hero-inner{max-width:1100px;margin:auto}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin-bottom:10px}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);max-width:640px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:700;margin-top:18px;border:none;cursor:pointer;font-size:1rem}
+.btn.alt{background:#fff;color:var(--ink)}
+section{max-width:1100px;margin:auto;padding:76px 20px}
+h2{font-size:2rem;margin-bottom:16px;letter-spacing:.01em}
+h2:after{content:'';display:block;width:56px;height:3px;background:var(--accent2);margin-top:8px;border-radius:2px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.split img,.gallery img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.split img{aspect-ratio:4/3}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.card{background:var(--card);border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.card-body{padding:18px}
+.card h3{margin-bottom:6px;font-size:1.15rem}
+.price{color:var(--accent);font-weight:800;margin-top:10px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gallery figure{aspect-ratio:4/3}
+.gallery figcaption{font-size:.85rem;color:#666;margin-top:6px}
+form{background:#fff;padding:24px;border-radius:14px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+label{display:block;font-weight:700;margin:12px 0 4px;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:.9rem}
+input,textarea,select{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font-size:1rem}
+.thanks{display:none;background:#eef6ec;border:1px solid #bcd8b6;padding:16px;border-radius:10px;margin-top:14px}
+footer{background:var(--ink);color:#eee;padding:36px 20px;text-align:center}
+footer a{color:#fff}
+.chat-btn{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;background:var(--accent);color:#fff;font-size:26px;border:none;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3);z-index:99}
+.chat-panel{position:fixed;right:20px;bottom:92px;width:min(340px,92vw);background:#fff;border-radius:16px;box-shadow:0 12px 40px rgba(0,0,0,.28);z-index:99;display:none;overflow:hidden}
+.chat-panel.open{display:block}
+.chat-head{background:var(--accent);color:#fff;padding:14px 16px;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-weight:700}
+.chat-body{padding:14px 16px;max-height:320px;overflow:auto;font-size:.93rem}
+.chip{display:inline-block;border:1px solid var(--accent);color:var(--accent);background:#fff;border-radius:20px;padding:6px 12px;margin:4px 4px 4px 0;cursor:pointer;font-size:.85rem}
+.chat-actions{display:flex;gap:10px;padding:12px 16px;border-top:1px solid #eee}
+.chat-actions a{flex:1;text-align:center;background:var(--ink);color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-weight:700;font-size:.9rem}
+.answer{background:#f4f1ea;border-radius:10px;padding:10px 12px;margin-top:10px;display:none}
+@media(max-width:760px){.split{grid-template-columns:1fr}nav a{margin-left:10px;font-size:.85rem}}
+</style>
+</head>
+<body>
+<header><div class="nav"><div class="logo">Clarendon Square Bed and Breakfast <span>· Boston</span></div><nav><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#area">Area</a><a href="#book">Book</a></nav></div></header>
+
+<div class="hero"><div class="hero-overlay"><div class="hero-inner">
+<h1>Clarendon Square Bed and Breakfast</h1><p>Classic elegance in a historic Victorian brownstone</p>
+<a class="btn" href="#book">Check Availability</a> <a class="btn alt" href="tel:6175362229">Call 617-536-2229</a>
+</div></div></div>
+
+<section><div class="split"><div>
+<h2>Welcome</h2><p>A classic historic Victorian brownstone in Boston's South End — elegant, traditional luxury with a warm B&B welcome.</p>
+<p style="margin-top:12px">Every stay is looked after personally — book direct with us by phone, email or the enquiry form below, and we will confirm your room ourselves. No call centres, no fuss.</p>
+</div><img src="assets/own-about.jpg" alt="Clarendon Square Bed and Breakfast setting"></div></section>
+
+<section id="rooms"><h2>Rooms &amp; Rates</h2>
+<div class="cards"><div class="card"><img src="assets/own-room1.jpg" alt="Interior Queen Room"><div class="card-body"><h3>Interior Queen Room</h3><p>A quiet interior queen room with classic Victorian styling and elegant traditional details.</p><p class="price">$175 – $895 range (own site)</p></div></div><div class="card"><img src="assets/own-room2.jpg" alt="Deluxe Queen Room"><div class="card-body"><h3>Deluxe Queen Room</h3><p>A deluxe queen with more space, period features and the brownstone&#x27;s timeless charm.</p><p class="price">$175 – $895 range (own site)</p></div></div><div class="card"><img src="assets/own-room3.jpg" alt="Luxury Suite &amp; Queen Suite with Spa Bath"><div class="card-body"><h3>Luxury Suite &amp; Queen Suite with Spa Bath</h3><p>Our suites offer the full brownstone experience — the Queen Suite with Spa Bath is made for indulgent weekends.</p><p class="price">$175 – $895 range (own site)</p></div></div></div></section>
+
+<section id="gallery"><h2>Gallery</h2>
+<div class="gallery"><figure><img src="assets/own-gallery1.jpg" alt="South End brownstones, Boston"><figcaption>South End brownstones, Boston</figcaption></figure><figure><img src="assets/own-gallery2.jpg" alt="Boston Public Garden"><figcaption>Boston Public Garden</figcaption></figure><figure><img src="assets/own-gallery3.jpg" alt="Historic Boston architecture"><figcaption>Historic Boston architecture</figcaption></figure></div></section>
+
+<section id="area"><h2>Location &amp; Area</h2><p>In Boston's elegant South End, Clarendon Square is surrounded by Victorian brownstones, acclaimed restaurants and galleries — with Back Bay and downtown a short walk away.</p></section>
+
+<section id="book"><div class="split"><div>
+<h2>Contact</h2>
+<p><strong>Clarendon Square Bed and Breakfast</strong><br>Boston, Massachusetts<br>
+Phone: <a href="tel:6175362229">617-536-2229</a><br>
+Email: <a href="mailto:stay@clarendonsquare.com">stay@clarendonsquare.com</a></p>
+<p style="margin-top:12px">Questions before you book? Tap the gold support button — or simply call or email us. We reply personally.</p>
+</div>
+<form id="bookForm">
+<h3 style="font-size:1.3rem">Booking Enquiry</h3>
+<label for="f-name">Your name</label><input id="f-name" required>
+<label for="f-email">Your email</label><input id="f-email" type="email" required>
+<label for="f-in">Check-in</label><input id="f-in" type="date">
+<label for="f-out">Check-out</label><input id="f-out" type="date">
+<label for="f-room">Room type</label><select id="f-room"><option>Interior Queen Room</option><option>Deluxe Queen Room</option><option>Luxury Suite &amp; Queen Suite with Spa Bath</option></select>
+<label for="f-msg">Anything we should know?</label><textarea id="f-msg" rows="3"></textarea>
+<button class="btn" type="submit">Send Enquiry</button>
+<div class="thanks" id="thanks">Thank you! Your enquiry has been noted — this is a demonstration form, and the hotel team would confirm your booking personally by email or phone.</div>
+</form></div></section>
+
+<footer><p><strong>Clarendon Square Bed and Breakfast</strong> · Boston, Massachusetts · <a href="tel:6175362229">617-536-2229</a> · <a href="mailto:stay@clarendonsquare.com">stay@clarendonsquare.com</a></p>
+<p style="margin-top:8px;font-size:.85rem;opacity:.85">Sample website prepared for Clarendon Square Bed and Breakfast — demonstration only.</p></footer>
+
+<button class="chat-btn" id="chatBtn" aria-label="Guest support chat">💬</button>
+<div class="chat-panel" id="chatPanel">
+<div class="chat-head">Guest Support — Clarendon Square Bed and Breakfast</div>
+<div class="chat-body"><p>Hello! How can we help? Tap a question, or call/email the hotel directly below.</p>
+<div><button class="chip" onclick="askChat('q0')">Do you serve breakfast?</button><button class="chip" onclick="askChat('q1')">How do I book?</button><button class="chip" onclick="askChat('q2')">Where are you located?</button></div>
+<div class="answer" id="chatAnswer"></div>
+</div>
+<div class="chat-actions"><a href="tel:6175362229">📞 Call Hotel</a><a href="mailto:stay@clarendonsquare.com">✉ Email Hotel</a></div>
+</div>
+
+<script>
+var answers = {"q0": "Yes \u2014 as a bed and breakfast, a proper morning breakfast is part of the stay.", "q1": "Use the booking enquiry form, call us, or email us and we will confirm your dates.", "q2": "In a historic Victorian brownstone in Boston's South End, Massachusetts."};
+document.getElementById('bookForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('thanks').style.display = 'block';
+});
+var panel = document.getElementById('chatPanel');
+document.getElementById('chatBtn').addEventListener('click', function () {
+  panel.classList.toggle('open');
+});
+function askChat(key) {
+  var box = document.getElementById('chatAnswer');
+  box.textContent = answers[key] || 'Please call or email the hotel and we will be happy to help.';
+  box.style.display = 'block';
+}
+</script>
+</body>
+</html>
