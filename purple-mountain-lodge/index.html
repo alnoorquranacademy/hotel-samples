@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Purple Mountain Bed &amp; Breakfast and Spa — Crested Butte, Colorado</title>
+<style>
+:root{--purple:#4a2c6d;--deep:#2e1a47;--lilac:#f1eaf8;--gold:#c9a227;--ink:#2f2a33;--mut:#6d6475}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;color:var(--ink);line-height:1.65;background:#fff}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--deep);line-height:1.2}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 14px rgba(46,26,71,.14)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;flex-wrap:wrap}
+.logo{font-family:Georgia,serif;font-size:1.45rem;color:var(--purple);font-weight:700}
+.logo span{color:var(--gold)}
+.hcontact{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.hphone{color:var(--deep);font-weight:600;text-decoration:none}
+.btn{display:inline-block;background:var(--purple);color:#fff;padding:11px 22px;border-radius:30px;text-decoration:none;font-weight:600;transition:.25s}
+.btn:hover{background:var(--deep)}
+.btn.gold{background:var(--gold);color:var(--deep)}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:url('assets/hero.jpg') center/cover no-repeat}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(46,26,71,.90) 0%,rgba(46,26,71,.28) 55%,transparent 100%)}
+.hero-in{position:relative;z-index:2;color:#fff;padding:110px 0 46px;width:100%}
+.hero h1{color:#fff;font-size:2.9rem;margin-bottom:8px}
+.hero p{font-size:1.2rem;max-width:660px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.badge{background:rgba(255,255,255,.94);color:var(--deep);padding:7px 15px;border-radius:20px;font-size:.88rem;font-weight:700}
+section{padding:64px 0}
+.alt{background:var(--lilac)}
+.kicker{text-transform:uppercase;letter-spacing:2.5px;font-size:.78rem;color:var(--purple);font-weight:700;text-align:center}
+h2.title{text-align:center;font-size:2.1rem;margin:8px 0 12px}
+.sub{text-align:center;color:var(--mut);max-width:740px;margin:0 auto 36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(46,26,71,.12)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card .pad{padding:20px 22px 24px}
+.card h3{font-size:1.22rem;margin-bottom:6px}
+.rate{display:inline-block;margin-top:12px;background:var(--lilac);color:var(--purple);font-weight:700;padding:5px 14px;border-radius:16px;font-size:.9rem}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.about img{width:100%;border-radius:14px;height:100%;object-fit:cover;min-height:320px}
+.hl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.hl .item{background:#fff;border-top:4px solid var(--gold);border-radius:10px;padding:22px;box-shadow:0 4px 16px rgba(46,26,71,.09)}
+.hl h3{font-size:1.08rem;margin-bottom:6px}
+.hl p{color:var(--mut);font-size:.95rem}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.gal figure{border-radius:12px;overflow:hidden}
+.gal img{width:100%;height:210px;object-fit:cover;display:block;transition:.35s}
+.gal img:hover{transform:scale(1.05)}
+.gal figcaption{background:var(--deep);color:#fff;font-size:.85rem;padding:8px 12px}
+.contact{background:var(--deep);color:#e9e2f2;text-align:center}
+.contact h2{color:#fff}
+.contact a{color:#fff;font-weight:600}
+footer{background:#1d1030;color:#a795bd;text-align:center;padding:24px 16px;font-size:.88rem}
+.chatbtn{position:fixed;right:20px;bottom:20px;z-index:99;width:58px;height:58px;border-radius:50%;border:none;background:var(--purple);color:#fff;font-size:26px;cursor:pointer;box-shadow:0 8px 22px rgba(46,26,71,.4)}
+.chatpanel{position:fixed;right:20px;bottom:88px;z-index:99;width:300px;max-width:calc(100vw - 40px);background:#fff;border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.28);padding:20px;display:none}
+.chatpanel.open{display:block}
+.chatpanel h3{margin-bottom:6px}
+.chatpanel p{color:var(--mut);font-size:.92rem;margin-bottom:14px}
+.chatpanel a{display:block;text-align:center;margin-bottom:9px;padding:11px;border-radius:9px;text-decoration:none;font-weight:700}
+.cp-call{background:var(--purple);color:#fff}.cp-wa{background:#25d366;color:#fff}.cp-em{background:var(--lilac);color:var(--deep)}
+@media(max-width:760px){.hero h1{font-size:2rem}.about{grid-template-columns:1fr}section{padding:46px 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap hbar">
+<div class="logo">Purple Mountain <span>B&amp;B &amp; Spa</span></div>
+<div class="hcontact"><a class="hphone" href="tel:+19703495888">📞 (970) 349-5888</a><a class="btn" href="tel:+19703495888">Book Direct</a></div>
+</div></header>
+
+<div class="hero"><div class="wrap hero-in">
+<h1>Purple Mountain Bed &amp; Breakfast and Spa</h1>
+<p>A better way to stay in Crested Butte — boutique comfort, a walkable downtown location, and a breakfast worth waking up for.</p>
+<div class="badges"><span class="badge">⭐ Rated 4.9 on Google</span><span class="badge">🏔️ Downtown · 714 Gothic Avenue</span><span class="badge">🧖 In-house day spa</span></div>
+</div></div>
+
+<section><div class="wrap">
+<div class="about">
+<div><p class="kicker" style="text-align:left">Our Story</p>
+<h2 style="font-size:1.9rem;margin:8px 0 12px">Crested Butte's oldest B&amp;B — since 1927</h2>
+<p>Originally built in 1927 as the Crested Butte Big Mine mining office, our lodge began its life as Purple Mountain Lodge in 1976 and today blends old-world charm with modern mountain amenities. Hosts Chris &amp; Mollie Haver — Chris bought the B&amp;B in 2003 — share their years of local knowledge so every guest makes the most of the mountains.</p>
+<p style="margin-top:10px">We're on a quiet street in the town of Crested Butte, within walking distance of the restaurants, bars and historic Elk Avenue — leave the car behind, ride our complimentary townie bikes, or take the free 3-minute town shuttle up to the Mount Crested Butte ski area. An adult-oriented property (16+).</p>
+<p style="margin-top:14px"><a class="btn gold" href="tel:+18773495888">Call Toll-Free 877-349-5888</a></p></div>
+<img src="assets/den.jpg" alt="Purple Mountain lounge with stone fireplace">
+</div></div></section>
+
+<section class="alt" id="rooms"><div class="wrap">
+<p class="kicker">Stay With Us</p><h2 class="title">Six Plush Rooms, Each With a Private Bath</h2>
+<p class="sub">Every room features Egyptian cotton linens, luxury terry robes, free Wi-Fi, a flat-panel TV with Roku streaming and a private bathroom — each named for a beloved local peak.</p>
+<div class="grid">
+<div class="card"><img src="assets/room-teocalli.jpg" alt="Teocalli King Room"><div class="pad"><h3>Teocalli King Room</h3><p>Our largest room and highest amenities, named for 13,208 ft Teocalli Mountain. The only first-floor room, with a private door to the sundeck and outdoor hot tub, large walk-in shower and two vanities.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/room-whetstone.jpg" alt="Whetstone Queen Room"><div class="pad"><h3>Whetstone Queen Room with Balcony</h3><p>Deluxe queen suite with a private second-story balcony and café seating overlooking Whetstone Mountain (12,490 ft), a claw-foot bathtub, walk-in shower and futon sitting area.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/room-twinbuttes.jpg" alt="Twin Buttes Queen Room"><div class="pad"><h3>Twin Buttes Queen Room</h3><p>Queen suite with four magnificent windows framing Mount Crested Butte and Gothic Mountain, a walk-in shower and a full-size futon for relaxing with the view.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/room-paradise.jpg" alt="Paradise Divide Queen Room"><div class="pad"><h3>Paradise Divide Queen Room</h3><p>Cottage-style queen room with a charming slanted ceiling, beautiful wood vanity and an antique cabinet fitted with a china basin. Tub/shower combination bath.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/room-crestedbutte.jpg" alt="Crested Butte Queen Room"><div class="pad"><h3>Crested Butte Queen Room</h3><p>A petite queen room that's a clever use of space — premium amenities and superior comfort, with Mount Crested Butte visible right from the room.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/room-redlady.jpg" alt="Red Lady Standard Room"><div class="pad"><h3>Red Lady Standard Room</h3><p>A cozy full-size bed room named for Mount Emmons — "Red Lady" to locals (12,392 ft). The perfect blend of luxury and convenience, with a walk-in shower.</p><span class="rate">Rates on request</span></div></div>
+</div></div></section>
+
+<section><div class="wrap">
+<p class="kicker">Good To Know</p><h2 class="title">Highlights</h2>
+<div class="hl">
+<div class="item"><h3>🥞 Multi-Course Gourmet Breakfast</h3><p>A new gourmet breakfast each morning from Chef Chris Haver, with locally roasted Camp 4 Coffee — Italian frittatas, Belgian waffles, blue corn blueberry pancakes and mixed berry stuffed French toast.</p></div>
+<div class="item"><h3>🍺 Daily Craft Beer Tastings</h3><p>Four Colorado craft beers on tap plus a rotating Beer of the Day (wine and hard cider too), Monday–Saturday — the perfect way to unwind after the mountain.</p></div>
+<div class="item"><h3>🧖 In-House Day Spa &amp; Hot Tub</h3><p>Massage in the Zen Den — the Deep Soothe full-body massage is $150 for one hour — plus a steam shower, yoga space and our outdoor hot tub under the stars.</p></div>
+<div class="item"><h3>🚲 Bikes, Ski Storage &amp; Shuttle</h3><p>Complimentary townie bikes in summer, slope-side ski storage in winter, and the free town shuttle to the ski base just a short walk away.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<p class="kicker">Gallery</p><h2 class="title">Life at Purple Mountain</h2>
+<div class="gal">
+<figure><img src="assets/breakfast-pancakes.jpg" alt="Blue corn blueberry pancakes"><figcaption>Blue corn blueberry pancakes</figcaption></figure>
+<figure><img src="assets/breakfast-toast.jpg" alt="Peach French toast breakfast"><figcaption>Peach French toast, fresh each morning</figcaption></figure>
+<figure><img src="assets/beer.jpg" alt="Craft beer tasting flight"><figcaption>Afternoon craft beer tastings</figcaption></figure>
+<figure><img src="assets/hottub.jpg" alt="Outdoor hot tub"><figcaption>The outdoor hot tub</figcaption></figure>
+<figure><img src="assets/spa.jpg" alt="Spa massage treatment"><figcaption>In-house day spa</figcaption></figure>
+<figure><img src="assets/dining.jpg" alt="Dining room with mountain views"><figcaption>Breakfast with a view of Mt. Crested Butte</figcaption></figure>
+</div></div></section>
+
+<section class="contact"><div class="wrap">
+<h2 class="title">Book Your Mountain Stay</h2>
+<p>714 Gothic Avenue, Crested Butte, CO 81224<br>
+Phone: <a href="tel:+19703495888">(970) 349-5888</a> · Toll-Free: <a href="tel:+18773495888">877-349-5888</a><br>
+Email: <a href="mailto:mail@purplemountainlodge.com">mail@purplemountainlodge.com</a></p>
+<p style="margin-top:16px"><a class="btn gold" href="tel:+19703495888">Call to Book Direct</a></p>
+</div></section>
+
+<footer>Purple Mountain Bed &amp; Breakfast and Spa · Crested Butte, Colorado<br>Sample website — demonstration only</footer>
+
+<button class="chatbtn" id="chatBtn" aria-label="Chat with us">💬</button>
+<div class="chatpanel" id="chatPanel">
+<h3>Chat with Purple Mountain</h3>
+<p>Questions about a stay, the spa or the mountains? Chris &amp; Mollie are happy to help:</p>
+<a class="cp-call" href="tel:+19703495888">📞 Call (970) 349-5888</a>
+<a class="cp-wa" href="https://wa.me/19703495888" target="_blank" rel="noopener">💬 WhatsApp Us</a>
+<a class="cp-em" href="mailto:mail@purplemountainlodge.com">✉️ Email mail@purplemountainlodge.com</a>
+</div>
+<script>
+var b=document.getElementById('chatBtn'),p=document.getElementById('chatPanel');
+b.addEventListener('click',function(){p.classList.toggle('open');});
+document.addEventListener('click',function(e){if(!p.contains(e.target)&&e.target!==b){p.classList.remove('open');}});
+</script>
+</body>
+</html>
