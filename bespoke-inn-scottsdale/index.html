@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bespoke Inn Scottsdale — Scottsdale, Arizona</title>
+<style>
+:root{--ink:#3a2a20;--accent:#b06036;--bg:#faf4ec;--card:#ffffff;--muted:#6f6a61}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#2b2b2b;line-height:1.65}
+h1,h2,h3,.serif{font-family:Georgia,'Playfair Display','Times New Roman',serif;color:var(--ink)}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+header .brand{font-family:Georgia,'Playfair Display',serif;font-size:1.35rem;letter-spacing:.06em;color:#fff}
+header nav a{color:#f3ead9;text-decoration:none;margin-left:20px;font-size:.92rem;letter-spacing:.04em}
+header nav a:hover{color:var(--accent)}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:url('assets/hero.jpg') center/cover no-repeat}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(20,14,8,.72),rgba(20,14,8,.12) 55%)}
+.hero-in{position:relative;z-index:2;padding:56px 5%;color:#fff;max-width:820px}
+.hero-in h1{color:#fff;font-size:2.9rem;line-height:1.12;letter-spacing:.01em}
+.hero-in p{margin:14px 0 22px;font-size:1.12rem;color:#f5efe2}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 28px;border-radius:3px;text-decoration:none;font-weight:600;letter-spacing:.03em;margin-right:10px;border:none;cursor:pointer;font-size:1rem}
+.btn.ghost{background:transparent;border:1.5px solid #fff;color:#fff}
+section{padding:72px 5%;max-width:1180px;margin:0 auto}
+.kicker{text-transform:uppercase;letter-spacing:.28em;font-size:.74rem;color:var(--accent);font-weight:700;text-align:center}
+h2.title{text-align:center;font-size:2.1rem;margin:10px 0 14px}
+.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
+.card{background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 6px 24px rgba(30,20,10,.09)}
+.card img{height:210px;width:100%;object-fit:cover}
+.card .pad{padding:22px}
+.card h3{font-size:1.22rem;margin-bottom:8px}
+.rate{color:var(--accent);font-weight:700;letter-spacing:.02em}
+.amen{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.amen span{background:#fff;border:1px solid #e4dcc9;padding:9px 16px;border-radius:30px;font-size:.9rem;color:var(--ink)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media(max-width:820px){.split{grid-template-columns:1fr}.hero-in h1{font-size:2.1rem}}
+.gal img{height:250px;width:100%;object-fit:cover;border-radius:8px}
+form{background:#fff;padding:30px;border-radius:8px;box-shadow:0 6px 24px rgba(30,20,10,.09)}
+form label{display:block;font-size:.88rem;font-weight:600;margin:14px 0 5px;color:var(--ink)}
+form input,form select,form textarea{width:100%;padding:11px;border:1px solid #d8d2c4;border-radius:4px;font:inherit}
+.thanks{display:none;background:#eef5ec;border:1px solid #b9d2b2;color:#2e5b2a;padding:16px;border-radius:6px;margin-top:16px}
+footer{background:var(--ink);color:#e9e2d2;padding:44px 5%;text-align:center}
+footer a{color:#fff}
+#chatBtn{position:fixed;right:20px;bottom:20px;z-index:99;background:var(--accent);color:#fff;border:none;border-radius:50px;padding:15px 22px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+#chatPanel{position:fixed;right:20px;bottom:82px;z-index:99;width:340px;max-width:92vw;background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:none;overflow:hidden}
+#chatPanel .hd{background:var(--ink);color:#fff;padding:16px 18px;font-family:Georgia,serif;font-size:1.05rem}
+#chatPanel .bd{padding:16px 18px;max-height:56vh;overflow:auto}
+.chip{display:inline-block;border:1.5px solid var(--accent);color:var(--accent);background:#fff;border-radius:30px;padding:7px 14px;margin:0 6px 8px 0;cursor:pointer;font-size:.86rem;font-weight:600}
+.chip:hover{background:var(--accent);color:#fff}
+.msg{background:var(--bg);border-radius:8px;padding:11px 13px;margin:10px 0;font-size:.93rem;white-space:pre-line}
+.acts{display:flex;gap:10px;padding:0 18px 18px}
+.acts a{flex:1;text-align:center;background:var(--accent);color:#fff;text-decoration:none;padding:11px;border-radius:6px;font-weight:700}
+.acts a.alt{background:var(--ink)}
+</style>
+</head>
+<body>
+<header><div class="brand">Bespoke Inn Scottsdale</div><nav><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a href="#book">Book</a></nav></header>
+
+<div class="hero"><div class="hero-in"><h1>Bespoke Inn Scottsdale</h1><p>Casual luxury in the heart of Old Town's Arts District — Scottsdale, Arizona</p><a class="btn" href="#book">Check Availability</a><a class="btn ghost" href="tel:+18448616715">Call 844-861-6715</a></div></div>
+
+<section id="about"><div class="kicker">Welcome</div><h2 class="title">A Courtyard Hideaway, Purpose-Built in 2013</h2><p class="sub">With just four suites and six guest rooms gathered around a courtyard and a 43-foot infinity-edge pool, Bespoke Inn offers an intimate, design-led stay in Old Town Scottsdale. Dine at Virtù Honest Craft on site, borrow a complimentary Pashley bicycle, and bring your dog — we are proudly pet friendly.</p><div class="amen"><span>43-ft infinity-edge pool</span><span>Virtù Honest Craft restaurant</span><span>Complimentary Pashley bikes</span><span>Pet-friendly rooms</span><span>Free parking & Wi-Fi</span><span>In-room pour-over coffee, tea & sparkling water</span></div></section>
+
+<section id="rooms"><div class="kicker">Stay</div><h2 class="title">Rooms &amp; Suites</h2><p class="sub">Every stay is quoted personally — <strong>rates on request</strong>. Call <a href="tel:+18448616715">844-861-6715</a> or send an inquiry below.</p><div class="grid"><div class="card"><img src="assets/room-penthouse.jpg" alt="The Penthouse"><div class="pad"><h3>The Penthouse</h3><p>Our largest suite: king bed on the second floor, chef's kitchen, dining for eight, soaking tub and shower, and private access to the infinity pool.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div><div class="card"><img src="assets/room-ralphmaggie.jpg" alt="Ralph & Maggie"><div class="pad"><h3>Ralph & Maggie</h3><p>Two queen beds on the ground floor with a soaking tub and shower — antique-style headboards, a glass chandelier and courtyard calm.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div><div class="card"><img src="assets/room-giomaria.jpg" alt="Gio & Maria"><div class="pad"><h3>Gio & Maria</h3><p>Two queen beds on the second floor with a walk-in shower, iron-frame beds and soft farmhouse touches.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div><div class="card"><img src="assets/room-garden.jpg" alt="The Garden"><div class="pad"><h3>The Garden</h3><p>A ground-floor king room with a walk-in shower, sliding barn doors and the courtyard — bicycles included — right outside.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div></div><p class="sub" style="margin-top:28px">Also at the inn: The Loft (king, two stories, clawfoot tub) and The Terrace (king, second floor, terrace over the infinity pool) — ask us for tonight's availability.</p></section>
+
+<section id="gallery"><div class="kicker">Gallery</div><h2 class="title">Life at Bespoke Inn</h2><div class="grid gal"><figure><img src="assets/gallery-courtyard.jpg" alt="The courtyard at dusk"><figcaption style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:8px">The courtyard at dusk</figcaption></figure><figure><img src="assets/gallery-bikes.jpg" alt="Complimentary Pashley bicycles"><figcaption style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:8px">Complimentary Pashley bicycles</figcaption></figure><figure><img src="assets/gallery-dining.jpg" alt="Virtù Honest Craft, our on-site restaurant"><figcaption style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:8px">Virtù Honest Craft, our on-site restaurant</figcaption></figure></div></section>
+
+<section id="location"><div class="split"><div><div class="kicker" style="text-align:left">Location</div><h2 style="font-size:1.9rem;margin:10px 0">Old Town Scottsdale, Steps Away</h2><p>Find us on Marshall Way in the Scottsdale Arts District — galleries, the Scottsdale Museum of Contemporary Art, Old Town's dining and the spring-training ballpark are all an easy walk or bike ride away.</p><p style="margin-top:14px"><strong>3701 N Marshall Way, Scottsdale, AZ 85251</strong></p></div><img src="assets/virtu.jpg" alt="Virtù Honest Craft courtyard at Bespoke Inn" style="border-radius:8px"></div></section>
+
+<section id="contact"><div class="kicker">Contact</div><h2 class="title">Get in Touch</h2><p class="sub">3701 N Marshall Way, Scottsdale, AZ 85251<br>Phone: <a href="tel:+18448616715">844-861-6715</a> &nbsp;·&nbsp; Email: <a href="mailto:info@bespokeinn.com">info@bespokeinn.com</a></p>
+<div id="book"><form id="inqForm"><h3 style="font-size:1.3rem">Booking Inquiry</h3>
+<label>Your name</label><input required type="text" name="name">
+<label>Email</label><input required type="email" name="email">
+<label>Check-in</label><input type="date" name="in">
+<label>Check-out</label><input type="date" name="out">
+<label>Room / suite</label><select name="room"><option>The Penthouse</option><option>Ralph & Maggie</option><option>Gio & Maria</option><option>The Garden</option></select>
+<label>Message</label><textarea rows="3" name="msg"></textarea>
+<button class="btn" type="submit" style="margin-top:18px">Send Inquiry</button>
+<div class="thanks" id="thanks">Thank you! Your inquiry has been noted — the Bespoke Inn team will reply shortly. For anything urgent, call <a href="tel:+18448616715">844-861-6715</a>.</div>
+</form></div></section>
+
+<footer><p style="font-family:Georgia,serif;font-size:1.15rem;color:#fff">Bespoke Inn Scottsdale</p><p>3701 N Marshall Way, Scottsdale, AZ 85251 · <a href="tel:+18448616715">844-861-6715</a> · <a href="mailto:info@bespokeinn.com">info@bespokeinn.com</a></p><p style="margin-top:12px;font-size:.85rem;opacity:.85">Sample website prepared for Bespoke Inn Scottsdale — demonstration only.</p></footer>
+
+<button id="chatBtn" onclick="toggleChat()">💬 Guest Support</button>
+<div id="chatPanel"><div class="hd">Bespoke Inn — Guest Support</div><div class="bd"><p style="font-size:.93rem">Hello! Tap a question, or reach the hotel team directly — they reply personally.</p><div style="margin-top:10px"><button class="chip" onclick="ask("Rates & availability")">Rates & availability</button><button class="chip" onclick="ask("Where are you located?")">Where are you located?</button><button class="chip" onclick="ask("Are pets welcome?")">Are pets welcome?</button><button class="chip" onclick="ask("What is included?")">What is included?</button><button class="chip" onclick="ask("How do I book?")">How do I book?</button></div><div id="chatLog"></div></div><div class="acts"><a href="tel:+18448616715">📞 Call the hotel</a><a class="alt" href="mailto:info@bespokeinn.com">✉ Email us</a></div></div>
+
+<script>
+var ANSWERS = {"Rates & availability": "We quote rates personally \u2014 rates on request. Call 844-861-6715 or email info@bespokeinn.com and we will confirm your dates.", "Where are you located?": "3701 N Marshall Way, Scottsdale, AZ 85251 \u2014 in the heart of Old Town's Arts District.", "Are pets welcome?": "Yes! Our accommodations are pet friendly. Let us know who is travelling with you and review our pet policies before booking.", "What is included?": "Complimentary parking, Wi-Fi, use of our Pashley bikes, and in-room custom-blend pour-over coffee, tea and still and sparkling water.", "How do I book?": "Call 844-861-6715, email info@bespokeinn.com, or send the inquiry form on this page."};
+function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display==='block')?'none':'block';}
+function ask(k){var log=document.getElementById('chatLog');var d=document.createElement('div');d.className='msg';d.textContent=ANSWERS[k]||'';log.appendChild(d);log.scrollTop=log.scrollHeight;}
+document.getElementById('inqForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('thanks').style.display='block';this.reset();});
+</script>
+</body>
+</html>
