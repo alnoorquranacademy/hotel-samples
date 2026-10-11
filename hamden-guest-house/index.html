@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hamden Guest House — Cambridge</title><style>:root{--ink:#2f4a3c;--accent:#b3862c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;color:#2b2b2b;background:#fdfbf7;line-height:1.6}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--ink)}
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);display:flex;justify-content:space-between;align-items:center;padding:14px 5%}
+.logo{font-family:Georgia,serif;font-size:1.35rem;font-weight:bold;color:var(--ink)}
+.logo span{color:var(--accent)}
+nav a{margin-left:22px;text-decoration:none;color:#444;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{position:relative;height:78vh;min-height:480px}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(rgba(10,15,20,.25),rgba(10,15,20,.62));display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:0 5% 52px;color:#fff}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.1}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);max-width:640px;margin:10px 0 18px}
+.badge{display:inline-block;background:var(--accent);color:#fff;padding:6px 14px;border-radius:30px;font-size:.9rem;margin-bottom:14px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 28px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn.light{background:#fff;color:var(--ink);margin-left:10px}
+section{padding:64px 5%;max-width:1180px;margin:0 auto}
+section h2{font-size:2rem;margin-bottom:14px}
+.lead{max-width:760px;color:#555}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:30px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card .body{padding:20px}
+.card h3{margin-bottom:8px}
+.rate{margin-top:12px;font-weight:700;color:var(--accent)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:30px}
+.gallery figure{border-radius:12px;overflow:hidden;position:relative}
+.gallery img{width:100%;height:230px;object-fit:cover;display:block}
+.gallery figcaption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.55);color:#fff;padding:8px 12px;font-size:.9rem}
+.band{background:var(--ink);color:#fff}
+.band .inner{max-width:1180px;margin:0 auto;padding:52px 5%}
+.band h2{color:#fff}
+.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:24px}
+@media(max-width:760px){.contactgrid{grid-template-columns:1fr}nav{display:none}}
+form label{display:block;margin:12px 0 5px;font-weight:600;font-size:.92rem}
+form input,form select,form textarea{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font-size:1rem}
+form button{margin-top:18px;background:var(--accent);color:#fff;border:0;padding:13px 30px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer}
+.thanks{display:none;background:#e9f7ee;border:1px solid #9fd3ae;padding:16px;border-radius:10px;margin-top:16px}
+footer{background:#191919;color:#bbb;text-align:center;padding:34px 5%;font-size:.92rem}
+footer .fname{color:#fff;font-family:Georgia,serif;font-size:1.1rem}
+#chatBtn{position:fixed;right:22px;bottom:22px;z-index:99;background:var(--accent);color:#fff;border:0;border-radius:50px;padding:15px 22px;font-size:1rem;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.3);cursor:pointer}
+#chatPanel{position:fixed;right:22px;bottom:86px;z-index:99;width:330px;max-width:calc(100vw - 32px);background:#fff;border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:none;overflow:hidden}
+#chatPanel .chead{background:var(--ink);color:#fff;padding:16px}
+#chatPanel .cbody{padding:16px;max-height:52vh;overflow:auto}
+.chip{display:inline-block;border:1.5px solid var(--accent);color:var(--ink);background:#fff;border-radius:30px;padding:7px 13px;margin:0 6px 8px 0;font-size:.85rem;cursor:pointer}
+.chip:hover{background:var(--accent);color:#fff}
+#chatAnswer{background:#f4f1ea;border-radius:10px;padding:12px;font-size:.92rem;margin:8px 0 14px;display:none}
+.faq{font-size:.9rem;color:#555}
+.faq p{margin-bottom:8px}
+.cactions{display:flex;gap:10px;padding:0 16px 16px}
+.cactions a{flex:1;text-align:center;padding:11px;border-radius:8px;text-decoration:none;font-weight:700}
+.cactions .call{background:var(--accent);color:#fff}
+.cactions .mail{background:#eee;color:var(--ink)}</style></head>
+<body>
+<header><div class="logo">Hamden <span>Guest House</span></div>
+<nav><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a href="#book">Book</a></nav></header>
+<div class="hero"><img src="assets/hero.jpg" alt="The garden at Hamden Guest House, Cambridge">
+<div class="overlay"><span class="badge">★ 5.0 on Google · Cambridge</span>
+<h1>Hamden Guest House</h1><p>A friendly, family-run guest house in Cambridge — comfortable rooms, a peaceful garden, and a Continental breakfast included in every rate.</p>
+<div><a class="btn" href="#book">Check availability</a><a class="btn light" href="tel:+447999869191">Call 07999 869191</a></div></div></div>
+<section id="welcome"><h2>Welcome to Hamden Guest House</h2><p class="lead">Hamden Guest House is a welcoming family-run B&amp;B in Cambridge, ideal for visitors to the university city, business travellers and families alike. Guests rate us 5.0 on Google. Every room rate includes a Continental breakfast, and our garden is a peaceful spot to unwind after a day in the city.</p></section>
+<section id="rooms"><h2>Our rooms</h2><p class="lead">Single £50 · Double £70 · Twin £80 · Family £120 per night — every rate includes a Continental breakfast.</p><div class="grid"><div class="card"><img src="assets/room-single.jpg" alt="Single Room"><div class="body"><h3>Single Room</h3><p>A cosy single room with a desk — a practical, great-value base for solo travellers visiting Cambridge.</p><p class="rate">£50 per night · incl. Continental breakfast</p></div></div><div class="card"><img src="assets/room-double.jpg" alt="Double Room"><div class="body"><h3>Double Room</h3><p>A comfortable double room with a traditional homely feel, perfect for couples exploring the city.</p><p class="rate">£70 per night · incl. Continental breakfast</p></div></div><div class="card"><img src="assets/room-twin.jpg" alt="Twin Room"><div class="body"><h3>Twin Room</h3><p>A twin room with two comfortable beds — ideal for friends or colleagues travelling together.</p><p class="rate">£80 per night · incl. Continental breakfast</p></div></div><div class="card"><img src="assets/room-family.jpg" alt="Family Room"><div class="body"><h3>Family Room</h3><p>A bright, spacious family room with large windows looking out over the garden.</p><p class="rate">£120 per night · incl. Continental breakfast</p></div></div></div></section>
+<div class="band"><div class="inner"><h2>A peaceful garden to unwind in</h2><p>After a day among the colleges, relax in our garden — or take a stroll to the River Cam and watch the punts go by.</p></div></div>
+<section id="gallery"><h2>Gallery</h2><div class="gallery"><figure><img src="assets/breakfast.jpg" alt="The breakfast room"><figcaption>The breakfast room</figcaption></figure><figure><img src="assets/gallery-room.jpg" alt="A double room"><figcaption>A double room</figcaption></figure><figure><img src="assets/gallery-window.jpg" alt="Garden views from the rooms"><figcaption>Garden views from the rooms</figcaption></figure><figure><img src="assets/gallery-ensuite.jpg" alt="En-suite facilities"><figcaption>En-suite facilities</figcaption></figure><figure><img src="assets/gallery-kings.jpg" alt="King's College, Cambridge"><figcaption>King's College, Cambridge</figcaption></figure><figure><img src="assets/gallery-punting.jpg" alt="Punting on the River Cam"><figcaption>Punting on the River Cam</figcaption></figure></div></section>
+<section id="location"><h2>Location &amp; the area</h2><p class="lead">Hamden Guest House is in Cambridge, the famous university city on the River Cam. Visit the historic colleges, see King's College Chapel, punt along the Backs past the Mathematical Bridge, and enjoy the city's museums, shops and cafés — all within easy reach of the house.</p></section>
+<section id="contact"><h2>Contact &amp; booking</h2>
+<div class="contactgrid"><div id="book"><h3>Booking enquiry</h3>
+<form id="bookForm"><label>Your name</label><input required type="text" placeholder="Full name">
+<label>Email</label><input required type="email" placeholder="you@example.com">
+<label>Check-in</label><input required type="date"><label>Check-out</label><input required type="date">
+<label>Room</label><select><option>Single Room</option><option>Double Room</option><option>Twin Room</option><option>Family Room</option></select>
+<label>Guests</label><select><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+<label>Message (optional)</label><textarea rows="3" placeholder="Anything we should know?"></textarea>
+<button type="submit">Send enquiry</button><div class="thanks" id="thanks">Thank you! Your enquiry has been noted — Hamden Guest House will be in touch shortly to confirm availability.</div></form></div>
+<div><h3>Talk to us</h3><p>Phone: <a href="tel:+447999869191">07999 869191</a><br>Email: <a href="mailto:info@hamdenguesthouse.co.uk">info@hamdenguesthouse.co.uk</a></p>
+<p style="margin-top:14px">Booking direct is easy: call or email us with your dates and we will confirm availability and the best rate for your stay.</p></div></div></section>
+<footer><p class="fname">Hamden Guest House · Cambridge</p><p>Phone 07999 869191 · info@hamdenguesthouse.co.uk</p>
+<p style="margin-top:10px">Sample website prepared for Hamden Guest House — demonstration only.</p></footer>
+<button id="chatBtn" onclick="toggleChat()">💬 Guest support</button>
+<div id="chatPanel"><div class="chead"><strong>Hamden Guest House</strong><br><small>Guest support — ask us anything</small></div>
+<div class="cbody"><div><button class="chip" onclick="askChip('What time is check-in?')">What time is check-in?</button><button class="chip" onclick="askChip('Do you serve breakfast?')">Do you serve breakfast?</button><button class="chip" onclick="askChip('Is parking available?')">Is parking available?</button><button class="chip" onclick="askChip('Can I book direct?')">Can I book direct?</button></div><div id="chatAnswer"></div><div class="faq"><p><strong>What time is check-in?</strong><br>Check-in arrangements are confirmed when you book — call us on 07999 869191 and we will agree a time that suits you.</p><p><strong>Do you serve breakfast?</strong><br>Yes — a Continental breakfast is included in every room rate.</p><p><strong>Is parking available?</strong><br>Please call us on 07999 869191 and we will happily advise on parking for your stay.</p><p><strong>Can I book direct?</strong><br>Yes — booking direct is easy. Call 07999 869191 or email info@hamdenguesthouse.co.uk with your dates.</p></div></div>
+<div class="cactions"><a class="call" href="tel:+447999869191">📞 Call us</a><a class="mail" href="mailto:info@hamdenguesthouse.co.uk">✉️ Email us</a></div></div>
+<script>
+function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display==='block')?'none':'block';}
+var ANSWERS={"What time is check-in?": "Check-in arrangements are confirmed when you book \u2014 call us on 07999 869191 and we will agree a time that suits you.", "Do you serve breakfast?": "Yes \u2014 a Continental breakfast is included in every room rate.", "Is parking available?": "Please call us on 07999 869191 and we will happily advise on parking for your stay.", "Can I book direct?": "Yes \u2014 booking direct is easy. Call 07999 869191 or email info@hamdenguesthouse.co.uk with your dates."};
+function askChip(q){var a=document.getElementById('chatAnswer');a.style.display='block';a.innerHTML='<strong>'+q+'</strong><br>'+ANSWERS[q];}
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('thanks').style.display='block';this.reset();window.scrollTo({top:document.getElementById('book').offsetTop,behavior:'smooth'});});
+</script>
+</body></html>
