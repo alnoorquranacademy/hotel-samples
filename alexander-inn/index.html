@@ -3,93 +3,188 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bespoke Inn Scottsdale — Scottsdale, Arizona</title>
-<style>
-:root{--ink:#3a2a20;--accent:#b06036;--bg:#faf4ec;--card:#ffffff;--muted:#6f6a61}
+<title>Alexander Inn — Philadelphia | Sample Website</title>
+<style>:root{--ink:#1e2a3a;--accent:#b08d4c;--accent2:#8a6c33;--bg:#f7f3ec;--line:#e5dcc9;--muted:#68707c}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:#2b2b2b;line-height:1.65}
-h1,h2,h3,.serif{font-family:Georgia,'Playfair Display','Times New Roman',serif;color:var(--ink)}
-img{max-width:100%;display:block}
-a{color:var(--accent)}
-header{position:sticky;top:0;z-index:50;background:var(--ink);color:#fff;padding:14px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-header .brand{font-family:Georgia,'Playfair Display',serif;font-size:1.35rem;letter-spacing:.06em;color:#fff}
-header nav a{color:#f3ead9;text-decoration:none;margin-left:20px;font-size:.92rem;letter-spacing:.04em}
-header nav a:hover{color:var(--accent)}
-.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:url('assets/hero.jpg') center/cover no-repeat}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(20,14,8,.72),rgba(20,14,8,.12) 55%)}
-.hero-in{position:relative;z-index:2;padding:56px 5%;color:#fff;max-width:820px}
-.hero-in h1{color:#fff;font-size:2.9rem;line-height:1.12;letter-spacing:.01em}
-.hero-in p{margin:14px 0 22px;font-size:1.12rem;color:#f5efe2}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 28px;border-radius:3px;text-decoration:none;font-weight:600;letter-spacing:.03em;margin-right:10px;border:none;cursor:pointer;font-size:1rem}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:16.5px}
+h1,h2,h3,.serif{font-family:Georgia,'Playfair Display','Times New Roman',serif;font-weight:600;line-height:1.2}
+img{display:block;max-width:100%}
+a{color:var(--accent2)}
+.wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+.topbar{background:var(--ink);color:#f3ead9;font-size:13.5px;letter-spacing:.04em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap}
+.topbar a{color:#f3ead9;text-decoration:none}
+header.site{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px;gap:16px;flex-wrap:wrap}
+.logo{font-family:Georgia,'Playfair Display',serif;font-size:24px;color:var(--ink);text-decoration:none}
+.logo span{color:var(--accent)}
+nav.main a{margin-left:26px;text-decoration:none;color:var(--ink);font-size:14.5px;letter-spacing:.08em;text-transform:uppercase}
+nav.main a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 30px;border-radius:999px;font-size:15px;letter-spacing:.05em;border:none;cursor:pointer}
+.btn:hover{background:var(--accent2)}
 .btn.ghost{background:transparent;border:1.5px solid #fff;color:#fff}
-section{padding:72px 5%;max-width:1180px;margin:0 auto}
-.kicker{text-transform:uppercase;letter-spacing:.28em;font-size:.74rem;color:var(--accent);font-weight:700;text-align:center}
-h2.title{text-align:center;font-size:2.1rem;margin:10px 0 14px}
-.sub{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
-.card{background:var(--card);border-radius:8px;overflow:hidden;box-shadow:0 6px 24px rgba(30,20,10,.09)}
-.card img{height:210px;width:100%;object-fit:cover}
-.card .pad{padding:22px}
-.card h3{font-size:1.22rem;margin-bottom:8px}
-.rate{color:var(--accent);font-weight:700;letter-spacing:.02em}
-.amen{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.amen span{background:#fff;border:1px solid #e4dcc9;padding:9px 16px;border-radius:30px;font-size:.9rem;color:var(--ink)}
-.split{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
-@media(max-width:820px){.split{grid-template-columns:1fr}.hero-in h1{font-size:2.1rem}}
-.gal img{height:250px;width:100%;object-fit:cover;border-radius:8px}
-form{background:#fff;padding:30px;border-radius:8px;box-shadow:0 6px 24px rgba(30,20,10,.09)}
-form label{display:block;font-size:.88rem;font-weight:600;margin:14px 0 5px;color:var(--ink)}
-form input,form select,form textarea{width:100%;padding:11px;border:1px solid #d8d2c4;border-radius:4px;font:inherit}
-.thanks{display:none;background:#eef5ec;border:1px solid #b9d2b2;color:#2e5b2a;padding:16px;border-radius:6px;margin-top:16px}
-footer{background:var(--ink);color:#e9e2d2;padding:44px 5%;text-align:center}
-footer a{color:#fff}
-#chatBtn{position:fixed;right:20px;bottom:20px;z-index:99;background:var(--accent);color:#fff;border:none;border-radius:50px;padding:15px 22px;font-size:1rem;font-weight:700;cursor:pointer;box-shadow:0 8px 22px rgba(0,0,0,.28)}
-#chatPanel{position:fixed;right:20px;bottom:82px;z-index:99;width:340px;max-width:92vw;background:#fff;border-radius:12px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:none;overflow:hidden}
-#chatPanel .hd{background:var(--ink);color:#fff;padding:16px 18px;font-family:Georgia,serif;font-size:1.05rem}
-#chatPanel .bd{padding:16px 18px;max-height:56vh;overflow:auto}
-.chip{display:inline-block;border:1.5px solid var(--accent);color:var(--accent);background:#fff;border-radius:30px;padding:7px 14px;margin:0 6px 8px 0;cursor:pointer;font-size:.86rem;font-weight:600}
+.hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;color:#fff}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,14,8,.16) 40%,rgba(20,14,8,.78))}
+.hero .content{position:relative;padding:120px 0 64px;width:100%}
+.hero .kicker{letter-spacing:.34em;text-transform:uppercase;font-size:13px;color:#f0d9b5;margin-bottom:16px}
+.hero h1{font-size:clamp(42px,6.4vw,74px);max-width:840px}
+.hero p.tag{font-family:Georgia,serif;font-style:italic;font-size:clamp(19px,2.4vw,25px);margin-top:14px;color:#f7ecd7;max-width:660px}
+.hero .cta{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
+.facts{background:var(--ink);color:#efe6d4}
+.facts .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;padding-top:22px;padding-bottom:22px;text-align:center}
+.facts b{display:block;font-family:Georgia,serif;font-size:19px;color:#fff}
+.facts span{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:#cbbfa9}
+section{padding:88px 0}
+.kicker2{letter-spacing:.3em;text-transform:uppercase;font-size:12.5px;color:var(--accent);margin-bottom:12px}
+h2.title{font-size:clamp(30px,4vw,42px);margin-bottom:18px}
+.lede{color:var(--muted);max-width:720px;font-size:17.5px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.split img{border-radius:14px;box-shadow:0 24px 50px rgba(30,20,10,.18);width:100%;height:100%;object-fit:cover;max-height:520px}
+.amen{list-style:none;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
+.amen li{padding-left:22px;position:relative}
+.amen li:before{content:"\2014";position:absolute;left:0;color:var(--accent)}
+.rooms{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;margin-top:40px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(30,20,10,.07);display:flex;flex-direction:column}
+.card img{height:230px;width:100%;object-fit:cover}
+.card .body{padding:24px 26px 28px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:22px}
+.card p{color:var(--muted);font-size:15.5px;flex:1}
+.price{font-family:Georgia,serif;font-size:19px;color:var(--accent2)}
+.price small{font-size:12.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.card.textonly{justify-content:center;background:var(--bg)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:40px}
+.gallery figure{border-radius:12px;overflow:hidden;position:relative}
+.gallery img{height:250px;width:100%;object-fit:cover}
+.gallery figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;color:#fff;font-size:14px;background:linear-gradient(transparent,rgba(15,10,5,.72))}
+.locgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;margin-top:36px}
+.loc{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px}
+.loc h3{font-size:19px;margin-bottom:6px}
+.loc p{color:var(--muted);font-size:15px}
+.contact{background:var(--ink);color:#f1e8d8}
+.contact h2{color:#fff}
+.contact .lede{color:#cfc2ab}
+.cgrid{display:grid;grid-template-columns:1fr 1.2fr;gap:54px}
+.cinfo p{margin-bottom:14px}
+.cinfo a{color:#f0d9b5}
+form.book{background:#fff;color:var(--ink);border-radius:14px;padding:30px;--muted:#6f6459}
+form.book label{display:block;font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;margin:14px 0 6px;color:#6f6459}
+form.book input,form.book select,form.book textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:8px;font:inherit;font-size:15.5px;background:var(--bg)}
+form.book .btn{margin-top:20px;width:100%}
+.thanks{display:none;background:#eef5e9;border:1px solid #bcd3ae;color:#33511f;border-radius:10px;padding:16px 18px;margin-top:18px}
+footer{padding:34px 0 44px;background:var(--ink);color:#bfae94;font-size:14px;border-top:1px solid rgba(255,255,255,.12)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.chatbtn{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--accent);color:#fff;border:none;border-radius:999px;padding:15px 24px;font-size:15.5px;box-shadow:0 14px 34px rgba(20,10,0,.35);cursor:pointer}
+.chatbtn:hover{background:var(--accent2)}
+.chatpanel{position:fixed;right:22px;bottom:86px;z-index:60;width:min(360px,calc(100vw - 32px));background:#fff;border-radius:16px;box-shadow:0 24px 60px rgba(20,10,0,.35);overflow:hidden;display:none;border:1px solid var(--line)}
+.chatpanel.open{display:block}
+.chathead{background:var(--ink);color:#fff;padding:18px 20px}
+.chathead b{font-family:Georgia,serif;font-size:18px;display:block}
+.chathead span{font-size:13.5px;color:#d8cbae}
+.chatbody{padding:18px 20px;max-height:330px;overflow:auto}
+.chatbody p{font-size:15px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{border:1.5px solid var(--accent);color:var(--accent2);background:#fff;border-radius:999px;padding:7px 14px;font-size:13.5px;cursor:pointer}
 .chip:hover{background:var(--accent);color:#fff}
-.msg{background:var(--bg);border-radius:8px;padding:11px 13px;margin:10px 0;font-size:.93rem;white-space:pre-line}
-.acts{display:flex;gap:10px;padding:0 18px 18px}
-.acts a{flex:1;text-align:center;background:var(--accent);color:#fff;text-decoration:none;padding:11px;border-radius:6px;font-weight:700}
-.acts a.alt{background:var(--ink)}
+.answer{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:14.5px;display:none;color:var(--ink)}
+.chatactions{display:flex;gap:10px;padding:0 20px 20px}
+.chatactions a{flex:1;text-align:center;text-decoration:none;padding:12px;border-radius:10px;font-size:15px}
+.chatactions .call{background:var(--accent);color:#fff}
+.chatactions .mail{border:1.5px solid var(--ink);color:var(--ink)}
+@media(max-width:820px){.split,.cgrid{grid-template-columns:1fr}nav.main{display:none}section{padding:60px 0}.hero{min-height:74vh}}
 </style>
 </head>
 <body>
-<header><div class="brand">Bespoke Inn Scottsdale</div><nav><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a href="#book">Book</a></nav></header>
-
-<div class="hero"><div class="hero-in"><h1>Bespoke Inn Scottsdale</h1><p>Casual luxury in the heart of Old Town's Arts District — Scottsdale, Arizona</p><a class="btn" href="#book">Check Availability</a><a class="btn ghost" href="tel:+18448616715">Call 844-861-6715</a></div></div>
-
-<section id="about"><div class="kicker">Welcome</div><h2 class="title">A Courtyard Hideaway, Purpose-Built in 2013</h2><p class="sub">With just four suites and six guest rooms gathered around a courtyard and a 43-foot infinity-edge pool, Bespoke Inn offers an intimate, design-led stay in Old Town Scottsdale. Dine at Virtù Honest Craft on site, borrow a complimentary Pashley bicycle, and bring your dog — we are proudly pet friendly.</p><div class="amen"><span>43-ft infinity-edge pool</span><span>Virtù Honest Craft restaurant</span><span>Complimentary Pashley bikes</span><span>Pet-friendly rooms</span><span>Free parking & Wi-Fi</span><span>In-room pour-over coffee, tea & sparkling water</span></div></section>
-
-<section id="rooms"><div class="kicker">Stay</div><h2 class="title">Rooms &amp; Suites</h2><p class="sub">Every stay is quoted personally — <strong>rates on request</strong>. Call <a href="tel:+18448616715">844-861-6715</a> or send an inquiry below.</p><div class="grid"><div class="card"><img src="assets/room-penthouse.jpg" alt="The Penthouse"><div class="pad"><h3>The Penthouse</h3><p>Our largest suite: king bed on the second floor, chef's kitchen, dining for eight, soaking tub and shower, and private access to the infinity pool.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div><div class="card"><img src="assets/room-ralphmaggie.jpg" alt="Ralph & Maggie"><div class="pad"><h3>Ralph & Maggie</h3><p>Two queen beds on the ground floor with a soaking tub and shower — antique-style headboards, a glass chandelier and courtyard calm.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div><div class="card"><img src="assets/room-giomaria.jpg" alt="Gio & Maria"><div class="pad"><h3>Gio & Maria</h3><p>Two queen beds on the second floor with a walk-in shower, iron-frame beds and soft farmhouse touches.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div><div class="card"><img src="assets/room-garden.jpg" alt="The Garden"><div class="pad"><h3>The Garden</h3><p>A ground-floor king room with a walk-in shower, sliding barn doors and the courtyard — bicycles included — right outside.</p><p class="rate" style="margin-top:10px">Rates on request</p></div></div></div><p class="sub" style="margin-top:28px">Also at the inn: The Loft (king, two stories, clawfoot tub) and The Terrace (king, second floor, terrace over the infinity pool) — ask us for tonight's availability.</p></section>
-
-<section id="gallery"><div class="kicker">Gallery</div><h2 class="title">Life at Bespoke Inn</h2><div class="grid gal"><figure><img src="assets/gallery-courtyard.jpg" alt="The courtyard at dusk"><figcaption style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:8px">The courtyard at dusk</figcaption></figure><figure><img src="assets/gallery-bikes.jpg" alt="Complimentary Pashley bicycles"><figcaption style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:8px">Complimentary Pashley bicycles</figcaption></figure><figure><img src="assets/gallery-dining.jpg" alt="Virtù Honest Craft, our on-site restaurant"><figcaption style="text-align:center;color:var(--muted);font-size:.88rem;margin-top:8px">Virtù Honest Craft, our on-site restaurant</figcaption></figure></div></section>
-
-<section id="location"><div class="split"><div><div class="kicker" style="text-align:left">Location</div><h2 style="font-size:1.9rem;margin:10px 0">Old Town Scottsdale, Steps Away</h2><p>Find us on Marshall Way in the Scottsdale Arts District — galleries, the Scottsdale Museum of Contemporary Art, Old Town's dining and the spring-training ballpark are all an easy walk or bike ride away.</p><p style="margin-top:14px"><strong>3701 N Marshall Way, Scottsdale, AZ 85251</strong></p></div><img src="assets/virtu.jpg" alt="Virtù Honest Craft courtyard at Bespoke Inn" style="border-radius:8px"></div></section>
-
-<section id="contact"><div class="kicker">Contact</div><h2 class="title">Get in Touch</h2><p class="sub">3701 N Marshall Way, Scottsdale, AZ 85251<br>Phone: <a href="tel:+18448616715">844-861-6715</a> &nbsp;·&nbsp; Email: <a href="mailto:info@bespokeinn.com">info@bespokeinn.com</a></p>
-<div id="book"><form id="inqForm"><h3 style="font-size:1.3rem">Booking Inquiry</h3>
-<label>Your name</label><input required type="text" name="name">
-<label>Email</label><input required type="email" name="email">
-<label>Check-in</label><input type="date" name="in">
-<label>Check-out</label><input type="date" name="out">
-<label>Room / suite</label><select name="room"><option>The Penthouse</option><option>Ralph & Maggie</option><option>Gio & Maria</option><option>The Garden</option></select>
-<label>Message</label><textarea rows="3" name="msg"></textarea>
-<button class="btn" type="submit" style="margin-top:18px">Send Inquiry</button>
-<div class="thanks" id="thanks">Thank you! Your inquiry has been noted — the Bespoke Inn team will reply shortly. For anything urgent, call <a href="tel:+18448616715">844-861-6715</a>.</div>
-</form></div></section>
-
-<footer><p style="font-family:Georgia,serif;font-size:1.15rem;color:#fff">Bespoke Inn Scottsdale</p><p>3701 N Marshall Way, Scottsdale, AZ 85251 · <a href="tel:+18448616715">844-861-6715</a> · <a href="mailto:info@bespokeinn.com">info@bespokeinn.com</a></p><p style="margin-top:12px;font-size:.85rem;opacity:.85">Sample website prepared for Bespoke Inn Scottsdale — demonstration only.</p></footer>
-
-<button id="chatBtn" onclick="toggleChat()">💬 Guest Support</button>
-<div id="chatPanel"><div class="hd">Bespoke Inn — Guest Support</div><div class="bd"><p style="font-size:.93rem">Hello! Tap a question, or reach the hotel team directly — they reply personally.</p><div style="margin-top:10px"><button class="chip" onclick="ask("Rates & availability")">Rates & availability</button><button class="chip" onclick="ask("Where are you located?")">Where are you located?</button><button class="chip" onclick="ask("Are pets welcome?")">Are pets welcome?</button><button class="chip" onclick="ask("What is included?")">What is included?</button><button class="chip" onclick="ask("How do I book?")">How do I book?</button></div><div id="chatLog"></div></div><div class="acts"><a href="tel:+18448616715">📞 Call the hotel</a><a class="alt" href="mailto:info@bespokeinn.com">✉ Email us</a></div></div>
-
-<script>
-var ANSWERS = {"Rates & availability": "We quote rates personally \u2014 rates on request. Call 844-861-6715 or email info@bespokeinn.com and we will confirm your dates.", "Where are you located?": "3701 N Marshall Way, Scottsdale, AZ 85251 \u2014 in the heart of Old Town's Arts District.", "Are pets welcome?": "Yes! Our accommodations are pet friendly. Let us know who is travelling with you and review our pet policies before booking.", "What is included?": "Complimentary parking, Wi-Fi, use of our Pashley bikes, and in-room custom-blend pour-over coffee, tea and still and sparkling water.", "How do I book?": "Call 844-861-6715, email info@bespokeinn.com, or send the inquiry form on this page."};
-function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display==='block')?'none':'block';}
-function ask(k){var log=document.getElementById('chatLog');var d=document.createElement('div');d.className='msg';d.textContent=ANSWERS[k]||'';log.appendChild(d);log.scrollTop=log.scrollHeight;}
-document.getElementById('inqForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('thanks').style.display='block';this.reset();});
-</script>
+<div class="topbar"><div class="wrap"><span>Philadelphia, Pennsylvania</span><span><a href="tel:+12159233535">+12159233535</a> &nbsp;·&nbsp; <a href="mailto:info@alexanderinn.com">info@alexanderinn.com</a></span></div></div>
+<header class="site"><div class="wrap"><a class="logo" href="#top">Alexander <span>Inn</span></a><nav class="main"><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a></nav><a class="btn" href="#contact">Book Your Stay</a></div></header>
+<section class="hero" id="top" style="padding:0">
+<img class="bg" src="assets/hero.jpg" alt="Alexander Inn historic red-brick building, Philadelphia">
+<div class="shade"></div>
+<div class="content"><div class="wrap">
+<p class="kicker">Philadelphia, Pennsylvania</p>
+<h1>Alexander Inn</h1>
+<p class="tag">A 1930s ocean-liner boutique hotel in the heart of Center City.</p>
+<div class="cta"><a class="btn" href="#rooms">Explore Rooms</a><a class="btn ghost" href="tel:+12159233535">Call +12159233535</a></div>
+</div></div>
+</section>
+<div class="facts"><div class="wrap"><div><b>48</b><span>Designer Rooms</span></div><div><b>$135-$179</b><span>Published Room Rates</span></div><div><b>Free</b><span>Continental Breakfast</span></div><div><b>5:00-7:30pm</b><span>Evening Lobby Social</span></div><div><b>Center City</b><span>Heart of Philadelphia</span></div></div></div>
+<section id="welcome"><div class="wrap"><div class="split">
+<div><p class="kicker2">Welcome</p><h2 class="title">Ocean-liner Art Deco, Philadelphia warmth</h2>
+<p class="lede">Behind the red doors at 301 South 12th Street, the Alexander Inn pairs 1930s ocean-liner Art Deco design with the ease of a neighbourhood inn. Forty-eight designer rooms, a complimentary continental breakfast, and an evening lobby social with wine and snacks - all in the heart of Center City, one block from the Broad Street subway line.</p>
+<ul class="amen"><li>Complimentary continental breakfast</li><li>Evening lobby social - wine & snacks, 5:00-7:30pm</li><li>Pet friendly - pets stay free</li><li>Free WiFi throughout</li><li>24-hour front desk</li><li>Discounted parking nearby at Parkway Garage</li><li>Bay-window seats & city views in Deluxe rooms</li><li>One block from Broad Street subway</li></ul></div>
+<div><img src="assets/about.jpg" alt="Sitting nook at the Alexander Inn"></div>
+</div></div></section>
+<section class="rooms" id="rooms"><div class="wrap">
+<p class="kicker2">Stay With Us</p><h2 class="title">Rooms &amp; Suites</h2>
+<p class="lede">Forty-eight designer rooms across seven floors. Published rates run $135-$179 per night - book direct for the warmest welcome in Center City.</p>
+<div class="grid"><article class="card"><img src="assets/room-king.jpg" alt="Deluxe King room with bay window at Alexander Inn"><div class="body"><h3>Deluxe King Room</h3><p>A king bed, bathroom with tub and shower, and the inn’s signature bay-window seat looking over the city - the room guests ask for by name.</p><div class="price">$135-$179 <small>per night</small></div></div></article><article class="card"><img src="assets/room-queen.jpg" alt="Queen room at Alexander Inn"><div class="body"><h3>Deluxe Queen Corner Room</h3><p>A queen bed in a light-filled corner setting with a bay-window seating area and tub/shower bathroom - Art Deco lines, modern comfort.</p><div class="price">$135-$179 <small>per night</small></div></div></article><article class="card"><img src="assets/room-desk.jpg" alt="Vanity and desk detail, Alexander Inn room"><div class="body"><h3>Standard Queen & Full Rooms</h3><p>One queen or one double bed, stand-up shower, and everything the Center City explorer needs - including breakfast and the evening social.</p><div class="price">$135-$179 <small>per night</small></div></div></article><article class="card textonly"><div class="body"><h3>Double Your Pleasure & Combo Rooms</h3><p>Two double beds with mini refrigerator, or one double plus one twin - made for friends, families and theatre weekends in the city.</p><div class="price">$135-$179 <small>per night</small></div></div></article></div>
+</div></section>
+<section id="gallery"><div class="wrap">
+<p class="kicker2">Gallery</p><h2 class="title">Inside the Alexander</h2>
+<div class="gallery"><figure><img src="assets/gallery-breakfast.jpg" alt="Breakfast, Alexander style"><figcaption>Breakfast, Alexander style</figcaption></figure><figure><img src="assets/gallery-door.jpg" alt="The red door at 301"><figcaption>The red door at 301</figcaption></figure><figure><img src="assets/gallery-wine.jpg" alt="Evening lobby social"><figcaption>Evening lobby social</figcaption></figure><figure><img src="assets/gallery-entrance.jpg" alt="The inn on 12th Street"><figcaption>The inn on 12th Street</figcaption></figure></div>
+</div></section>
+<section id="location" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+<p class="kicker2">Location</p><h2 class="title">Discover Philadelphia</h2>
+<p class="lede">Six blocks from the Liberty Bell and Independence Hall, two blocks from Midtown Village restaurants and boutiques - Philadelphia’s most walkable neighbourhood, outside the door.</p>
+<div class="locgrid"><div class="loc"><h3>Liberty Bell & Independence Hall</h3><p>Two of America’s most iconic landmarks, six blocks away.</p></div><div class="loc"><h3>Reading Terminal Market</h3><p>Philadelphia’s beloved indoor food market, a 15-minute stroll.</p></div><div class="loc"><h3>Theatres</h3><p>Academy of Music, Kimmel Center and Walnut Street Theatre nearby.</p></div><div class="loc"><h3>Philadelphia Museum of Art</h3><p>World-class art - and the famous Rocky Steps.</p></div></div>
+</div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="cgrid">
+<div class="cinfo"><p class="kicker2">Contact</p><h2 class="title">Plan Your Stay</h2>
+<p class="lede">Questions, celebrations, whole-property enquiries — the team is glad to help, directly and personally.</p>
+<p><strong>Alexander Inn</strong><br>301 S 12th St, Philadelphia, PA<br>Philadelphia, Pennsylvania</p>
+<p>Phone: <a href="tel:+12159233535">+12159233535</a><br>Email: <a href="mailto:info@alexanderinn.com">info@alexanderinn.com</a></p>
+</div>
+<div><form class="book" id="bookForm">
+<h3 class="serif" style="font-size:24px">Booking Enquiry</h3>
+<label for="f-name">Your name</label><input id="f-name" required type="text" placeholder="Full name">
+<label for="f-email">Your email</label><input id="f-email" required type="email" placeholder="you@example.com">
+<label for="f-room">Room or suite</label><select id="f-room"><option>Deluxe King Room</option><option>Deluxe Queen Corner Room</option><option>Standard Queen & Full Rooms</option><option>Double Your Pleasure & Combo Rooms</option></select>
+<label for="f-in">Check-in</label><input id="f-in" type="date">
+<label for="f-out">Check-out</label><input id="f-out" type="date">
+<label for="f-msg">Anything we should know?</label><textarea id="f-msg" rows="3" placeholder="Occasion, requests, questions"></textarea>
+<button class="btn" type="submit">Send Enquiry</button>
+<div class="thanks" id="formThanks">Thank you — your enquiry has been noted. The hotel team will reply shortly. For anything urgent, call <a href="tel:+12159233535">+12159233535</a>.</div>
+</form></div>
+</div></div></section>
+<footer><div class="wrap"><span>Alexander Inn · Philadelphia, Pennsylvania</span><span>Sample website prepared for Alexander Inn — demonstration only.</span></div></footer>
+<button class="chatbtn" onclick="toggleChat()">Guest Support</button>
+<div class="chatpanel" id="chatPanel">
+<div class="chathead"><b>Alexander Inn</b><span>Guest support — replies from the hotel team</span></div>
+<div class="chatbody">
+<p>Hello, and welcome to Alexander Inn. Tap a question, or reach the team directly below.</p>
+<div class="chips">
+<button class="chip" onclick="ask('rates')">Rates &amp; availability</button>
+<button class="chip" onclick="ask('checkin')">Check-in times</button>
+<button class="chip" onclick="ask('parking')">Parking</button>
+<button class="chip" onclick="ask('breakfast')">Breakfast</button>
+<button class="chip" onclick="ask('pets')">Pets</button>
+</div>
+<div class="answer" id="chatAnswer"></div>
+</div>
+<div class="chatactions"><a class="call" href="tel:+12159233535">Call the Hotel</a><a class="mail" href="mailto:info@alexanderinn.com">Email Us</a></div>
+</div>
+<script>var answers = {
+  rates: "Our published rates run $135-$179 per night depending on room and date. Send an enquiry above or call +12159233535 and we will confirm the best direct rate.",
+  checkin: "Our front desk is staffed 24 hours, so arrivals are flexible - send your enquiry and we will confirm your check-in and check-out times directly.",
+  parking: "Guests enjoy a 10% discounted hourly rate at the Parkway Garage, 1201 Walnut St, Philadelphia, PA 19107.",
+  breakfast: "A complimentary continental breakfast is included with every stay, every morning of your visit.",
+  pets: "We are proudly pet friendly - and pets stay free at the Alexander Inn."
+};
+function toggleChat() {
+  var p = document.getElementById('chatPanel');
+  p.classList.toggle('open');
+}
+function ask(key) {
+  var a = document.getElementById('chatAnswer');
+  a.textContent = answers[key] || '';
+  a.style.display = 'block';
+}
+document.getElementById('bookForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  document.getElementById('formThanks').style.display = 'block';
+  this.reset();
+});</script>
 </body>
 </html>
