@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A Room With A View — Brighton</title><style>:root{--ink:#274b5c;--accent:#b3862c}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',Arial,sans-serif;color:#2b2b2b;background:#fdfbf7;line-height:1.6}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--ink)}
+header{position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);display:flex;justify-content:space-between;align-items:center;padding:14px 5%}
+.logo{font-family:Georgia,serif;font-size:1.35rem;font-weight:bold;color:var(--ink)}
+.logo span{color:var(--accent)}
+nav a{margin-left:22px;text-decoration:none;color:#444;font-size:.95rem}
+nav a:hover{color:var(--accent)}
+.hero{position:relative;height:78vh;min-height:480px}
+.hero img{width:100%;height:100%;object-fit:cover;display:block}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(rgba(10,15,20,.25),rgba(10,15,20,.62));display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;padding:0 5% 52px;color:#fff}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.6rem);line-height:1.1}
+.hero p{font-size:clamp(1rem,2vw,1.25rem);max-width:640px;margin:10px 0 18px}
+.badge{display:inline-block;background:var(--accent);color:#fff;padding:6px 14px;border-radius:30px;font-size:.9rem;margin-bottom:14px}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:13px 28px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn.light{background:#fff;color:var(--ink);margin-left:10px}
+section{padding:64px 5%;max-width:1180px;margin:0 auto}
+section h2{font-size:2rem;margin-bottom:14px}
+.lead{max-width:760px;color:#555}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:30px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card .body{padding:20px}
+.card h3{margin-bottom:8px}
+.rate{margin-top:12px;font-weight:700;color:var(--accent)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:30px}
+.gallery figure{border-radius:12px;overflow:hidden;position:relative}
+.gallery img{width:100%;height:230px;object-fit:cover;display:block}
+.gallery figcaption{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.55);color:#fff;padding:8px 12px;font-size:.9rem}
+.band{background:var(--ink);color:#fff}
+.band .inner{max-width:1180px;margin:0 auto;padding:52px 5%}
+.band h2{color:#fff}
+.contactgrid{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:24px}
+@media(max-width:760px){.contactgrid{grid-template-columns:1fr}nav{display:none}}
+form label{display:block;margin:12px 0 5px;font-weight:600;font-size:.92rem}
+form input,form select,form textarea{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font-size:1rem}
+form button{margin-top:18px;background:var(--accent);color:#fff;border:0;padding:13px 30px;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer}
+.thanks{display:none;background:#e9f7ee;border:1px solid #9fd3ae;padding:16px;border-radius:10px;margin-top:16px}
+footer{background:#191919;color:#bbb;text-align:center;padding:34px 5%;font-size:.92rem}
+footer .fname{color:#fff;font-family:Georgia,serif;font-size:1.1rem}
+#chatBtn{position:fixed;right:22px;bottom:22px;z-index:99;background:var(--accent);color:#fff;border:0;border-radius:50px;padding:15px 22px;font-size:1rem;font-weight:700;box-shadow:0 8px 24px rgba(0,0,0,.3);cursor:pointer}
+#chatPanel{position:fixed;right:22px;bottom:86px;z-index:99;width:330px;max-width:calc(100vw - 32px);background:#fff;border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:none;overflow:hidden}
+#chatPanel .chead{background:var(--ink);color:#fff;padding:16px}
+#chatPanel .cbody{padding:16px;max-height:52vh;overflow:auto}
+.chip{display:inline-block;border:1.5px solid var(--accent);color:var(--ink);background:#fff;border-radius:30px;padding:7px 13px;margin:0 6px 8px 0;font-size:.85rem;cursor:pointer}
+.chip:hover{background:var(--accent);color:#fff}
+#chatAnswer{background:#f4f1ea;border-radius:10px;padding:12px;font-size:.92rem;margin:8px 0 14px;display:none}
+.faq{font-size:.9rem;color:#555}
+.faq p{margin-bottom:8px}
+.cactions{display:flex;gap:10px;padding:0 16px 16px}
+.cactions a{flex:1;text-align:center;padding:11px;border-radius:8px;text-decoration:none;font-weight:700}
+.cactions .call{background:var(--accent);color:#fff}
+.cactions .mail{background:#eee;color:var(--ink)}</style></head>
+<body>
+<header><div class="logo">A Room <span>With A View</span></div>
+<nav><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a href="#book">Book</a></nav></header>
+<div class="hero"><img src="assets/hero.jpg" alt="The balcony at A Room With A View, overlooking Brighton beach">
+<div class="overlay"><span class="badge">★ 4.9 on Google · Brighton</span>
+<h1>A Room With A View</h1><p>A contemporary boutique seafront B&amp;B in a Grade II listed Georgian building — nine rooms, most with breathtaking sea views.</p>
+<div><a class="btn" href="#book">Check availability</a><a class="btn light" href="tel:+441273682885">Call +441273682885</a></div></div></div>
+<section id="welcome"><h2>Welcome to A Room With A View</h2><p class="lead">A Room With A View is a boutique bed &amp; breakfast on Brighton seafront, in a Grade II listed Georgian building, rated 4.9 on Google. Its nine rooms range from a cosy single to a deluxe king — and true to our name, the sea views from our rooms and rooftop balcony are unforgettable.</p></section>
+<section id="rooms"><h2>Our rooms</h2><p class="lead">Nine rooms, from single to deluxe king size. For live rates and the best direct price, call us or check availability — we are always happy to help you choose the right room.</p><div class="grid"><div class="card"><img src="assets/room-deluxe.jpg" alt="Deluxe King Sea View"><div class="body"><h3>Deluxe King Sea View</h3><p>Our finest room — a deluxe king bed in a sweeping curved bay with panoramic views over Brighton beach and the sea.</p><p class="rate">Rates confirmed on enquiry — call +441273682885</p></div></div><div class="card"><img src="assets/room-king.jpg" alt="King Size Room"><div class="body"><h3>King Size Room</h3><p>A bright, elegant king room with plantation shutters and stylish contemporary touches.</p><p class="rate">Rates confirmed on enquiry — call +441273682885</p></div></div><div class="card"><img src="assets/room-double.jpg" alt="Double Room"><div class="body"><h3>Double Room</h3><p>A beautifully finished double room with a bold, contemporary boutique feel.</p><p class="rate">Rates confirmed on enquiry — call +441273682885</p></div></div><div class="card"><img src="assets/room-single.jpg" alt="Single Room"><div class="body"><h3>Single Room</h3><p>A smart, comfortable single room with a desk — perfect for solo travellers who still want the seafront location.</p><p class="rate">Rates confirmed on enquiry — call +441273682885</p></div></div></div></section>
+<div class="band"><div class="inner"><h2>Wake up to the sea</h2><p>Step onto the balcony and take in the whole of Brighton beach — from the Palace Pier to the West Pier — then enjoy breakfast in our light-filled dining room.</p></div></div>
+<section id="gallery"><h2>Gallery</h2><div class="gallery"><figure><img src="assets/gallery-balcony.jpg" alt="The rooftop balcony"><figcaption>The rooftop balcony</figcaption></figure><figure><img src="assets/gallery-breakfast.jpg" alt="The breakfast room"><figcaption>The breakfast room</figcaption></figure><figure><img src="assets/gallery-seaview.jpg" alt="Sea views from the rooms"><figcaption>Sea views from the rooms</figcaption></figure><figure><img src="assets/gallery-fireplace.jpg" alt="A room with fireplace"><figcaption>A room with fireplace</figcaption></figure><figure><img src="assets/gallery-rooftop.jpg" alt="The rooftop balcony room"><figcaption>The rooftop balcony room</figcaption></figure><figure><img src="assets/gallery-room.jpg" alt="A sea-view double"><figcaption>A sea-view double</figcaption></figure></div></section>
+<section id="location"><h2>Location &amp; the area</h2><p class="lead">A Room With A View stands on Brighton seafront, facing the beach and the Palace Pier. The Royal Pavilion, the Lanes and Brighton's famous restaurants, bars and shops are all an easy walk along the promenade.</p></section>
+<section id="contact"><h2>Contact &amp; booking</h2>
+<div class="contactgrid"><div id="book"><h3>Booking enquiry</h3>
+<form id="bookForm"><label>Your name</label><input required type="text" placeholder="Full name">
+<label>Email</label><input required type="email" placeholder="you@example.com">
+<label>Check-in</label><input required type="date"><label>Check-out</label><input required type="date">
+<label>Room</label><select><option>Deluxe King Sea View</option><option>King Size Room</option><option>Double Room</option><option>Single Room</option></select>
+<label>Guests</label><select><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select>
+<label>Message (optional)</label><textarea rows="3" placeholder="Anything we should know?"></textarea>
+<button type="submit">Send enquiry</button><div class="thanks" id="thanks">Thank you! Your enquiry has been noted — A Room With A View will be in touch shortly to confirm availability.</div></form></div>
+<div><h3>Talk to us</h3><p>Phone: <a href="tel:+441273682885">+441273682885</a><br>Email: <a href="mailto:info@aroomwithaviewbrighton.com">info@aroomwithaviewbrighton.com</a></p>
+<p style="margin-top:14px">Booking direct is easy: call or email us with your dates and we will confirm availability and the best rate for your stay.</p></div></div></section>
+<footer><p class="fname">A Room With A View · Brighton</p><p>Phone +441273682885 · info@aroomwithaviewbrighton.com</p>
+<p style="margin-top:10px">Sample website prepared for A Room With A View — demonstration only.</p></footer>
+<button id="chatBtn" onclick="toggleChat()">💬 Guest support</button>
+<div id="chatPanel"><div class="chead"><strong>A Room With A View</strong><br><small>Guest support — ask us anything</small></div>
+<div class="cbody"><div><button class="chip" onclick="askChip('What time is check-in?')">What time is check-in?</button><button class="chip" onclick="askChip('Do you serve breakfast?')">Do you serve breakfast?</button><button class="chip" onclick="askChip('Is parking available?')">Is parking available?</button><button class="chip" onclick="askChip('Can I book direct?')">Can I book direct?</button></div><div id="chatAnswer"></div><div class="faq"><p><strong>What time is check-in?</strong><br>Check-in arrangements are confirmed when you book — call us on +441273682885 and we will agree a time that suits you.</p><p><strong>Do you serve breakfast?</strong><br>Breakfast is served in our dining room each morning — ask us when you book and we will tell you what is served during your visit.</p><p><strong>Is parking available?</strong><br>Please call us on +441273682885 and we will happily advise on parking for your stay in Brighton.</p><p><strong>Can I book direct?</strong><br>Yes — booking direct is easy. Call +441273682885 or email info@aroomwithaviewbrighton.com with your dates.</p></div></div>
+<div class="cactions"><a class="call" href="tel:+441273682885">📞 Call us</a><a class="mail" href="mailto:info@aroomwithaviewbrighton.com">✉️ Email us</a></div></div>
+<script>
+function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display==='block')?'none':'block';}
+var ANSWERS={"What time is check-in?": "Check-in arrangements are confirmed when you book \u2014 call us on +441273682885 and we will agree a time that suits you.", "Do you serve breakfast?": "Breakfast is served in our dining room each morning \u2014 ask us when you book and we will tell you what is served during your visit.", "Is parking available?": "Please call us on +441273682885 and we will happily advise on parking for your stay in Brighton.", "Can I book direct?": "Yes \u2014 booking direct is easy. Call +441273682885 or email info@aroomwithaviewbrighton.com with your dates."};
+function askChip(q){var a=document.getElementById('chatAnswer');a.style.display='block';a.innerHTML='<strong>'+q+'</strong><br>'+ANSWERS[q];}
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('thanks').style.display='block';this.reset();window.scrollTo({top:document.getElementById('book').offsetTop,behavior:'smooth'});});
+</script>
+</body></html>
