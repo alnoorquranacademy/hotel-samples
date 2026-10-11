@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Townhouse Exeter — Exeter</title><meta name="description" content="Townhouse Exeter, Exeter — duvets | dishes | guesthouse">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#22201d;--muted:#6b6660;--bg:#faf8f5;--card:#fff;--accent:#2e2a26;--accent2:#c8a24a;--line:#e7e1d8}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.65}
+.sans{font-family:'Helvetica Neue',Arial,sans-serif}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:1.45rem;letter-spacing:.04em;color:var(--accent);font-weight:bold;text-decoration:none}
+.logo small{display:block;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif;font-weight:normal}
+nav.links a{margin-left:18px;color:var(--ink);text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.92rem}
+nav.links a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff!important;padding:11px 22px;border-radius:30px;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.92rem;border:none;cursor:pointer}
+.btn.light{background:transparent;border:1.5px solid #fff}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:#111}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.62))}
+.hero-in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:56px 20px;width:100%;color:#fff}
+.hero-in h1{font-size:clamp(2.2rem,5.5vw,4rem);line-height:1.08;font-weight:normal;max-width:760px}
+.hero-in p{font-size:1.15rem;max-width:620px;margin:14px 0 22px;color:#f3efe9}
+.badge{display:inline-block;background:var(--accent2);color:#1c1a17;padding:5px 14px;border-radius:20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+section{max-width:1180px;margin:0 auto;padding:64px 20px}
+h2{font-size:2rem;font-weight:normal;color:var(--accent);margin-bottom:8px}
+.sub{color:var(--muted);max-width:680px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{width:100%;height:230px;object-fit:cover;display:block}
+.card .pad{padding:20px}
+.card h3{font-size:1.25rem;font-weight:normal;margin-bottom:6px}
+.rate{display:inline-block;margin-top:12px;background:#f3eee6;color:var(--accent);padding:5px 14px;border-radius:16px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.85rem;font-weight:bold}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal figure{border-radius:12px;overflow:hidden;position:relative}
+.gal img{width:100%;height:210px;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;padding:22px 12px 8px;font-size:.88rem;font-family:'Helvetica Neue',Arial,sans-serif}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.split img{width:100%;height:340px;object-fit:cover;border-radius:14px}
+@media(max-width:760px){.split{grid-template-columns:1fr}nav.links{display:none}}
+form{display:grid;gap:12px;max-width:640px}
+input,select,textarea{padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;width:100%;background:#fff}
+.thanks{display:none;background:#eef6ee;border:1px solid #bcd8bc;padding:18px;border-radius:10px;font-family:'Helvetica Neue',Arial,sans-serif}
+footer{background:#1d1a17;color:#cfc8bd;padding:44px 20px;font-family:'Helvetica Neue',Arial,sans-serif}
+footer .in{max-width:1180px;margin:0 auto;display:grid;gap:8px}
+footer a{color:#fff}
+#chatBtn{position:fixed;right:20px;bottom:20px;z-index:99;background:var(--accent);color:#fff;border:none;border-radius:30px;padding:14px 20px;font-size:.95rem;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3);font-family:'Helvetica Neue',Arial,sans-serif}
+#chatPanel{position:fixed;right:20px;bottom:78px;z-index:99;width:min(350px,92vw);background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.32);display:none;overflow:hidden;font-family:'Helvetica Neue',Arial,sans-serif}
+#chatPanel.open{display:block}
+#chatPanel .head{background:var(--accent);color:#fff;padding:14px 16px;font-weight:bold}
+#chatPanel .body{padding:14px 16px;max-height:60vh;overflow:auto}
+.chip{display:inline-block;border:1px solid var(--accent);color:var(--accent);border-radius:18px;padding:6px 12px;margin:0 6px 8px 0;font-size:.82rem;cursor:pointer;background:#fff}
+.chip:hover{background:var(--accent);color:#fff}
+#chatAnswer{background:#f6f2ec;border-radius:10px;padding:10px 12px;font-size:.88rem;margin:8px 0 12px;display:none}
+.faq{font-size:.86rem;color:#444;border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+.faq b{color:var(--ink)}
+.chat-actions{display:flex;gap:8px;margin-top:12px}
+.chat-actions a{flex:1;text-align:center;padding:10px;border-radius:9px;text-decoration:none;font-size:.88rem}
+.call{background:var(--accent);color:#fff}.mail{background:#f0ebe3;color:var(--ink)}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#">Townhouse Exeter<small>Exeter · Guest House</small></a>
+<nav class="links"><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a class="btn" href="#book">Book Direct</a></nav></div></header>
+<div class="hero"><img src="assets/hero.jpg" alt="Exeter Cathedral Green"><div class="hero-in">
+<span class="badge">Boutique Guesthouse · 9 En-Suite Rooms</span><h1>duvets | dishes | guesthouse</h1><p>Townhouse Exeter is a chic boutique townhouse in Exeter — nine stylish en-suite rooms, period features, and breakfast brought to your room.</p>
+<a class="btn" href="#book">Check Availability</a> <a class="btn light" href="#rooms">Explore Rooms</a></div></div>
+
+<section id="welcome"><div class="split"><div><h2>Welcome to Townhouse Exeter</h2>
+<p>Townhouse Exeter blends contemporary style with the character of a period townhouse. Behind the front door you will find nine stylish en-suite rooms, each individually finished — crisp duvets, thoughtful design touches and space to truly unwind.</p><p style="margin-top:12px">Our signature is simple: duvets, dishes and a proper guesthouse welcome. Breakfast is served in-room, so your morning can start slowly, exactly as it should — before a day exploring Exeter's cathedral quarter, independent shops and historic quayside.</p></div>
+<img src="assets/lounge.jpg" alt="The townhouse lounge"></div></section>
+
+<section id="rooms" style="padding-top:10px"><h2>Our Rooms</h2><p class="sub">Nine individually styled en-suite rooms — three signature styles are shown here. Every rate is confirmed personally: rates on request.</p>
+<div class="grid"><div class="card"><img src="assets/room3.jpg" alt="The Classic En-Suite"><div class="pad"><h3>The Classic En-Suite</h3><p>Light, elegant and calm — a stylish double bed, period features and a modern en-suite bathroom.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/room2.jpg" alt="The Boutique En-Suite"><div class="pad"><h3>The Boutique En-Suite</h3><p>Bold, design-led styling with plush textures and a luxurious double bed — made for a special weekend.</p><span class="rate">Rates on request</span></div></div>
+<div class="card"><img src="assets/room1.jpg" alt="The Deluxe En-Suite"><div class="pad"><h3>The Deluxe En-Suite</h3><p>Our most indulgent style: a sumptuous bed, a seating corner and an en-suite finished to boutique standard.</p><span class="rate">Rates on request</span></div></div></div></section>
+
+<section id="gallery" style="padding-top:10px"><h2>Gallery</h2><p class="sub">Inside the townhouse — and out into historic Exeter.</p>
+<div class="gal"><figure><img src="assets/room1.jpg" alt="Deluxe en-suite bedroom"><figcaption>Deluxe en-suite bedroom</figcaption></figure>
+<figure><img src="assets/breakfast-tray.jpg" alt="Breakfast served in your room"><figcaption>Breakfast served in your room</figcaption></figure>
+<figure><img src="assets/cathedral.jpg" alt="Exeter Cathedral"><figcaption>Exeter Cathedral</figcaption></figure>
+<figure><img src="assets/quayside.jpg" alt="Exeter Quayside from above"><figcaption>Exeter Quayside from above</figcaption></figure>
+<figure><img src="assets/lounge.jpg" alt="The townhouse lounge"><figcaption>The townhouse lounge</figcaption></figure>
+<figure><img src="assets/room3.jpg" alt="Classic en-suite bedroom"><figcaption>Classic en-suite bedroom</figcaption></figure></div></section>
+
+<section id="location" style="padding-top:10px"><div class="split"><img src="assets/cathedral.jpg" alt="Exeter Cathedral">
+<div><h2>Exploring Exeter</h2><p>Stay in the heart of historic Exeter. Cathedral Green and the great west front of Exeter Cathedral are the city's postcard view, the Cathedral Close is lined with handsome period buildings, and the Quayside offers riverside dining and walks along the Exe. Townhouse Exeter puts the best of the city within easy reach.</p></div></div></section>
+
+<section id="contact" style="padding-top:10px"><h2>Contact Us</h2>
+<p class="sub">Book direct for a personal welcome — we are always happy to help you plan your stay.</p>
+<p style="font-size:1.1rem">Phone: <a href="tel:+441392494994">+441392494994</a><br>Email: <a href="mailto:info@townhouseexeter.co.uk">info@townhouseexeter.co.uk</a></p></section>
+
+<section id="book" style="padding-top:10px"><h2>Booking Enquiry</h2>
+<p class="sub">Send us your dates and we will confirm availability and rates personally. Rates on request.</p>
+<form id="bookForm"><input required placeholder="Your name"><input required type="email" placeholder="Your email">
+<input required type="tel" placeholder="Your phone"><label class="sans" style="font-size:.85rem;color:var(--muted)">Check-in date</label><input required type="date">
+<label class="sans" style="font-size:.85rem;color:var(--muted)">Check-out date</label><input required type="date">
+<select><option>En-Suite Room — any style</option><option>The Classic En-Suite</option><option>The Boutique En-Suite</option><option>The Deluxe En-Suite</option></select><textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
+<button class="btn" type="submit">Send Enquiry</button></form>
+<div class="thanks" id="thanks">Thank you — your enquiry has been noted. This is a demonstration website, so no message has been sent; on the live site, Townhouse Exeter would reply to confirm availability and rates.</div></section>
+
+<footer><div class="in"><div style="font-size:1.15rem;color:#fff">Townhouse Exeter — Exeter</div>
+<div>Phone: <a href="tel:+441392494994">+441392494994</a> · Email: <a href="mailto:info@townhouseexeter.co.uk">info@townhouseexeter.co.uk</a></div>
+<div>duvets | dishes | guesthouse</div><div style="margin-top:10px;font-size:.85rem">Sample website prepared for Townhouse Exeter — demonstration only.</div></div></footer>
+
+<button id="chatBtn" onclick="toggleChat()">💬 Guest Support</button>
+<div id="chatPanel"><div class="head">Guest Support — Townhouse Exeter</div><div class="body">
+<p style="font-size:.9rem;margin-bottom:10px">Hello! Tap a question, or contact the house directly below.</p>
+<button class="chip" onclick="ask('What time is check-in?')">What time is check-in?</button>
+<button class="chip" onclick="ask('Do you serve breakfast?')">Do you serve breakfast?</button>
+<button class="chip" onclick="ask('Is parking available?')">Is parking available?</button>
+<button class="chip" onclick="ask('Can I book direct?')">Can I book direct?</button><div id="chatAnswer"></div>
+<div class="faq"><p style="margin-bottom:8px"><b>Quick answers</b></p><p><b>What time is check-in?</b><br>We confirm your check-in time personally when you book — call +441392494994 and we will have everything ready for your arrival.</p>
+<p><b>Do you serve breakfast?</b><br>Yes — breakfast is our signature, served in the comfort of your own room. Tell us your preferences when you book.</p>
+<p><b>Is parking available?</b><br>Please call us on +441392494994 for the latest advice on parking near the townhouse before you arrive.</p></div>
+<div class="chat-actions"><a class="call" href="tel:+441392494994">📞 Call Us</a><a class="mail" href="mailto:info@townhouseexeter.co.uk">✉️ Email Us</a></div>
+<p style="font-size:.8rem;color:#777;margin-top:10px">Phone: +441392494994<br>Email: info@townhouseexeter.co.uk</p>
+</div></div>
+<script>
+function toggleChat(){document.getElementById('chatPanel').classList.toggle('open')}
+var {
+'What time is check-in?': 'We confirm your check-in time personally when you book — call +441392494994 and we will have everything ready for your arrival.',
+'Do you serve breakfast?': 'Yes — breakfast is our signature, served in the comfort of your own room. Tell us your preferences when you book.',
+'Is parking available?': 'Please call us on +441392494994 for the latest advice on parking near the townhouse before you arrive.',
+'Can I book direct?': 'Absolutely — booking direct is best. Call +441392494994 or email info@townhouseexeter.co.uk and we will confirm availability and rates.'
+}={{
+'What time is check-in?': 'We confirm your check-in time personally when you book — call +441392494994 and we will have everything ready for your arrival.',
+'Do you serve breakfast?': 'Yes — breakfast is our signature, served in the comfort of your own room. Tell us your preferences when you book.',
+'Is parking available?': 'Please call us on +441392494994 for the latest advice on parking near the townhouse before you arrive.',
+'Can I book direct?': 'Absolutely — booking direct is best. Call +441392494994 or email info@townhouseexeter.co.uk and we will confirm availability and rates.'
+}};
+function ask(q){var a=document.getElementById('chatAnswer');a.style.display='block';a.innerHTML='<b>'+q+'</b><br>'+{
+'What time is check-in?': 'We confirm your check-in time personally when you book — call +441392494994 and we will have everything ready for your arrival.',
+'Do you serve breakfast?': 'Yes — breakfast is our signature, served in the comfort of your own room. Tell us your preferences when you book.',
+'Is parking available?': 'Please call us on +441392494994 for the latest advice on parking near the townhouse before you arrive.',
+'Can I book direct?': 'Absolutely — booking direct is best. Call +441392494994 or email info@townhouseexeter.co.uk and we will confirm availability and rates.'
+}[q];}
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('thanks').style.display='block';});
+</script></body></html>
