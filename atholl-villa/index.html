@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atholl Villa Guest House — 4 Star B&amp;B in Pitlochry, Perthshire</title>
+<style>
+:root{--red:#7d1a1a;--red2:#5a1010;--cream:#fff8f1;--sand:#f3e7da;--stone:#4a4440;--ink:#2b2724;--mut:#77705f}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--red2);color:#f3ddd3;font-size:.85rem;padding:8px 0}
+.topbar .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.topbar a{color:#ffd9a8}
+header.site{background:#fff;border-bottom:3px solid var(--red);position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;gap:12px;flex-wrap:wrap}
+.logo{font-family:Georgia,serif;font-size:1.55rem;color:var(--red);font-weight:700}
+.logo small{display:block;font-family:'Segoe UI',sans-serif;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);font-weight:600}
+nav.main a{color:var(--stone);margin:0 12px;font-weight:600;font-size:.95rem}
+nav.main a:hover{color:var(--red)}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:11px 24px;border-radius:30px;font-weight:700;transition:.2s}
+.btn:hover{background:var(--red2)}
+.btn.ghost{background:transparent;border:2px solid #fff;color:#fff}
+.btn.ghost:hover{background:#fff;color:var(--red2)}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:var(--red2)}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,8,8,.16),rgba(30,8,8,.78))}
+.hero .inner{position:relative;z-index:2;color:#fff;padding:70px 20px 56px;width:100%}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.9rem);line-height:1.12;margin-bottom:10px}
+.hero p.tag{font-size:clamp(1rem,2.2vw,1.3rem);color:#f7e8dc;max-width:660px;margin-bottom:22px}
+.badge{display:inline-block;background:rgba(255,255,255,.94);color:var(--red2);padding:7px 16px;border-radius:30px;font-weight:700;font-size:.88rem;margin-bottom:18px}
+.badge b{color:var(--red)}
+.hero .cta a{margin-right:12px;margin-bottom:10px}
+section{padding:64px 0}
+.kicker{text-transform:uppercase;letter-spacing:.24em;font-size:.74rem;color:var(--red);font-weight:800;text-align:center}
+h2.title{font-size:clamp(1.7rem,3.6vw,2.5rem);text-align:center;color:var(--red2);margin:8px 0 14px}
+.sub{text-align:center;color:var(--mut);max-width:720px;margin:0 auto 38px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.about-grid img{border-radius:14px;box-shadow:0 14px 34px rgba(90,16,16,.16)}
+.about-grid h3{color:var(--red2);font-size:1.5rem;margin-bottom:12px}
+.hl{background:#fff}
+.hl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.hl-card{background:var(--cream);border:1px solid var(--sand);border-top:4px solid var(--red);border-radius:12px;padding:24px}
+.hl-card .ic{font-size:1.7rem;margin-bottom:8px}
+.hl-card h3{color:var(--red2);font-size:1.08rem;margin-bottom:6px}
+.hl-card p{font-size:.93rem;color:var(--mut)}
+.rooms-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.room{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(90,16,16,.10);display:flex;flex-direction:column}
+.room img{height:230px;width:100%;object-fit:cover}
+.room .body{padding:22px;display:flex;flex-direction:column;flex:1}
+.room h3{color:var(--red2);font-size:1.25rem;margin-bottom:6px}
+.room p{font-size:.93rem;color:var(--mut);flex:1}
+.feats{list-style:none;margin:12px 0;font-size:.88rem}
+.feats li:before{content:'✓ ';color:var(--red);font-weight:800}
+.rate{font-family:Georgia,serif;font-size:1.15rem;color:var(--red);font-weight:700;margin-bottom:14px}
+.more-rooms{background:#fff;border:1px solid var(--sand);border-radius:12px;padding:24px;margin-top:24px}
+.more-rooms h3{color:var(--red2);margin-bottom:10px}
+.more-rooms table{width:100%;border-collapse:collapse;font-size:.93rem}
+.more-rooms td{padding:8px 6px;border-bottom:1px solid var(--sand)}
+.more-rooms td:first-child{font-weight:700;color:var(--stone);white-space:nowrap}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gallery-grid figure{border-radius:12px;overflow:hidden;position:relative}
+.gallery-grid img{height:230px;width:100%;object-fit:cover;transition:.3s}
+.gallery-grid figure:hover img{transform:scale(1.05)}
+.gallery-grid figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(30,8,8,.75));color:#fff;font-size:.85rem;padding:26px 14px 10px}
+.contact{background:var(--red2);color:#f3ddd3}
+.contact h2.title{color:#fff}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;text-align:center}
+.contact-grid h3{color:#ffd9a8;margin-bottom:8px;font-size:1.1rem}
+.contact-grid a{color:#fff;font-weight:700}
+footer{background:#2a0b0b;color:#c9a49b;text-align:center;padding:26px 20px;font-size:.86rem}
+.chatbtn{position:fixed;right:20px;bottom:20px;z-index:99;background:var(--red);color:#fff;border:none;border-radius:50%;width:60px;height:60px;font-size:1.55rem;cursor:pointer;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.chatpanel{position:fixed;right:20px;bottom:92px;z-index:99;width:310px;max-width:calc(100vw - 40px);background:#fff;border-radius:14px;box-shadow:0 18px 44px rgba(0,0,0,.28);overflow:hidden;display:none}
+.chatpanel.open{display:block}
+.chatpanel .head{background:var(--red2);color:#fff;padding:16px;font-family:Georgia,serif}
+.chatpanel .head small{display:block;font-family:'Segoe UI',sans-serif;font-size:.8rem;color:#e8cdbf}
+.chatpanel a.row{display:flex;align-items:center;gap:12px;padding:14px 16px;color:var(--ink);font-weight:600;border-top:1px solid #eee}
+.chatpanel a.row:hover{background:var(--cream)}
+@media(max-width:760px){nav.main{display:none}.about-grid{grid-template-columns:1fr}.hero{min-height:64vh}.more-rooms td:first-child{white-space:normal}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>29 Atholl Road, Pitlochry, Perthshire, PH16 5BX</span><span>Call <a href="tel:+441796473820">01796 473820</a> · Free parking available</span></div></div>
+<header class="site"><div class="wrap">
+<div class="logo">Atholl Villa<small>Guest House · Pitlochry</small></div>
+<nav class="main"><a href="#about">About</a><a href="#rooms">Bedrooms</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+<a class="btn" href="tel:+441796473820">Book Direct</a>
+</div></header>
+
+<section class="hero" style="padding:0">
+<img class="bg" src="assets/hero.jpg" alt="Atholl Villa Guest House — Victorian stone house in Pitlochry">
+<div class="inner wrap">
+<div class="badge">★★★★ <b>Visit Scotland 4 Star</b> Guest House</div>
+<h1>Atholl Villa Guest House</h1>
+<p class="tag">A warm welcome awaits you in Pitlochry — a Victorian detached stone guest house in Highland Perthshire, a few minutes' walk from the station, the Festival Theatre and the salmon ladder.</p>
+<div class="cta"><a class="btn" href="tel:+441796473820">Call 01796 473820</a><a class="btn ghost" href="#rooms">View Bedrooms</a></div>
+</div>
+</section>
+
+<section id="about"><div class="wrap">
+<p class="kicker">Welcome</p><h2 class="title">A Warm Welcome Awaits</h2>
+<p class="sub">Atholl Villa is a 4 Star bed and breakfast enjoying a superb location in the pretty town of Pitlochry, set in spacious, tree-bordered grounds at the quiet southern end of Atholl Road.</p>
+<div class="about-grid">
+<img src="assets/garden.jpg" alt="Atholl Villa garden with hanging baskets, looking towards Pitlochry">
+<div>
+<h3>Homely, comfortable, well appointed</h3>
+<p>Our ten en-suite bedrooms are bright, tastefully decorated and appointed to a high standard, across the ground, first and second floors — with quality bedding, Freeview LED televisions, refreshment trays and daily housekeeping. A few bedrooms still retain their feature Victorian fireplaces.</p>
+<p style="margin-top:12px">In the morning, relax in our large conservatory overlooking the garden and choose from a selection of freshly prepared quality breakfasts — including our traditional Scottish breakfast, Buckie smoked haddock and Scottish smoked salmon.</p>
+<p style="margin-top:12px">One of our ground floor bedrooms is an enabled facility with level access for guests with restricted mobility, and our guest lounge offers comfort and tranquillity at the end of an active day.</p>
+<a class="btn" style="margin-top:18px" href="mailto:enquiries@athollvilla.co.uk">Email Us</a>
+</div>
+</div>
+</div></section>
+
+<section class="hl"><div class="wrap">
+<p class="kicker">Good to Know</p><h2 class="title">Highlights</h2>
+<p class="sub">Factual comforts of a stay at Atholl Villa — exactly as we offer them.</p>
+<div class="hl-grid">
+<div class="hl-card"><div class="ic">🏴󐁧󐁢󐁳󐁣󐁴󐁿</div><h3>Full Scottish Breakfast</h3><p>Freshly and individually prepared, served 8:00–9:30am in our conservatory overlooking the garden. Vegetarian and vegan options available.</p></div>
+<div class="hl-card"><div class="ic">🅿️</div><h3>Free On-Site Parking</h3><p>Free parking available on site, with dedicated parking to the rear for our ground floor enabled room.</p></div>
+<div class="hl-card"><div class="ic">🚂</div><h3>5 Minutes from the Station</h3><p>Only a 5-minute walk from Pitlochry station, and close to the Festival Theatre, salmon ladder, restaurants and shops.</p></div>
+<div class="hl-card"><div class="ic">♿</div><h3>Enabled Access Room</h3><p>A ground floor bedroom classed as an enabled facility, with level access to the bedroom, lounge and breakfast room.</p></div>
+<div class="hl-card"><div class="ic">🛋️</div><h3>Guest Lounge</h3><p>Our lounge offers comfort and tranquillity at the end of an active day exploring Highland Perthshire.</p></div>
+<div class="hl-card"><div class="ic">📶</div><h3>Free Wi-Fi</h3><p>Free Wi-Fi in every bedroom, plus Freeview LED TV, refreshment tray, hair dryer and a welcome folder.</p></div>
+</div>
+</div></section>
+
+<section id="rooms"><div class="wrap">
+<p class="kicker">Stay With Us</p><h2 class="title">Our Bedrooms</h2>
+<p class="sub">Ten en-suite bedrooms over three floors — every room includes breakfast. Check-in 14:00–21:00 · Check-out 08:00–10:00.</p>
+<div class="rooms-grid">
+<article class="room"><img src="assets/room-superior.jpg" alt="Superior bedroom with Victorian fireplace at Atholl Villa">
+<div class="body"><h3>Superior Superking / Twin</h3><p>Our superior room — a super-king bed that can be arranged as twins, with a feature Victorian fireplace and elegant crane wallpaper.</p>
+<ul class="feats"><li>2 adults</li><li>En-suite with shower</li><li>1 × Super-king or Twin beds</li><li>Breakfast included</li></ul>
+<div class="rate">Rates on request — call for best price</div>
+<a class="btn" href="tel:+441796473820">Book Direct</a></div></article>
+<article class="room"><img src="assets/room-family.jpg" alt="Superior Family room at Atholl Villa">
+<div class="body"><h3>Superior Family</h3><p>A generous family room with a double bed and two single beds, a large screen television and a large en-suite.</p>
+<ul class="feats"><li>4 adults</li><li>En-suite with shower</li><li>1 × Double bed · 2 × Single beds</li><li>Breakfast included</li></ul>
+<div class="rate">Rates on request — call for best price</div>
+<a class="btn" href="tel:+441796473820">Book Direct</a></div></article>
+<article class="room"><img src="assets/conservatory.jpg" alt="Atholl Villa conservatory breakfast room">
+<div class="body"><h3>Breakfast in the Conservatory</h3><p>Every stay starts here — a traditional Scottish breakfast, freshly prepared and served in our large, comfortable conservatory looking out to the garden.</p>
+<ul class="feats"><li>Served 8:00–9:30am</li><li>Scottish smoked salmon &amp; Buckie haddock specials</li><li>Aberfeldy porridge oats</li><li>Vegetarian &amp; vegan options</li></ul>
+<div class="rate">Included with every room</div>
+<a class="btn" href="tel:+441796473820">Book Direct</a></div></article>
+</div>
+<div class="more-rooms"><h3>More Room Types at Atholl Villa</h3>
+<table>
+<tr><td>Luxury Twin</td><td>2 adults · En-suite with shower · 2 × Single beds · Breakfast included</td></tr>
+<tr><td>Standard King</td><td>2 adults · En-suite with shower · 1 × King size bed · Breakfast included</td></tr>
+<tr><td>Standard Family</td><td>3 adults · En-suite with shower · 1 × Super-king or Twin · 1 × Single bed · Breakfast included</td></tr>
+<tr><td>Deluxe Apartment</td><td>4 adults · En-suite with shower · 1 × Super-king or Twin · 2 × Single beds · Breakfast included</td></tr>
+<tr><td>Enabled Access (Ground Floor)</td><td>Level access for guests with restricted mobility · Dedicated parking to the rear</td></tr>
+</table>
+<p style="margin-top:12px;font-size:.9rem;color:var(--mut)">Rates on request — please call <a href="tel:+441796473820" style="color:var(--red);font-weight:700">01796 473820</a> or email us for availability and our best direct price.</p>
+</div>
+</div></section>
+
+<section id="gallery" style="padding-top:0"><div class="wrap">
+<p class="kicker">Gallery</p><h2 class="title">Atholl Villa &amp; Pitlochry</h2>
+<p class="sub">The house, its gardens and breakfast room — and the famous Pitlochry dam and salmon ladder, a short stroll away.</p>
+<div class="gallery-grid">
+<figure><img src="assets/exterior-dusk.jpg" alt="Atholl Villa at dusk"><figcaption>Atholl Villa at dusk</figcaption></figure>
+<figure><img src="assets/garden.jpg" alt="Flower-filled garden at Atholl Villa"><figcaption>Our flower-filled garden</figcaption></figure>
+<figure><img src="assets/breakfast-room.jpg" alt="Guests enjoying breakfast in the conservatory"><figcaption>Breakfast in the conservatory</figcaption></figure>
+<figure><img src="assets/pitlochry-dam.jpg" alt="Pitlochry dam and salmon ladder in autumn"><figcaption>Pitlochry dam &amp; salmon ladder</figcaption></figure>
+</div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<p class="kicker" style="color:#ffd9a8">Get in Touch</p><h2 class="title">Contact Us</h2>
+<p class="sub" style="color:#e3c4b8">Atholl Villa overlooks Atholl Road at the quiet southern end of Pitlochry — very central, yet attractively set in spacious, well-kept gardens.</p>
+<div class="contact-grid">
+<div><h3>Address</h3><p>Atholl Villa Guest House<br>29 Atholl Road<br>Pitlochry, Perthshire<br>PH16 5BX</p></div>
+<div><h3>Phone</h3><p><a href="tel:+441796473820">01796 473820</a></p><h3 style="margin-top:18px">Email</h3><p><a href="mailto:enquiries@athollvilla.co.uk">enquiries@athollvilla.co.uk</a></p></div>
+<div><h3>Good to Know</h3><p>Check-in: 14:00 – 21:00<br>Check-out: 08:00 – 10:00<br>Free parking available</p><a class="btn" style="margin-top:14px;background:#fff;color:var(--red2)" href="tel:+441796473820">Call to Book</a></div>
+</div>
+</div></section>
+
+<footer><p>© Atholl Villa Guest House, Pitlochry — Visit Scotland 4 Star B&amp;B</p><p style="margin-top:6px;color:#a97e72">Sample website — demonstration only</p></footer>
+
+<button class="chatbtn" id="chatBtn" aria-label="Chat with us">💬</button>
+<div class="chatpanel" id="chatPanel">
+<div class="head">Chat with Atholl Villa<small>We usually reply quickly — pick your way to reach us:</small></div>
+<a class="row" href="tel:+441796473820">📞 Call us — 01796 473820</a>
+<a class="row" href="https://wa.me/441796473820" target="_blank" rel="noopener">🟢 WhatsApp us</a>
+<a class="row" href="mailto:enquiries@athollvilla.co.uk">✉️ Email — enquiries@athollvilla.co.uk</a>
+</div>
+<script>
+var btn=document.getElementById('chatBtn'),panel=document.getElementById('chatPanel');
+btn.addEventListener('click',function(){panel.classList.toggle('open');});
+document.addEventListener('click',function(e){if(!panel.contains(e.target)&&e.target!==btn){panel.classList.remove('open');}});
+</script>
+</body>
+</html>
