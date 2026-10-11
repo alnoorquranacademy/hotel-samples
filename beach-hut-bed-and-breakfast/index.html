@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beach Hut Bed and Breakfast — San Diego, California</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:#FBF7F0;color:#2b2b2b;line-height:1.65}
+h1,h2,h3{font-family:Georgia,'Playfair Display','Times New Roman',serif;color:#14505E;line-height:1.25}
+header{background:#14505E;color:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+header .brand{font-family:Georgia,'Playfair Display','Times New Roman',serif;font-size:1.35rem;letter-spacing:.04em}
+header nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:.95rem;letter-spacing:.03em}
+header nav a:hover{color:#C0764A}
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:480px}
+.hero-text{background:#14505E;color:#fff;padding:72px 8%;display:flex;flex-direction:column;justify-content:center}
+.hero-text h1{color:#fff;font-size:2.5rem;margin-bottom:14px}
+.hero-text .tag{color:#C0764A;font-style:italic;font-family:Georgia,'Playfair Display','Times New Roman',serif;font-size:1.15rem;margin-bottom:18px}
+.hero-text p{margin-bottom:26px;max-width:46ch}
+.hero img{width:100%;height:100%;object-fit:cover;display:block;max-height:640px}
+.btn{display:inline-block;background:#C0764A;color:#fff;padding:13px 30px;border-radius:30px;text-decoration:none;font-weight:600;letter-spacing:.03em;align-self:flex-start}
+.btn:hover{opacity:.88}
+section{padding:64px 6%;max-width:1180px;margin:0 auto}
+section h2{font-size:1.9rem;margin-bottom:10px}
+.rule{width:64px;height:3px;background:#C0764A;margin:14px 0 26px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.card img{width:100%;height:220px;object-fit:cover;display:block}
+.card-body{padding:24px}
+.card-body h3{margin-bottom:8px;font-size:1.25rem}
+.price{color:#C0764A;font-weight:700;margin-top:12px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.gallery figure{border-radius:12px;overflow:hidden;background:#fff;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.gallery img{width:100%;height:230px;object-fit:cover;display:block}
+.gallery figcaption{padding:14px 18px;font-family:Georgia,'Playfair Display','Times New Roman',serif;font-style:italic;color:#14505E}
+.band{background:#14505E;color:#fff}
+.band h2{color:#fff} .band .rule{background:#C0764A}
+.band a{color:#C0764A}
+form{background:#fff;padding:30px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.08);max-width:640px}
+label{display:block;margin:14px 0 5px;font-weight:600;font-size:.92rem}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ccc;border-radius:8px;font-family:inherit}
+button.submit{margin-top:20px;background:#14505E;color:#fff;border:none;padding:13px 32px;border-radius:30px;font-weight:600;cursor:pointer}
+#thankYou{display:none;background:#fff;padding:30px;border-radius:12px;max-width:640px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+footer{background:#14505E;color:#e8e2d8;padding:38px 6%;text-align:center;font-size:.92rem}
+footer .note{margin-top:10px;font-style:italic;color:#C0764A}
+#chatBtn{position:fixed;right:22px;bottom:22px;background:#C0764A;color:#fff;border:none;border-radius:30px;padding:14px 22px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:50}
+#chatPanel{display:none;position:fixed;right:22px;bottom:78px;width:330px;max-width:92vw;background:#fff;border-radius:14px;box-shadow:0 14px 44px rgba(0,0,0,.3);z-index:50;overflow:hidden}
+#chatPanel .chead{background:#14505E;color:#fff;padding:15px 18px;font-family:Georgia,'Playfair Display','Times New Roman',serif}
+#chatBody{padding:16px 18px;max-height:300px;overflow-y:auto;font-size:.93rem}
+.chip{display:inline-block;border:1px solid #C0764A;color:#14505E;border-radius:20px;padding:6px 13px;margin:0 6px 8px 0;cursor:pointer;background:#fff;font-size:.85rem}
+.ans{background:#FBF7F0;border-left:3px solid #C0764A;padding:10px 12px;margin:10px 0;border-radius:6px}
+.cactions{padding:0 18px 16px;display:flex;gap:10px}
+.cactions a{flex:1;text-align:center;background:#14505E;color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-size:.9rem}
+@media(max-width:820px){.hero{grid-template-columns:1fr}.hero img{max-height:340px}header nav a{margin-left:12px}}
+</style></head>
+<body>
+<header><div class="brand">Beach Hut Bed and Breakfast</div><nav><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a></nav></header>
+<div class="hero"><div class="hero-text"><h1>Beach Hut Bed and Breakfast</h1><div class="tag">A Beautiful, Relaxing Bed and Breakfast in Crown Point, Pacific Beach</div><p>A two-room hideaway at Sail Bay in Mission Bay Park, with private entrances, a saline pool and a landscaped patio made for slow mornings.</p><a class="btn" href="#contact">Check Availability</a></div><img src="assets/hero.jpg" alt="Sunset over Sail Bay, from Beach Hut Bed and Breakfast"></div>
+<section id="welcome"><h2>Welcome</h2><div class="rule"></div><p>Beach Hut Bed and Breakfast sits at 3761 Riviera Drive in Crown Point, Pacific Beach, inside the 4,200-acre Mission Bay Park. Guests enjoy private exterior entrances, reserved on-site parking, high-speed WiFi, a saline pool with solar heating, and a marble fire table on a professionally landscaped patio. Breakfast items are selected by each guest in advance and placed in the room, so mornings begin exactly the way you like them.</p></section>
+<section id="rooms"><h2>Rooms &amp; Rates</h2><div class="rule"></div><div class="grid"><article class="card"><img src="assets/room-garden.jpg" alt="Garden Room at Beach Hut Bed and Breakfast"><div class="card-body"><h3>Garden Room</h3><p>A serene queen room in a separate building, overlooking the garden flowers, pool and fountain. Private entrance, kitchen nook, travertine and granite bathroom, and a cosy faux fireplace.</p><p class="price">Published tariff: $249-$285 per night · 2-night minimum</p></div></article><article class="card"><img src="assets/room-tuscan.jpg" alt="Tuscan Room at Beach Hut Bed and Breakfast"><div class="card-body"><h3>Tuscan Room</h3><p>Our premium room at the front of the main house, in warm Tuscan colours with vineyard accents. Queen bed, large bay window with a peek of Sail Bay, brick faux fireplace and a stocked breakfast kitchen.</p><p class="price">Published tariff: $249-$285 per night · 2-night minimum</p></div></article></div><p style="margin-top:22px">Rates are as published by the inn: $249-$285 per night with a 2-night minimum. Reserved parking, WiFi, beach chairs, umbrella and towels are included.</p></section>
+<section id="gallery"><h2>Gallery</h2><div class="rule"></div><div class="gallery"><figure><img src="assets/gallery-beach.jpg" alt="The saline pool and landscaped patio"><figcaption>The saline pool and landscaped patio</figcaption></figure><figure><img src="assets/gallery-garden.jpg" alt="In-room dining in the Tuscan Room"><figcaption>In-room dining in the Tuscan Room</figcaption></figure></div></section>
+<div class="band"><section id="location"><h2>Location — San Diego, California</h2><div class="rule"></div><p>In Crown Point, Pacific Beach — steps from Sail Bay and Mission Bay Park, with boardwalks for biking and walking, sailing and paddle boarding on the bay, and the Pacific Beach oceanfront a short stroll away. La Jolla and Downtown San Diego are an easy drive.</p></section></div>
+<section id="contact"><h2>Contact &amp; Booking Enquiry</h2><div class="rule"></div>
+<p style="margin-bottom:20px">3761 Riviera Drive, San Diego, California 92109<br>Call: <a href="tel:6199572456">619-957-2456</a> &nbsp;·&nbsp; Email: <a href="mailto:beachhutbnb@gmail.com">beachhutbnb@gmail.com</a></p>
+<form id="inquiryForm" onsubmit="return submitInquiry(event)"><label>Your name</label><input required type="text" name="name"><label>Email</label><input required type="email" name="email"><label>Check-in</label><input type="date" name="in"><label>Check-out</label><input type="date" name="out"><label>Room preference</label><select name="room"><option>Garden Room</option><option>Tuscan Room</option></select><label>Message</label><textarea rows="3" name="msg"></textarea><button class="submit" type="submit">Send Enquiry</button></form>
+<div id="thankYou"><h3>Thank you!</h3><p>Your enquiry has been noted in this demonstration. The inn will reply using the contact details you provided.</p></div></section>
+<footer><div>Beach Hut Bed and Breakfast · San Diego, California · 619-957-2456 · beachhutbnb@gmail.com</div><div class="note">Sample website prepared for Beach Hut Bed and Breakfast — demonstration only.</div></footer>
+<button id="chatBtn" onclick="toggleChat()">Guest Support</button>
+<div id="chatPanel"><div class="chead">Guest Support — Beach Hut Bed and Breakfast</div><div id="chatBody"><p>Welcome! Choose a topic, or reach the inn directly below.</p><div style="margin-top:10px"><button class="chip" onclick="askChat('rates')">Rates</button><button class="chip" onclick="askChat('rooms')">Rooms</button><button class="chip" onclick="askChat('location')">Location</button><button class="chip" onclick="askChat('contact')">Contact</button></div></div><div class="cactions"><a href="tel:6199572456">Call the Inn</a><a href="mailto:beachhutbnb@gmail.com">Email the Inn</a></div></div>
+<script>
+function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display==='block')?'none':'block';}
+var answers={"rates":"Our published tariff is $249 to $285 per night, with a 2-night minimum. Parking, WiFi, beach chairs, umbrella and towels are included.","rooms":"We have two queen rooms, the Garden Room and the Tuscan Room, each with a private entrance, kitchen nook and private bathroom.","location":"You will find us at 3761 Riviera Drive in Crown Point, Pacific Beach, beside Sail Bay in Mission Bay Park, San Diego.","contact":"Call or text us on 619-957-2456, or email beachhutbnb@gmail.com. Use the Call and Email buttons below."};
+function askChat(k){var b=document.getElementById('chatBody');var d=document.createElement('div');d.className='ans';d.textContent=answers[k]||'';b.appendChild(d);b.scrollTop=b.scrollHeight;}
+function submitInquiry(e){e.preventDefault();document.getElementById('inquiryForm').style.display='none';document.getElementById('thankYou').style.display='block';return false;}
+</script>
+</body></html>
