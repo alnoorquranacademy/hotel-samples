@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windrush House — Broadway, Cotswolds</title>
+<meta name="description" content="Five individually styled bedrooms, a landscaped garden and a warm, personal welcome from owners Kate and Robin — in one of the Cotswolds’ prettiest villages.">
+<style>:root{--bg:#faf7f0;--ink:#2e2a26;--accent:#5c7350;--accent2:#b4654a;--soft:#f0e9da;--card:#ffffff;--line:#e0d5bf}
+:root{--bg:#faf7f0;--ink:#2b2723;--accent:#5c7350;--accent2:#b4654a;--soft:#efe8db;--card:#ffffff;--line:#e3dac9}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+h1,h2,h3,.serif{font-family:Georgia,'Times New Roman',serif;font-weight:600;letter-spacing:.01em}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 92%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-family:Georgia,serif;font-size:1.3rem;font-weight:700;text-decoration:none}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:26px;align-items:center}
+.navlinks a{text-decoration:none;font-size:.95rem;opacity:.85}
+.navlinks a:hover{opacity:1;color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff!important;padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid var(--accent)}
+.btn.ghost{background:transparent;color:var(--accent)!important}
+.btn:hover{filter:brightness(1.07)}
+.burger{display:none;background:none;border:0;font-size:1.5rem;cursor:pointer;color:var(--ink)}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background-size:cover;background-position:center}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,12,8,.15),rgba(15,12,8,.62))}
+.hero-inner{position:relative;z-index:2;color:#fff;padding:64px 0 54px;max-width:760px}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.6rem);line-height:1.12;margin-bottom:14px}
+.hero p{font-size:1.12rem;opacity:.94;max-width:600px;margin-bottom:24px}
+.hero .row{display:flex;gap:12px;flex-wrap:wrap}
+.hero-split{display:grid;grid-template-columns:1.05fr 1fr;gap:0;align-items:stretch;background:var(--soft)}
+.hero-split .txt{padding:72px 8% 64px;display:flex;flex-direction:column;justify-content:center}
+.hero-split h1{font-size:clamp(2.1rem,4.4vw,3.2rem);line-height:1.14;margin-bottom:14px}
+.hero-split p{font-size:1.08rem;opacity:.88;margin-bottom:24px;max-width:520px}
+.hero-split .img{background-size:cover;background-position:center;min-height:420px}
+.eyebrow{text-transform:uppercase;letter-spacing:.22em;font-size:.78rem;font-weight:700;color:var(--accent2);margin-bottom:12px}
+section{padding:74px 0}
+.sec-head{max-width:680px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:10px}
+.sec-head p{opacity:.85}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.about img{border-radius:16px;width:100%;height:100%;object-fit:cover;box-shadow:0 18px 40px rgba(30,25,15,.14)}
+.about p{margin-bottom:14px;opacity:.92}
+.highlights{background:var(--ink);color:#f5efe3}
+.hl-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+.hl h3{color:#fff;font-size:1.08rem;margin-bottom:6px}
+.hl p{opacity:.82;font-size:.95rem}
+.hl .n{font-family:Georgia,serif;font-size:1.7rem;color:var(--accent2);display:block;margin-bottom:6px}
+.rooms{background:var(--soft)}
+.room-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.room{background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 10px 28px rgba(30,25,15,.08);display:flex;flex-direction:column}
+.room img{height:210px;width:100%;object-fit:cover}
+.room .body{padding:20px 20px 22px;display:flex;flex-direction:column;gap:8px;flex:1}
+.room h3{font-size:1.18rem}
+.room p{font-size:.95rem;opacity:.85;flex:1}
+.price{font-weight:700;color:var(--accent)}
+.note{margin-top:22px;font-size:.95rem;opacity:.85}
+.feature{margin-top:24px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 28px;display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}
+.feature h3{font-size:1.25rem;margin-bottom:4px}
+.gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal{border-radius:14px;overflow:hidden;position:relative;cursor:zoom-in}
+.gal img{height:230px;width:100%;object-fit:cover;transition:transform .5s}
+.gal:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;color:#fff;font-size:.88rem;background:linear-gradient(transparent,rgba(10,8,5,.72))}
+.contact{background:var(--soft)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.contact a{color:var(--accent);font-weight:600}
+.big-tel{font-family:Georgia,serif;font-size:1.7rem;text-decoration:none}
+footer{background:var(--ink);color:#efe9db;padding:36px 0;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.chat-btn{position:fixed;right:20px;bottom:20px;z-index:90;width:58px;height:58px;border-radius:50%;border:0;background:#25d366;color:#fff;font-size:1.55rem;cursor:pointer;box-shadow:0 12px 28px rgba(0,0,0,.28);display:flex;align-items:center;justify-content:center}
+.chat-panel{position:fixed;right:20px;bottom:90px;z-index:90;width:min(330px,calc(100vw - 40px));background:#fff;border-radius:18px;box-shadow:0 22px 50px rgba(0,0,0,.3);overflow:hidden;display:none}
+.chat-panel.open{display:block}
+.chat-head{background:#075e54;color:#fff;padding:16px 18px}
+.chat-head b{font-size:1.02rem}
+.chat-head p{font-size:.83rem;opacity:.85}
+.chat-body{padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.chat-body .msg{background:#eef4ec;border-radius:12px;padding:10px 12px;font-size:.92rem}
+.chat-body a{display:block;text-align:center;padding:11px;border-radius:999px;text-decoration:none;font-weight:600}
+.chat-body .wa{background:#25d366;color:#fff}
+.chat-body .call{border:1.5px solid var(--accent);color:var(--accent)}
+.lb{position:fixed;inset:0;background:rgba(10,8,5,.88);z-index:120;display:none;align-items:center;justify-content:center;padding:24px}
+.lb.open{display:flex}
+.lb img{max-height:86vh;border-radius:12px}
+@media(max-width:900px){.hl-grid{grid-template-columns:repeat(2,1fr)}.room-grid{grid-template-columns:repeat(2,1fr)}.about,.contact-grid{grid-template-columns:1fr}.hero-split{grid-template-columns:1fr}.hero-split .img{min-height:300px;order:-1}}
+@media(max-width:620px){.room-grid,.gal-grid{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:16px 22px;gap:14px;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.burger{display:block}header{position:relative}header .wrap{position:relative}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#">Windrush House <span>· Broadway</span></a>
+<button class="burger" onclick="toggleNav()" aria-label="Menu">&#9776;</button>
+<nav class="navlinks" id="navlinks"><a href="#about">About</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a><a class="btn" href="tel:+441386853577">+44 1386 853577</a></nav></div></header>
+<div class="hero" style="background-image:url('assets/hero.jpg')"><div class="wrap hero-inner">
+        <div class="eyebrow" style="color:#ffd9a8">Broadway, Cotswolds</div><h1>A classical Cotswold retreat in the heart of Broadway</h1><p>Five individually styled bedrooms, a landscaped garden and a warm, personal welcome from owners Kate and Robin — in one of the Cotswolds’ prettiest villages.</p>
+        <div class="row"><a class="btn" href="#rooms">See the rooms</a><a class="btn ghost" style="color:#fff!important;border-color:#fff" href="tel:+441386853577">Call +44 1386 853577</a></div></div></div>
+<section id="about"><div class="wrap about"><div><div class="eyebrow">Welcome</div><h2 class="serif" style="font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:14px">Owner-run, in the traditional way</h2><p>Windrush House is a classical, contemporary bed and breakfast in Broadway, run personally by its owners, Kate and Robin.</p><p>Each of the five bedrooms is named after a much-loved Cotswold village, and the house looks onto a landscaped garden — a peaceful base for walking, exploring Broadway’s honey-stone high street, or simply unwinding.</p><p>It is the kind of place where the details are looked after by the people who own them: home baking, a comfortable lounge, and traditional values throughout.</p></div><img src="assets/hosts.jpg" alt="Windrush House"></div></section>
+<div class="highlights"><div class="wrap" style="padding-top:52px;padding-bottom:52px"><div class="hl-grid"><div class="hl"><span class="n">01</span><h3>Five named bedrooms</h3><p>The Broadway, Snowshill, Buckland, Campden and Bourton rooms.</p></div><div class="hl"><span class="n">02</span><h3>Run by the owners</h3><p>Kate and Robin welcome every guest personally.</p></div><div class="hl"><span class="n">03</span><h3>Landscaped garden</h3><p>A quiet garden to sit out in after a day’s walking.</p></div><div class="hl"><span class="n">04</span><h3>Rated 4.8 / 5</h3><p>From 21 Google reviews by recent guests.</p></div></div></div></div>
+<section id="rooms" class="rooms"><div class="wrap"><div class="sec-head"><div class="eyebrow">Stay</div><h2>Rooms &amp; rates</h2><p>Five bedrooms, each with its own character — named after the Cotswold villages around us.</p></div>
+<div class="room-grid"><article class="room"><img src="assets/room-broadway.jpg" alt="Windrush House — The Broadway Room"><div class="body"><h3>The Broadway Room</h3><p>Our signature room, in soft lilac tones with a dressing table by the window.</p><div class="price">From £125 per night</div></div></article><article class="room"><img src="assets/room-snowshill.jpg" alt="Windrush House — The Snowshill Room"><div class="body"><h3>The Snowshill Room</h3><p>A romantic four-poster room with floral drapes and garden colours.</p><div class="price">From £125 per night</div></div></article><article class="room"><img src="assets/room-buckland.jpg" alt="Windrush House — The Buckland Room"><div class="body"><h3>The Buckland Room</h3><p>A calm room with a classic iron bedstead and patchwork quilt.</p><div class="price">From £125 per night</div></div></article><article class="room"><img src="assets/room-campden.jpg" alt="Windrush House — The Campden Room"><div class="body"><h3>The Campden Room</h3><p>A bright double with hand-painted floral walls and a brass bedstead.</p><div class="price">From £125 per night</div></div></article><article class="room"><img src="assets/room-bourton.jpg" alt="Windrush House — The Bourton Room"><div class="body"><h3>The Bourton Room</h3><p>A cosy room with a hand-made patchwork quilt and wooden beams of character.</p><div class="price">From £125 per night</div></div></article></div><p class="note">Rates from £125 per night. To check tonight’s availability, call us on +44 1386 853577.</p></div></section>
+<section id="gallery"><div class="wrap"><div class="sec-head"><div class="eyebrow">Gallery</div><h2>A look inside</h2></div><div class="gal-grid"><figure class="gal"><img src="assets/gallery-1.jpg" alt="The entrance hall" loading="lazy"><figcaption>The entrance hall</figcaption></figure><figure class="gal"><img src="assets/gallery-2.jpg" alt="The guest lounge" loading="lazy"><figcaption>The guest lounge</figcaption></figure><figure class="gal"><img src="assets/gallery-3.jpg" alt="Fresh home baking" loading="lazy"><figcaption>Fresh home baking</figcaption></figure><figure class="gal"><img src="assets/gallery-4.jpg" alt="Broadway Tower, on our doorstep" loading="lazy"><figcaption>Broadway Tower, on our doorstep</figcaption></figure><figure class="gal"><img src="assets/gallery-5.jpg" alt="Inside the Broadway Room" loading="lazy"><figcaption>Inside the Broadway Room</figcaption></figure><figure class="gal"><img src="assets/gallery-6.jpg" alt="The Snowshill four-poster" loading="lazy"><figcaption>The Snowshill four-poster</figcaption></figure></div></div></section>
+<section id="contact" class="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Contact</div><h2 class="serif" style="font-size:2rem;margin-bottom:12px">Book direct — we would love to hear from you</h2>
+<p>For the best rate and a personal welcome, book directly with us.</p>
+<p style="margin-top:14px">Email: <a href="mailto:info@windrushhouse.com">info@windrushhouse.com</a></p></div>
+<div><p style="opacity:.8;margin-bottom:6px">Call us on</p><a class="big-tel" href="tel:+441386853577">+44 1386 853577</a>
+<p style="margin-top:14px"><a class="btn" href="https://wa.me/441386853577?text=Hello%20Windrush%20House%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener">Message us on WhatsApp</a></p></div></div></section>
+<footer><div class="wrap"><div>© <span id="yr"></span> Windrush House, Broadway, Cotswolds</div><div>Tel +44 1386 853577 · info@windrushhouse.com</div></div></footer>
+<button class="chat-btn" onclick="toggleChat()" aria-label="Chat with us">&#128172;</button>
+<div class="chat-panel" id="chatPanel"><div class="chat-head"><b>Windrush House</b><p>Guest support — ask us anything about your stay</p></div>
+<div class="chat-body"><div class="msg">Hello! How can we help — availability, directions, or something special for your visit?</div>
+<a class="wa" href="https://wa.me/441386853577?text=Hello%20Windrush%20House%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener">Chat on WhatsApp</a>
+<a class="call" href="tel:+441386853577">Call +44 1386 853577</a></div></div>
+<div class="lb" id="lb"><img src="" alt="Gallery image enlarged"></div>
+<script>
+function toggleNav(){document.getElementById('navlinks').classList.toggle('open')}
+function toggleChat(){document.getElementById('chatPanel').classList.toggle('open')}
+document.querySelectorAll('.gal img').forEach(function(im){im.addEventListener('click',function(){var lb=document.getElementById('lb');lb.querySelector('img').src=im.src;lb.classList.add('open')})});
+document.getElementById('lb').addEventListener('click',function(){this.classList.remove('open')});
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
