@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Galaxie — Oxford</title><style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Georgia,'Times New Roman',serif;color:#2b2b2b;background:#fdfbf7;line-height:1.6}
+h1,h2,h3,.sans{font-family:'Segoe UI',Arial,sans-serif}
+a{color:inherit}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav{max-width:1150px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:14px 20px;flex-wrap:wrap;gap:8px}
+.logo{font-size:1.25rem;font-weight:700;letter-spacing:.5px}
+nav.links a{margin-left:18px;text-decoration:none;font-family:'Segoe UI',Arial,sans-serif;font-size:.95rem}
+.hero{position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.hero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero .overlay{position:absolute;inset:0;background:linear-gradient(rgba(10,20,30,.45),rgba(10,20,30,.55))}
+.hero .inner{position:relative;padding:70px 20px;max-width:820px}
+.hero h1{font-size:clamp(2rem,5.5vw,3.6rem);margin-bottom:12px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.hero p.tag{font-size:clamp(1rem,2.4vw,1.35rem);font-style:italic;margin-bottom:26px}
+.btn{display:inline-block;padding:13px 30px;border-radius:40px;text-decoration:none;font-family:'Segoe UI',Arial,sans-serif;font-weight:600;margin:4px}
+section{max-width:1150px;margin:auto;padding:64px 20px}
+h2{font-size:2rem;margin-bottom:14px;text-align:center}
+.sub{text-align:center;max-width:720px;margin:0 auto 34px;color:#555}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.08)}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
+.card .body{padding:20px}
+.card h3{margin-bottom:8px}
+.rate{font-family:'Segoe UI',Arial,sans-serif;font-weight:700;margin-top:10px}
+.offer{background:#fff8e6;border:1px solid #e8cf8a;border-radius:12px;padding:18px 22px;text-align:center;font-family:'Segoe UI',Arial,sans-serif;margin-bottom:30px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal figure{border-radius:12px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.1)}
+.gal img{width:100%;height:220px;object-fit:cover;display:block}
+.gal figcaption{padding:10px 14px;background:#fff;font-family:'Segoe UI',Arial,sans-serif;font-size:.9rem}
+form{display:grid;gap:14px;max-width:640px;margin:auto}
+input,select,textarea{width:100%;padding:12px 14px;border:1px solid #ccc;border-radius:8px;font-family:'Segoe UI',Arial,sans-serif;font-size:1rem}
+button.submit{border:none;cursor:pointer;padding:14px;border-radius:40px;font-family:'Segoe UI',Arial,sans-serif;font-weight:700;font-size:1rem;color:#fff}
+#thanks{display:none;text-align:center;background:#eaf7ea;border:1px solid #9ccc9c;padding:20px;border-radius:12px;max-width:640px;margin:auto;font-family:'Segoe UI',Arial,sans-serif}
+footer{color:#eee;text-align:center;padding:38px 20px;font-family:'Segoe UI',Arial,sans-serif;font-size:.92rem}
+footer a{color:#fff}
+#chatBtn{position:fixed;right:20px;bottom:20px;z-index:99;width:60px;height:60px;border-radius:50%;border:none;cursor:pointer;font-size:26px;color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+#chatPanel{position:fixed;right:20px;bottom:92px;z-index:99;width:min(92vw,350px);background:#fff;border-radius:16px;box-shadow:0 10px 34px rgba(0,0,0,.28);display:none;overflow:hidden;font-family:'Segoe UI',Arial,sans-serif}
+#chatPanel .head{color:#fff;padding:14px 18px;font-weight:700}
+#chatPanel .body{padding:16px;max-height:60vh;overflow:auto}
+.chip{display:inline-block;border:1px solid #bbb;background:#f6f6f6;border-radius:20px;padding:7px 13px;margin:3px;cursor:pointer;font-size:.85rem}
+.ans{background:#f2f6f2;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:.9rem;display:none}
+#chatPanel .actions{display:flex;gap:10px;padding:0 16px 16px}
+#chatPanel .actions a{flex:1;text-align:center;padding:11px;border-radius:30px;text-decoration:none;font-weight:700;color:#fff}
+.contactbox{text-align:center;font-family:'Segoe UI',Arial,sans-serif}
+.contactbox a{font-weight:700;text-decoration:none}
+@media(max-width:600px){nav.links a{margin-left:10px;font-size:.85rem}section{padding:44px 16px}}
+
+.logo,.btn-solid{color:#c2187a} .btn-solid{background:#c2187a;color:#fff} button.submit{background:#c2187a} footer{background:#2a1030} h2{color:#2a1030}
+</style></head><body>
+<header><div class="nav"><div class="logo">✦ The Galaxie</div>
+<nav class="links"><a href="#about">About</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a href="#book">Book</a></nav></div></header>
+<div class="hero"><img class="bg" src="assets/hero.jpg" alt="The Galaxie, Oxford"><div class="overlay"></div>
+<div class="inner"><h1>The Galaxie, Oxford</h1><p class="tag">Find modern comfort with a twist</p><a class="btn btn-solid" href="#book">Send a Booking Enquiry</a><a class="btn" style="background:#fff;color:#222" href="#rooms">Explore Rooms</a></div></div>
+<section id="about"><h2>Welcome to The Galaxie</h2><p class="sub">A modern, playful boutique hotel in Oxford — part hotel, part hangout. With 35 en-suite rooms, colourful quirky design and a relaxed social vibe, The Galaxie is a fun, friendly base for exploring the dreaming spires.</p></section>
+<section id="rooms" style="padding-top:10px"><h2>Our Rooms</h2><p class="sub">The Galaxie has 35 en-suite rooms in total, across the room types below.</p><div class="grid"><div class="card"><img src="assets/single.jpg" alt="Single Room"><div class="body"><h3>Single Room</h3><p>A smart, comfortable single — everything a solo traveller needs, with playful Galaxie colour.</p><p class="rate">Rates on request</p></div></div><div class="card"><img src="assets/twin.jpg" alt="Twin Room"><div class="body"><h3>Twin Room</h3><p>Two comfortable beds in a bright, modern room — great for friends visiting Oxford together.</p><p class="rate">Rates on request</p></div></div><div class="card"><img src="assets/small-double.jpg" alt="Small Double Room"><div class="body"><h3>Small Double</h3><p>A cosy small double under the eaves, full of character — a snug hideaway for one or two.</p><p class="rate">Rates on request</p></div></div><div class="card"><img src="assets/colourful-room.jpg" alt="Large Double Room"><div class="body"><h3>Large Double</h3><p>A larger double bursting with colour and personality — modern comfort with a twist, Galaxie style.</p><p class="rate">Rates on request</p></div></div><div class="card"><img src="assets/quirky-room.jpg" alt="Superior Room"><div class="body"><h3>Superior Room</h3><p>Our Superior Rooms are the boldest in the house: statement colours, art-filled walls and extra space to spread out.</p><p class="rate">Rates on request</p></div></div></div></section>
+<section id="gallery" style="padding-top:10px"><h2>Gallery</h2><div class="gal"><figure><img src="assets/colourful-room.jpg" alt="A colourful, quirky bedroom"><figcaption>A colourful, quirky bedroom</figcaption></figure><figure><img src="assets/oxford-street.jpg" alt="Oxford colleges along the High Street"><figcaption>Oxford colleges along the High Street</figcaption></figure><figure><img src="assets/punting.jpg" alt="Punting on the River Cherwell"><figcaption>Punting on the River Cherwell</figcaption></figure><figure><img src="assets/lounge.jpg" alt="The lounge — our hotel-and-hangout space"><figcaption>The lounge — our hotel-and-hangout space</figcaption></figure><figure><img src="assets/breakfast.jpg" alt="Breakfast at The Galaxie"><figcaption>Breakfast at The Galaxie</figcaption></figure><figure><img src="assets/quirky-room.jpg" alt="A bold Superior Room"><figcaption>A bold Superior Room</figcaption></figure></div></section>
+<section id="location" style="padding-top:10px"><h2>Oxford — the Dreaming Spires</h2><p class="sub">The Galaxie puts Oxford within easy reach: the Radcliffe Camera and the historic colleges, the High Street's shops and cafés, and punting on the River Cherwell. Explore the university city by day, then come back and hang out with us.</p></section>
+<section id="contact" style="padding-top:10px"><h2>Contact Us</h2><div class="contactbox">
+<p>Oxford, England</p><p style="margin-top:12px">Phone: <a href="tel:+441865515688">+441865515688</a></p>
+<p>Email: <a href="mailto:info@galaxie.co.uk">info@galaxie.co.uk</a></p></div></section>
+<section id="book" style="padding-top:10px"><h2>Booking Enquiry</h2><p class="sub">Send an enquiry and the hotel team will reply to confirm availability for your dates. This is a demonstration form.</p>
+<form id="bookForm" onsubmit="submitForm(event)">
+<input required placeholder="Your name"><input required type="email" placeholder="Your email">
+<label class="sans" style="font-size:.9rem">Check-in date <input type="date"></label>
+<label class="sans" style="font-size:.9rem">Check-out date <input type="date"></label>
+<input type="number" min="1" placeholder="Number of guests">
+<textarea rows="3" placeholder="Anything else the team should know?"></textarea>
+<button class="submit" type="submit">Send Enquiry</button></form>
+<div id="thanks">Thank you! Your enquiry has been noted. The hotel team will be in touch — for anything urgent, please call +441865515688 or email info@galaxie.co.uk.</div>
+</section>
+<footer><p><strong>The Galaxie</strong> · Oxford, England</p>
+<p style="margin:8px 0">Phone: <a href="tel:+441865515688">+441865515688</a> · Email: <a href="mailto:info@galaxie.co.uk">info@galaxie.co.uk</a></p>
+<p>Sample website prepared for The Galaxie — demonstration only.</p></footer>
+
+<button id="chatBtn" style="background:#c2187a" onclick="toggleChat()" aria-label="Chat with us">💬</button>
+<div id="chatPanel">
+  <div class="head" style="background:#c2187a">Guest Support — The Galaxie</div>
+  <div class="body">
+    <p style="font-size:.92rem;margin-bottom:10px">Hello! Tap a question, or contact the hotel team directly — they will be happy to help.</p>
+    <div>
+      <span class="chip" onclick="showAns('a1')">What time is check-in?</span>
+      <span class="chip" onclick="showAns('a2')">Do you serve breakfast?</span>
+      <span class="chip" onclick="showAns('a3')">Is parking available?</span>
+      <span class="chip" onclick="showAns('a4')">Can I book direct?</span>
+    </div>
+    <div class="ans" id="a1">Check-in and check-out times can be confirmed by the hotel team — please call or email using the buttons below and they will confirm everything for your dates.</div>
+    <div class="ans" id="a2">Breakfast arrangements can be confirmed by the hotel team when you enquire — please call or email below and they will share the current options.</div>
+    <div class="ans" id="a3">Parking availability depends on your dates — please ask the hotel team directly using the buttons below and they will advise.</div>
+    <div class="ans" id="a4">Yes — you can book direct with the hotel. Use the booking enquiry form on this page, or call or email the team below.</div>
+    <p style="font-size:.85rem;margin-top:14px;color:#555">Phone: +441865515688<br>Email: info@galaxie.co.uk</p>
+  </div>
+  <div class="actions">
+    <a href="tel:+441865515688" style="background:#c2187a">📞 Call</a>
+    <a href="mailto:info@galaxie.co.uk" style="background:#444">✉️ Email</a>
+  </div>
+</div>
+
+
+<script>
+function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=(p.style.display=='block')?'none':'block';}
+function showAns(id){document.querySelectorAll('.ans').forEach(function(e){e.style.display='none'});document.getElementById(id).style.display='block';}
+function submitForm(e){e.preventDefault();document.getElementById('bookForm').style.display='none';document.getElementById('thanks').style.display='block';window.scrollTo({top:document.getElementById('book').offsetTop,behavior:'smooth'});}
+</script>
+
+</body></html>
