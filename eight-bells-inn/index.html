@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eight Bells Inn</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Georgia,'Times New Roman',serif;color:#2b2620;background:#faf7f2;line-height:1.6}
+a{color:inherit}img{max-width:100%;display:block}
+.top{background:#3d2c1e;color:#f3e9d7;text-align:center;padding:8px;font-family:Arial,sans-serif;font-size:.85rem;letter-spacing:.05em}
+nav{display:flex;justify-content:space-between;align-items:center;padding:16px 5%;background:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+nav .brand{font-size:1.3rem;font-weight:bold;color:#3d2c1e}nav ul{display:flex;gap:22px;list-style:none;font-family:Arial,sans-serif;font-size:.92rem}
+nav ul a{text-decoration:none}nav .cta{background:#a4713a;color:#fff;padding:9px 18px;border-radius:30px;text-decoration:none;font-family:Arial,sans-serif}
+.hero{position:relative;height:78vh;min-height:440px;background:url('assets/hero.jpg') center/cover no-repeat;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(rgba(20,14,8,.45),rgba(20,14,8,.55))}
+.hero div{position:relative;padding:20px}.hero h1{font-size:clamp(2.2rem,6vw,4rem);line-height:1.1}.hero p{font-size:clamp(1rem,2.4vw,1.35rem);font-style:italic;margin:14px 0 22px}
+.btn{display:inline-block;background:#a4713a;color:#fff;padding:13px 30px;border-radius:30px;text-decoration:none;font-family:Arial,sans-serif;margin:4px}
+.btn.ghost{background:transparent;border:2px solid #fff}
+section{padding:64px 5%;max-width:1150px;margin:auto}h2{font-size:2rem;color:#3d2c1e;text-align:center;margin-bottom:10px}
+.sub{text-align:center;color:#6d6355;max-width:680px;margin:0 auto 34px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 22px rgba(0,0,0,.09)}
+.card img{height:210px;width:100%;object-fit:cover}.card div{padding:20px}.card h3{color:#3d2c1e;margin-bottom:6px}
+.rate{display:inline-block;margin-top:10px;background:#f0e4d0;color:#3d2c1e;padding:5px 14px;border-radius:20px;font-family:Arial,sans-serif;font-size:.85rem;font-weight:bold}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.gal figure{border-radius:12px;overflow:hidden;position:relative}
+.gal img{height:220px;width:100%;object-fit:cover}.gal figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;padding:22px 12px 10px;font-family:Arial,sans-serif;font-size:.85rem}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.split img{border-radius:14px;height:320px;width:100%;object-fit:cover}
+@media(max-width:760px){.split{grid-template-columns:1fr}nav ul{display:none}}
+form{background:#fff;padding:28px;border-radius:14px;box-shadow:0 6px 22px rgba(0,0,0,.09);max-width:640px;margin:auto}
+form label{font-family:Arial,sans-serif;font-size:.9rem;display:block;margin:12px 0 5px}
+form input,form select,form textarea{width:100%;padding:11px;border:1px solid #cfc6b8;border-radius:8px;font-family:Arial,sans-serif}
+form button{margin-top:18px;width:100%;background:#a4713a;color:#fff;border:0;padding:13px;border-radius:30px;font-size:1rem;cursor:pointer}
+.thanks{display:none;background:#e9f5e4;border:1px solid #9dc48d;padding:16px;border-radius:10px;margin-top:16px;text-align:center}
+footer{background:#3d2c1e;color:#e9dfcd;text-align:center;padding:38px 5%;font-family:Arial,sans-serif;font-size:.92rem}
+footer a{color:#fff}
+#chatBtn{position:fixed;bottom:22px;right:22px;z-index:99;background:#a4713a;color:#fff;border:0;border-radius:50%;width:60px;height:60px;font-size:1.5rem;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+#chatPanel{position:fixed;bottom:94px;right:22px;z-index:99;width:330px;max-width:92vw;background:#fff;border-radius:16px;box-shadow:0 14px 44px rgba(0,0,0,.3);display:none;overflow:hidden;font-family:Arial,sans-serif}
+#chatPanel header{background:#3d2c1e;color:#fff;padding:14px 16px;font-weight:bold}
+#chatPanel .body{padding:14px 16px;max-height:380px;overflow:auto}
+.chip{display:inline-block;border:1.5px solid #a4713a;color:#3d2c1e;background:#f0e4d0;border-radius:20px;padding:6px 12px;margin:3px;cursor:pointer;font-size:.82rem}
+.ans{background:#f4efe6;border-radius:10px;padding:10px 12px;margin:10px 0;font-size:.9rem;display:none}
+#chatPanel .contactBtns{display:flex;gap:8px;padding:0 16px 16px}#chatPanel .contactBtns a{flex:1;text-align:center;padding:10px;border-radius:8px;text-decoration:none;color:#fff;background:#a4713a}#chatPanel .contactBtns a:last-child{background:#3d2c1e}
+</style></head><body>
+<div class="top">📞 +441386840371 &nbsp;·&nbsp; ✉️ info@eightbellsinn.co.uk</div>
+<nav><div class="brand">Eight Bells Inn</div><ul><li><a href="#about">About</a></li><li><a href="#rooms">Rooms</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#location">Location</a></li><li><a href="#contact">Contact</a></li></ul><a class="cta" href="#book">Book Now</a></nav>
+<div class="hero"><div><h1>Eight Bells Inn</h1><p>“A place to eat well, drink well and sleep well”</p><p style="font-style:normal;font-size:1rem">A 14th-century Cotswold stone inn in Chipping Campden · Rated 4.6 on Google</p><a class="btn" href="#book">Check Availability</a><a class="btn ghost" href="#rooms">Explore Rooms</a></div></div>
+<section id="about"><h2>Welcome</h2><p class="sub">Tucked into the honey-coloured stone of Chipping Campden's famous High Street, the Eight Bells Inn has welcomed travellers since the 14th century. Inside you'll find open fires, worn stone floors, low beams and a much-loved gastropub kitchen — a place, as we like to say, to eat well, drink well and sleep well. Above the inn sit our six bedrooms, each full of the character you'd expect from a building with seven centuries of stories.</p><div class="split"><img src="assets/fire.jpg" alt="Open fire at the Eight Bells Inn"><div><h3 style="color:#3d2c1e;margin-bottom:8px">Eat Well, Drink Well</h3><p>Our gastropub kitchen and bar are the beating heart of the inn — hearty, carefully cooked food, well-kept drinks and a fireside seat waiting for you at the end of the day. Residents and visitors alike are welcome to settle in.</p></div></div></section>
+<section id="rooms"><h2>Rooms &amp; Suites</h2><p class="sub">Every stay is quoted personally by the team — simply ask for the current rate for your dates.</p><div class="grid"><div class="card"><img src="assets/room2.jpg" alt="Historic Inn Bedrooms"><div><h3>Historic Inn Bedrooms</h3><p>Our six bedrooms sit above the old inn, full of period character — think beams, stone and countryside calm, with the gastropub downstairs to start the day.</p><span class="rate">Rates on request</span></div></div><div class="card"><img src="assets/room.jpg" alt="Bedrooms with Garden Views"><div><h3>Bedrooms with Garden Views</h3><p>Bright, comfortable rooms looking out over the gardens and fields beyond the village — made for slow mornings and deep sleeps after a day walking the Cotswolds.</p><span class="rate">Rates on request</span></div></div></div></section>
+<section id="gallery"><h2>Gallery</h2><p class="sub">A taste of the house and the beautiful area around us.</p><div class="gal"><figure><img src="assets/street.jpg" alt="Chipping Campden High Street"><figcaption>Chipping Campden High Street</figcaption></figure><figure><img src="assets/fire.jpg" alt="By the open fire in the inn"><figcaption>By the open fire in the inn</figcaption></figure><figure><img src="assets/food.jpg" alt="From the gastropub kitchen"><figcaption>From the gastropub kitchen</figcaption></figure><figure><img src="assets/room.jpg" alt="A bright inn bedroom"><figcaption>A bright inn bedroom</figcaption></figure><figure><img src="assets/countryside.jpg" alt="The Cotswold countryside"><figcaption>The Cotswold countryside</figcaption></figure><figure><img src="assets/hero.jpg" alt="Honey-coloured Cotswold stone"><figcaption>Honey-coloured Cotswold stone</figcaption></figure></div></section>
+<section id="location"><h2>Location &amp; Area</h2><div class="split"><img src="assets/countryside.jpg" alt="In the Heart of the Cotswolds"><div><h3 style="color:#3d2c1e;margin-bottom:8px">In the Heart of the Cotswolds</h3><p>The Eight Bells Inn stands on the High Street in Chipping Campden, one of the most beautiful small towns in the Cotswolds. From our door you can wander the honey-stone High Street, browse independent shops and galleries, and step straight onto country walks through the rolling hills that surround the town.</p></div></div></section>
+<section id="contact"><h2>Contact Us</h2><p class="sub">We would love to hear from you. Book direct for the warmest welcome:</p>
+<div class="card" style="max-width:560px;margin:auto;text-align:center"><div><p style="font-size:1.1rem">📞 <a href="tel:+441386840371">+441386840371</a><br>✉️ <a href="mailto:info@eightbellsinn.co.uk">info@eightbellsinn.co.uk</a></p></div></div></section>
+<section id="book"><h2>Booking Enquiry</h2><p class="sub">Send your dates and the team will confirm availability and your rate.</p><form id="bookForm"><label>Your name</label><input required type="text" placeholder="Full name">
+<label>Email</label><input required type="email" placeholder="you@example.com">
+<label>Check-in date</label><input required type="date"><label>Check-out date</label><input required type="date">
+<label>Room / suite</label><select id="roomSel"></select>
+<label>Guests</label><select><option>1</option><option>2</option><option>3</option><option>4+</option></select>
+<label>Anything else?</label><textarea rows="3" placeholder="Special requests, questions..."></textarea>
+<button type="submit">Send Booking Enquiry</button><div class="thanks" id="thanks">🙏 Thank you! Your enquiry has been noted — the Eight Bells Inn team will be in touch to confirm availability. For anything urgent, please call or email us using the contact details above.</div></form></section>
+<footer><p><strong>Eight Bells Inn</strong></p><p>📞 +441386840371 · ✉️ info@eightbellsinn.co.uk</p><p style="margin-top:14px;opacity:.85">Sample website prepared for Eight Bells Inn — demonstration only.</p></footer>
+<button id="chatBtn" onclick="toggleChat()" aria-label="Chat with us">💬</button>
+<div id="chatPanel"><header>💬 Guest Support — Eight Bells Inn</header><div class="body">
+<p style="font-size:.9rem">Hello! How can we help? Tap a question:</p>
+<button class="chip" onclick="ask('a1')">What time is check-in?</button>
+<button class="chip" onclick="ask('a2')">Do you serve breakfast?</button>
+<button class="chip" onclick="ask('a3')">Is parking available?</button>
+<button class="chip" onclick="ask('a4')">Can I book direct?</button>
+<div class="ans" id="a1">Check-in times can vary by date — please call us on +441386840371 or email info@eightbellsinn.co.uk and the team will confirm the arrangements for your stay.</div>
+<div class="ans" id="a2">Food and breakfast arrangements are best confirmed directly with the team — call +441386840371 or email info@eightbellsinn.co.uk and we'll happily talk you through what's on offer during your visit.</div>
+<div class="ans" id="a3">Please contact us on +441386840371 before you travel and we'll advise on the best parking options for your visit.</div>
+<div class="ans" id="a4">Yes — booking direct is easy. Call us on +441386840371 or email info@eightbellsinn.co.uk, or send the booking enquiry form on this page and the team will get back to you.</div>
+<p style="font-size:.85rem;margin-top:10px">Prefer to talk? Reach Eight Bells Inn directly:</p></div>
+<div class="contactBtns"><a href="tel:+441386840371">📞 Call +441386840371</a><a href="mailto:info@eightbellsinn.co.uk">✉️ Email Us</a></div></div>
+<script>document.getElementById('roomSel').innerHTML=`<option>Historic Inn Bedroom</option><option>Bedroom with Garden Views</option>`;function toggleChat(){var p=document.getElementById('chatPanel');p.style.display=p.style.display==='block'?'none':'block'}
+function ask(id){document.querySelectorAll('.ans').forEach(function(a){a.style.display='none'});document.getElementById(id).style.display='block'}
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();document.getElementById('thanks').style.display='block';this.reset();});
+</script></body></html>
