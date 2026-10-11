@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cappadocia Guest House — Brighton</title><meta name="description" content="Cappadocia Guest House, Brighton — A boutique guesthouse in Brighton’s North Laine, newly refurbished — cosy doubles, superking rooms and singles full of comfort and character, from exposed brick to Turkish mosaic lamps.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--ink:#2b2320;--muted:#7d6f63;--bg:#faf6f0;--card:#fff;--accent:#a44a24;--accent2:#c9a227;--line:#eadfd2}
+body{font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--bg);line-height:1.65}
+.sans{font-family:'Helvetica Neue',Arial,sans-serif}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:1.45rem;letter-spacing:.04em;color:var(--accent);font-weight:bold;text-decoration:none}
+.logo small{display:block;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif;font-weight:normal}
+nav.links a{margin-left:18px;color:var(--ink);text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.92rem}
+nav.links a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff!important;padding:11px 22px;border-radius:30px;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.92rem;border:none;cursor:pointer}
+.btn.light{background:transparent;border:1.5px solid #fff}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;background:#111}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.62))}
+.hero-in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:56px 20px;width:100%;color:#fff}
+.hero-in h1{font-size:clamp(2.2rem,5.5vw,4rem);line-height:1.08;font-weight:normal;max-width:760px}
+.hero-in p{font-size:1.15rem;max-width:620px;margin:14px 0 22px;color:#f3efe9}
+.badge{display:inline-block;background:var(--accent2);color:#1c1a17;padding:5px 14px;border-radius:20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+section{max-width:1180px;margin:0 auto;padding:64px 20px}
+h2{font-size:2rem;font-weight:normal;color:var(--accent);margin-bottom:8px}
+.sub{color:var(--muted);max-width:680px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{width:100%;height:230px;object-fit:cover;display:block}
+.card .pad{padding:20px}
+.card h3{font-size:1.25rem;font-weight:normal;margin-bottom:6px}
+.rate{display:inline-block;margin-top:12px;background:#f3eee6;color:var(--accent);padding:5px 14px;border-radius:16px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.85rem;font-weight:bold}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal figure{border-radius:12px;overflow:hidden;position:relative}
+.gal img{width:100%;height:210px;object-fit:cover;display:block}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(0,0,0,.72));color:#fff;padding:22px 12px 8px;font-size:.88rem;font-family:'Helvetica Neue',Arial,sans-serif}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.split img{width:100%;height:340px;object-fit:cover;border-radius:14px}
+@media(max-width:760px){.split{grid-template-columns:1fr}nav.links{display:none}}
+form{display:grid;gap:12px;max-width:640px}
+input,select,textarea{padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;width:100%;background:#fff}
+.thanks{display:none;background:#eef6ee;border:1px solid #bcd8bc;padding:18px;border-radius:10px;font-family:'Helvetica Neue',Arial,sans-serif}
+footer{background:#1d1a17;color:#cfc8bd;padding:44px 20px;font-family:'Helvetica Neue',Arial,sans-serif}
+footer .in{max-width:1180px;margin:0 auto;display:grid;gap:8px}
+footer a{color:#fff}
+#chatBtn{position:fixed;right:20px;bottom:20px;z-index:99;background:var(--accent);color:#fff;border:none;border-radius:30px;padding:14px 20px;font-size:.95rem;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3);font-family:'Helvetica Neue',Arial,sans-serif}
+#chatPanel{position:fixed;right:20px;bottom:78px;z-index:99;width:min(350px,92vw);background:#fff;border-radius:16px;box-shadow:0 18px 50px rgba(0,0,0,.32);display:none;overflow:hidden;font-family:'Helvetica Neue',Arial,sans-serif}
+#chatPanel.open{display:block}
+#chatPanel .head{background:var(--accent);color:#fff;padding:14px 16px;font-weight:bold}
+#chatPanel .body{padding:14px 16px;max-height:60vh;overflow:auto}
+.chip{display:inline-block;border:1px solid var(--accent);color:var(--accent);border-radius:18px;padding:6px 12px;margin:0 6px 8px 0;font-size:.82rem;cursor:pointer;background:#fff}
+.chip:hover{background:var(--accent);color:#fff}
+#chatAnswer{background:#f6f2ec;border-radius:10px;padding:10px 12px;font-size:.88rem;margin:8px 0 12px;display:none}
+.faq{font-size:.86rem;color:#444;border-top:1px solid var(--line);padding-top:10px;margin-top:6px}
+.faq b{color:var(--ink)}
+.chat-actions{display:flex;gap:8px;margin-top:12px}
+.chat-actions a{flex:1;text-align:center;padding:10px;border-radius:9px;text-decoration:none;font-size:.88rem}
+.call{background:var(--accent);color:#fff}.mail{background:#f0ebe3;color:var(--ink)}
+</style></head><body>
+<header><div class="nav"><a class="logo" href="#">Cappadocia Guest House<small>Brighton · North Laine</small></a>
+<nav class="links"><a href="#welcome">Welcome</a><a href="#rooms">Rooms</a><a href="#gallery">Gallery</a><a href="#location">Location</a><a href="#contact">Contact</a><a class="btn" href="#book">Book Direct</a></nav></div></header>
+<div class="hero"><img src="assets/hero.jpg" alt="A spacious refurbished double room at Cappadocia Guest House, Brighton"><div class="hero-in">
+<span class="badge">Boutique North Laine Guesthouse · Newly Refurbished</span><h1>Character & Comfort in the North Laine</h1><p>A boutique guesthouse in Brighton’s North Laine, newly refurbished — cosy doubles, superking rooms and singles full of comfort and character, from exposed brick to Turkish mosaic lamps.</p>
+<a class="btn" href="#book">Check Availability</a> <a class="btn light" href="#rooms">Explore Rooms</a></div></div>
+
+<section id="welcome"><div class="split"><div><h2>Welcome to Cappadocia Guest House</h2>
+<p>Cappadocia Guest House is a boutique hideaway in the North Laine, Brighton’s most creative quarter. Newly refurbished, our rooms mix comfort with character: exposed brick chimney breasts, wooden wardrobes, warm throws and ornate cushions.</p><p style="margin-top:12px">Look up and you will spot our signature touch — hand-made Turkish mosaic lamps, a nod to the Cappadocia that gave us our name. Every room is en-suite, and the seafront, the Lanes and the station are all an easy stroll away.</p></div>
+<img src="assets/welcome.jpg" alt="A double room with exposed brick fireplace at Cappadocia Guest House"></div></section>
+
+<section id="rooms" style="padding-top:10px"><h2>Our Rooms</h2><p class="sub">Cosy doubles, standard doubles, a superking/twin superior and singles — every rate is confirmed personally: rates on request.</p>
+<div class="grid"><div class="card"><img src="assets/superior.jpg" alt="Superking / Twin Superior"><div class="pad"><h3>Superking / Twin Superior</h3><p>Our largest rooms: a superking that can be set as twins, a seating area and a sleek en-suite shower room.</p><span class="rate">Rates on request</span></div></div><div class="card"><img src="assets/standard.jpg" alt="Standard Double"><div class="pad"><h3>Standard Double</h3><p>A characterful double with an exposed brick fireplace, wooden furniture and warm, layered textiles.</p><span class="rate">Rates on request</span></div></div><div class="card"><img src="assets/cosy.jpg" alt="Cosy Double"><div class="pad"><h3>Cosy Double</h3><p>A snug double with an ornate feature cushion and everything close at hand — made for weekends in the Lanes.</p><span class="rate">Rates on request</span></div></div><div class="card"><img src="assets/single.jpg" alt="Single Room"><div class="pad"><h3>Single Room</h3><p>A smart single with a brick feature wall and dressing table — a comfortable solo base in the North Laine.</p><span class="rate">Rates on request</span></div></div></div></section>
+
+<section id="gallery" style="padding-top:10px"><h2>Gallery</h2><p class="sub">Refurbished rooms, mosaic lamps and plenty of Brighton character.</p>
+<div class="gal"><figure><img src="assets/gal-lamps.jpg" alt="Our signature Turkish mosaic lamps"><figcaption>Our signature Turkish mosaic lamps</figcaption></figure><figure><img src="assets/gal-attic.jpg" alt="An attic room with skylights"><figcaption>An attic room with skylights</figcaption></figure><figure><img src="assets/gal-ensuite.jpg" alt="A modern en-suite shower room"><figcaption>A modern en-suite shower room</figcaption></figure><figure><img src="assets/gal-double.jpg" alt="A double room"><figcaption>A double room</figcaption></figure><figure><img src="assets/gal-brick.jpg" alt="Exposed brick detail"><figcaption>Exposed brick detail</figcaption></figure><figure><img src="assets/gal-top.jpg" alt="A top-floor double"><figcaption>A top-floor double</figcaption></figure></div></section>
+
+<section id="location" style="padding-top:10px"><div class="split"><img src="assets/location.jpg" alt="A double room at Cappadocia Guest House">
+<div><h2>The North Laine & Beyond</h2><p>Cappadocia Guest House sits in the North Laine, among independent shops, cafés and vintage stores. The Royal Pavilion and the Lanes are minutes away, the seafront and pier a short stroll, and Brighton station close by — the best of Brighton starts at our door.</p></div></div></section>
+
+<section id="contact" style="padding-top:10px"><h2>Contact Us</h2>
+<p class="sub">Book direct for a personal welcome — we are always happy to help you plan your stay.</p>
+<p style="font-size:1.1rem">Phone: <a href="tel:+441273233107">01273 233107</a><br>Email: <a href="mailto:info@cappadociaguesthouse.co.uk">info@cappadociaguesthouse.co.uk</a></p></section>
+
+<section id="book" style="padding-top:10px"><h2>Booking Enquiry</h2>
+<p class="sub">Send us your dates and we will confirm availability and rates personally. Rates on request.</p>
+<form id="bookForm"><input required placeholder="Your name"><input required type="email" placeholder="Your email">
+<input required type="tel" placeholder="Your phone"><label class="sans" style="font-size:.85rem;color:var(--muted)">Check-in date</label><input required type="date">
+<label class="sans" style="font-size:.85rem;color:var(--muted)">Check-out date</label><input required type="date">
+<select><option>Superior (Superking / Twin)</option><option>Standard Double</option><option>Cosy Double</option><option>Single Room</option></select><textarea rows="3" placeholder="Anything we should know? (optional)"></textarea>
+<button class="btn" type="submit">Send Enquiry</button></form>
+<div class="thanks" id="thanks">Thank you — your enquiry has been noted. This is a demonstration website, so no message has been sent; on the live site, Cappadocia Guest House would reply to confirm availability and rates.</div></section>
+
+<footer><div class="in"><div style="font-size:1.15rem;color:#fff">Cappadocia Guest House — Brighton</div>
+<div>Phone: <a href="tel:+441273233107">01273 233107</a> · Email: <a href="mailto:info@cappadociaguesthouse.co.uk">info@cappadociaguesthouse.co.uk</a></div>
+<div>Character & comfort in the North Laine</div><div style="margin-top:10px;font-size:.85rem">Sample website prepared for Cappadocia Guest House — demonstration only.</div></div></footer>
+
+<button id="chatBtn" onclick="toggleChat()">💬 Guest Support</button>
+<div id="chatPanel"><div class="head">Guest Support — Cappadocia Guest House</div><div class="body">
+<p style="font-size:.9rem;margin-bottom:10px">Hello! Tap a question, or contact the house directly below.</p>
+<button class="chip" onclick="ask("What time is check-in?")">What time is check-in?</button><button class="chip" onclick="ask("Where are you located?")">Where are you located?</button><button class="chip" onclick="ask("Is parking available?")">Is parking available?</button><button class="chip" onclick="ask("Can I book direct?")">Can I book direct?</button><div id="chatAnswer"></div>
+<div class="faq"><p style="margin-bottom:8px"><b>Quick answers</b></p><p><b>What time is check-in?</b><br>We confirm check-in personally when you book — call 01273 233107 and we will plan your arrival with you.</p><p><b>Where are you located?</b><br>In the North Laine, Brighton — close to the station, the Lanes and the seafront. Call 01273 233107 for directions.</p><p><b>Is parking available?</b><br>Please call us on 01273 233107 for the latest advice on parking near the guest house.</p><p><b>Can I book direct?</b><br>Yes — direct is best. Call 01273 233107 or email info@cappadociaguesthouse.co.uk and we will confirm availability and rates personally.</p></div>
+<div class="chat-actions"><a class="call" href="tel:+441273233107">📞 Call Us</a><a class="mail" href="mailto:info@cappadociaguesthouse.co.uk">✉️ Email Us</a></div>
+<p style="font-size:.8rem;color:#777;margin-top:10px">Phone: 01273 233107<br>Email: info@cappadociaguesthouse.co.uk</p>
+</div></div>
+<script>
+function toggleChat(){document.getElementById('chatPanel').classList.toggle('open')}
+var ANSWERS = {"What time is check-in?": "We confirm check-in personally when you book \u2014 call 01273 233107 and we will plan your arrival with you.", "Where are you located?": "In the North Laine, Brighton \u2014 close to the station, the Lanes and the seafront. Call 01273 233107 for directions.", "Is parking available?": "Please call us on 01273 233107 for the latest advice on parking near the guest house.", "Can I book direct?": "Yes \u2014 direct is best. Call 01273 233107 or email info@cappadociaguesthouse.co.uk and we will confirm availability and rates personally."};
+function ask(q){var a=document.getElementById('chatAnswer');a.style.display='block';a.innerHTML='<b>'+q+'</b><br>'+ANSWERS[q];}
+document.getElementById('bookForm').addEventListener('submit',function(e){e.preventDefault();this.style.display='none';document.getElementById('thanks').style.display='block';});
+</script></body></html>
