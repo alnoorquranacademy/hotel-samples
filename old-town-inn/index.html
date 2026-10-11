@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Old Town Inn — Family Inn &amp; Hotel, Crested Butte, Colorado</title>
+<style>
+:root{--pine:#2e4a3d;--pine2:#20362c;--cream:#faf6ee;--paper:#fffdf8;--copper:#b5762f;--ink:#2c2c26}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--pine);font-weight:600}
+img{display:block;max-width:100%}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:50;background:var(--pine2);color:#fff;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 20px;max-width:1140px;margin:0 auto;flex-wrap:wrap}
+.logo{font-family:Georgia,serif;font-size:1.35rem;letter-spacing:.4px;color:#fff}
+.logo span{color:#e0aa5e}
+.hbar a{color:#fff;text-decoration:none}
+.hphone{font-size:.98rem;opacity:.95}
+.btn{display:inline-block;background:var(--copper);color:#fff!important;padding:10px 20px;border-radius:30px;font-weight:600;text-decoration:none;transition:.2s}
+.btn:hover{background:#965f22}
+.hero{position:relative;min-height:74vh;display:flex;align-items:flex-end;background:url('assets/exterior.jpg') center/cover no-repeat}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(32,54,44,.85),rgba(32,54,44,.12) 55%)}
+.hero-in{position:relative;z-index:2;color:#fff;padding:56px 20px 48px;max-width:1140px;margin:0 auto;width:100%}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5.5vw,3.9rem);line-height:1.12}
+.hero p{font-size:clamp(1rem,2.2vw,1.3rem);max-width:660px;margin:14px 0 22px;color:#f5ecd9}
+.strip{background:var(--pine);color:#eee5cf;text-align:center;padding:13px 16px;font-family:Georgia,serif;font-size:1.02rem}
+section{padding:64px 0}
+.alt{background:var(--cream)}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem);text-align:center;margin-bottom:10px}
+.sub{text-align:center;color:#5d5b4f;max-width:700px;margin:0 auto 38px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.about-grid img{border-radius:14px;box-shadow:0 10px 30px rgba(46,74,61,.2)}
+.award{margin-top:20px;background:#fff;border:1px solid #e6dcc4;border-left:5px solid var(--copper);border-radius:10px;padding:15px 18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 8px 26px rgba(46,74,61,.13);border:1px solid #ece2c8}
+.card img{width:100%;height:215px;object-fit:cover}
+.card-in{padding:20px 22px 24px}
+.card h3{font-size:1.28rem;margin-bottom:2px}
+.meta{color:var(--copper);font-weight:600;font-size:.86rem;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
+.rate{display:inline-block;margin-top:12px;background:var(--cream);border:1px dashed var(--copper);color:var(--pine);padding:5px 13px;border-radius:20px;font-weight:600;font-size:.92rem}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.feat{background:#fff;border-top:4px solid var(--pine);border-radius:10px;padding:22px;box-shadow:0 5px 18px rgba(0,0,0,.06)}
+.feat h3{font-size:1.12rem;margin-bottom:6px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.gal figure{border-radius:12px;overflow:hidden;position:relative}
+.gal img{width:100%;height:230px;object-fit:cover;transition:.35s}
+.gal figure:hover img{transform:scale(1.05)}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(transparent,rgba(32,54,44,.88));color:#fff;padding:26px 14px 10px;font-size:.92rem}
+.contact-box{background:var(--pine);color:#eef2ec;border-radius:16px;padding:38px;text-align:center}
+.contact-box h2{color:#fff}
+.contact-box a{color:#eec27f;text-decoration:none;font-weight:600}
+footer{background:var(--pine2);color:#bcc8bf;text-align:center;padding:26px 16px;font-size:.9rem}
+.chat-btn{position:fixed;right:20px;bottom:20px;z-index:99;width:58px;height:58px;border-radius:50%;background:var(--copper);color:#fff;border:none;font-size:1.5rem;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.chat-panel{position:fixed;right:20px;bottom:88px;z-index:99;width:300px;max-width:calc(100vw - 40px);background:#fff;border-radius:14px;box-shadow:0 14px 40px rgba(0,0,0,.28);overflow:hidden;display:none}
+.chat-panel.open{display:block}
+.chat-head{background:var(--pine);color:#fff;padding:15px 18px;font-family:Georgia,serif}
+.chat-body{padding:16px 18px}
+.chat-body p{font-size:.93rem;margin-bottom:12px}
+.chat-body a{display:block;text-align:center;margin-bottom:9px;padding:11px;border-radius:9px;text-decoration:none;font-weight:600}
+.c-call{background:var(--pine);color:#fff}.c-wa{background:#25d366;color:#fff}.c-mail{background:var(--cream);color:var(--pine);border:1px solid var(--copper)}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}.hero{min-height:60vh}.hphone{display:none}}
+</style>
+</head>
+<body>
+<header><div class="hbar">
+<div class="logo">Old Town <span>Inn</span></div>
+<a class="hphone" href="tel:+18883496184">(888) 349-6184</a>
+<a class="btn" href="tel:+19703496184">Book Direct</a>
+</div></header>
+
+<div class="hero"><div class="hero-in">
+<h1>Old Town Inn</h1>
+<p>The warmth of a family inn; the value and convenience of a hotel — your home base in Crested Butte, Colorado.</p>
+<a class="btn" href="#rooms">See Our Rooms</a>
+</div></div>
+<div class="strip">33 Spacious Rooms &nbsp;·&nbsp; Free Continental-Plus Breakfast &nbsp;·&nbsp; Outdoor Hot Tub &nbsp;·&nbsp; Walk to Downtown</div>
+
+<section><div class="wrap">
+<h2>A Family Inn at the Entrance to Crested Butte</h2>
+<p class="sub">Hotel amenities with the personal feel of a bed-and-breakfast — park your car and leave it there.</p>
+<div class="about-grid">
+<img src="assets/slide1.jpg" alt="Crested Butte in the snow at dusk">
+<div>
+<p>The Old Town Inn makes a great home base for your Crested Butte adventures, wild or civilized. You&rsquo;ll find us at the entrance to town, next to Town Park, the Center for the Arts, the movie theater and the grocery store — a short stroll to the historic downtown&rsquo;s shops and eateries, and to cross-country skiing, hiking and biking trailheads. The free ski-area shuttle runs right near the hotel.</p>
+<p style="margin-top:12px">Launch your day with a hearty continental breakfast and organic, locally roasted coffee — then end it with fresh-baked cookies and a soak in the outdoor hot tub. We take great care of our guests, and of our mountain home: the inn runs on 100% green-powered electricity, composts on-site and recycles comprehensively — a TripAdvisor GreenLeader and Certificate of Excellence winner.</p>
+<div class="award"><strong>2023 Lodging Business of the Year</strong> — Crested Butte / Mt. Crested Butte Chamber Business Awards</div>
+</div></div></div></section>
+
+<section class="alt" id="rooms"><div class="wrap">
+<h2>Our 33 Rooms</h2>
+<p class="sub">Spacious, spotless and thoughtfully furnished — every room has free high-speed WiFi, a mini-fridge, HD television with HBO, a private bathroom and daily housekeeping.</p>
+<div class="cards">
+<article class="card"><img src="assets/s3.jpg" alt="Queen Room with two queen beds"><div class="card-in"><h3>Queen Room</h3><div class="meta">Two Queen Beds · 30 Rooms</div><p>Our most popular layout for families, couples and friends travelling together — table and chairs by the window, writing desk, wardrobe and a bedside charging station.</p><span class="rate">Rates on request</span></div></article>
+<article class="card"><img src="assets/s2.jpg" alt="King Room"><div class="card-in"><h3>King Room</h3><div class="meta">One King Bed · 2 Rooms</div><p>A single king bed with all the inn&rsquo;s comforts — HD TV with HBO, mini-fridge, private bathroom and daily housekeeping included.</p><span class="rate">Rates on request</span></div></article>
+<article class="card"><img src="assets/s1.jpg" alt="The Suite"><div class="card-in"><h3>The Suite</h3><div class="meta">Two Queen Beds + Sleeper Sofa</div><p>Room to spread out: two queen beds plus a sleeper sofa and a sitting area — the inn&rsquo;s cosiest base camp for groups and longer stays.</p><span class="rate">Rates on request</span></div></article>
+</div>
+<p style="text-align:center;margin-top:26px;color:#5d5b4f">Plus: an ADA-adapted room, 6 designated pet-friendly rooms (and guaranteed non-pet rooms for guests with allergies). All rooms non-smoking, with heating and air-conditioning. Call <a href="tel:+18883496184">(888) 349-6184</a> for tonight&rsquo;s availability.</p>
+</div></section>
+
+<section><div class="wrap">
+<h2>Guest Amenities</h2>
+<p class="sub">The comfort and convenience of a large hotel — with a mountain inn&rsquo;s warmth.</p>
+<div class="feats">
+<div class="feat"><h3>Breakfast Included</h3><p>Hearty continental-plus breakfast, 7:30&ndash;9:30 am — pastries, oatmeal, fresh fruit, local organic coffee and teas.</p></div>
+<div class="feat"><h3>Outdoor Hot Tub</h3><p>Soak under the stars after the slopes or the trails — open during office hours, with an outdoor deck and picnic area.</p></div>
+<div class="feat"><h3>Fresh-Baked Cookies</h3><p>Cookies every afternoon, and coffee and tea served in the lobby all day.</p></div>
+<div class="feat"><h3>Ski &amp; Trail Ready</h3><p>Free town shuttle to the ski area, free ski storage at the base-area shop, and trailheads you can walk or bike to.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<h2>Gallery</h2>
+<p class="sub">Breakfast at the inn — and the mountains that surround it.</p>
+<div class="gal">
+<figure><img src="assets/breakfast.jpg" alt="Breakfast at the inn"><figcaption>Breakfast, fresh every morning</figcaption></figure>
+<figure><img src="assets/xfv1.jpg" alt="Winter sunrise in the mountains"><figcaption>Winter sunrise above Crested Butte</figcaption></figure>
+<figure><img src="assets/xfv2.jpg" alt="Wildflowers below the peaks"><figcaption>Wildflower season in the valley</figcaption></figure>
+<figure><img src="assets/slide2.jpg" alt="Hiker on a mountain ridge"><figcaption>Ridge hikes from the inn&rsquo;s door</figcaption></figure>
+</div></div></section>
+
+<section><div class="wrap">
+<div class="contact-box">
+<h2>Plan Your Stay</h2>
+<p style="margin:12px 0 4px">708 Sixth Street, Crested Butte, CO 81224</p>
+<p>Phone: <a href="tel:+19703496184">(970) 349-6184</a> · Toll-free: <a href="tel:+18883496184">(888) 349-6184</a> · Email: <a href="mailto:info@oldtowninn.net">info@oldtowninn.net</a></p>
+<p style="margin-top:16px"><a class="btn" href="tel:+18883496184">Call to Book Direct</a></p>
+</div></div></section>
+
+<footer>Old Town Inn · 708 Sixth Street, Crested Butte, CO 81224 · (970) 349-6184<br>Sample website — demonstration only</footer>
+
+<button class="chat-btn" id="chatBtn" aria-label="Chat with us">💬</button>
+<div class="chat-panel" id="chatPanel">
+<div class="chat-head">Questions? We&rsquo;re happy to help.</div>
+<div class="chat-body">
+<p>Reach the inn directly — our front desk is open 7:00 am to 10:00 pm.</p>
+<a class="c-call" href="tel:+19703496184">📞 Call (970) 349-6184</a>
+<a class="c-wa" href="https://wa.me/19703496184">WhatsApp Us</a>
+<a class="c-mail" href="mailto:info@oldtowninn.net">✉ Email the Inn</a>
+</div></div>
+<script>
+var b=document.getElementById('chatBtn'),p=document.getElementById('chatPanel');
+b.addEventListener('click',function(){p.classList.toggle('open');});
+document.addEventListener('click',function(e){if(!p.contains(e.target)&&e.target!==b){p.classList.remove('open');}});
+</script>
+</body>
+</html>
